@@ -2,7 +2,7 @@
 
 # School Lab UFC
 
-Monitoramento e controle do fluxo de entrada e saída dos laboratórios.
+Monitoramento e controle do fluxo de entrada e saída nos laboratórios.
 
 # Objetivo Geral
 
