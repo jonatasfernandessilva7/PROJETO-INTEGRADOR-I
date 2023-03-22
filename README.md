@@ -8,7 +8,7 @@ Monitoramento e controle do fluxo de entrada e saída dos laboratórios.
 
 Auxiliar no monitoramento e no controle de entrada e saída dos laboratórios da UFC. 
 
-# Objetivo Específicos
+# Objetivos Específicos
 
 Melhorar a segurança nos laboratórios
 
