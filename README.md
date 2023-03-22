@@ -1,16 +1,16 @@
 # PROJETO-INTEGRADOR-I
 
-#School Lab UFC
+# School Lab UFC
 
 Monitoramento e controle do fluxo de entrada e saída dos laboratórios.
 
-#Objetivos
+# Objetivos
 
-#Geral
+# Geral
 
 Auxiliar no monitoramento e no controle de entrada e saída dos laboratórios da UFC. 
 
-#Específicos
+# Específicos
 
 Melhorar a segurança dos laboratórios
 ... 
