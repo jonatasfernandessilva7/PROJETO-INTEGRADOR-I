@@ -16,7 +16,7 @@ identificar quem entra e sai dos laboratórios e da biblioteca e os horários em
 
 # Motivação
 
-O uso das listas de chamadas manuais é retrógrado e falho, pois alguém pode esquecer de colocar seu nome nela, propositalmente ou não, ou pode até mesmo informar o horário de forma equivocada, dessa maneira dificultando o trabalho dos monitores no controle e monitoramento do fluxo de alunos. Por isso, nós, da UFC de Itpajé, Campus Jardins de Anita estamos desenvolvenvo uma aplicação web que facilite esse controle de fluxo, dessa forma auxiliando os monitores e o campus.
+O uso das listas de chamadas manuais é retrógrado e falho, pois alguém pode esquecer de colocar seu nome nela, propositalmente ou não, ou pode até mesmo informar o horário de forma equivocada, dessa maneira dificultando o trabalho dos monitores no controle e monitoramento do fluxo de alunos. Por isso, nós, da UFC de Itpajé Campus Jardins de Anita, estamos desenvolvendo uma aplicação web que facilite esse controle de fluxo, dessa forma auxiliando os monitores e o campus.
 
 
 # Stakeholders
