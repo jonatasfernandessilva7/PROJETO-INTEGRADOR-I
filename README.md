@@ -21,7 +21,7 @@ O uso das listas de chamadas manuais é retrógrado e falho, pois alguém pode e
 
 # Stakeholders
 
-Corpo de doscentes, corpo discentes, monitores dos laboratórios, UFC.
+Corpo de docentes, corpo discentes, monitores dos laboratórios, UFC.
 
 # Impacto
 
