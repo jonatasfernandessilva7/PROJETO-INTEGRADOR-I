@@ -1,0 +1,100 @@
+body{
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #082c57;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.caixa{
+    background: #082c57;
+    width: 650px;
+    height: 600px;
+    border-radius: 20px;
+}
+h1{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+input#nome{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#nome1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#curso{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#curso1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#email{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#email1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#senha{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#senha1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#senha3{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#senha2{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+button{
+    padding: 15px 40px 15px 40px;
+    margin: 30px 0px 0px 250px;
+}
+p#logo{
+    color: #fff;
+    font-size: 20px;
+    margin: 35px 0px 0px 270px;
+}

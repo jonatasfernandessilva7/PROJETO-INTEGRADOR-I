@@ -1,0 +1,44 @@
+body{
+    background: rgb(3, 3, 177);
+    margin: 0px;
+}
+.nav{
+    background: #fff;
+}
+figure.icone{
+    padding: 10px;
+}
+button{
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+}
+.perf{
+    right: 40px;
+    top: 50px;
+    background-color: black;
+    padding: 10px;
+}
+.hist{
+    right: 220px;
+    top: 50px;
+    background-color: black;
+    padding: 10px;
+}
+img.ic1{
+    position: absolute;
+    right: 310px;
+    top: 45px;
+}
+img.ic2{
+    position: absolute;
+    right: 110px;
+    top: 45px;
+}
+.elementos{
+    background: #fff;
+}
+footer{
+    background: #fff;
+    text-align: center;
+}
