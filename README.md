@@ -21,8 +21,20 @@ O uso das listas de chamadas manuais é retrógrado e falho, pois alguém pode e
 
 # Stakeholders
 
-Corpo de docentes, corpo discentes, monitores dos laboratórios, UFC.
+Corpo discente, monitores dos laboratórios, UFC.
 
 # Impacto
 
 Melhorar a segurança dos hardwares, pois caso haja alguma infração o estudante que estava naquela máquina, naquele horário irá ser responsabilizado pelos seus atos.
+
+# Usuários
+
+Administrador geral (Acesso a tudo)
+Administrador monitor (Acesso apenas dados referentes ao seu laboratório em específico) 
+usuário comum, aluno (vai ter acesso apenas dados referentes à sua conta)
+
+# Como vai funcionar
+
+A aplicação funcionará via web. Inicialmente o usuário irá acessar o site, se ele não estiver logado, terá que realizar o login, que o levará a sua página de perfil, caso não tenha conta registrada, ele terá que fazer o cadastro, utilizando seus dados institucionais. Após este procedimento, o usuário de acordo com seu nível de acesso será redirecionado para a página correspondente, podendo escolher o laboratório e reservar o computador, ir para o seu histórico de uso ou acessar seu perfil para alterar dados, se ele desejar. 
+
+Caso seja um usuário administrador, ele terá acesso a uma página exclusiva onde ele poderá ver dados (a hora que ele entrou, saiu, email de quem está utilizando determinado computador e o que ele está acessando) dos usuários comuns. Além disso,  ele também terá funcionalidades exclusivas, como mudar o nível de acesso dos alunos (caso eles sejam monitores, ou deixem de ser). 
