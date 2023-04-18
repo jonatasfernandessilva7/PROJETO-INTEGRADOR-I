@@ -1,0 +1,78 @@
+body {
+    background: #082c57;
+    margin: 0;
+}
+.nav{
+    background: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 20px;
+}
+img#logo{
+    padding: 10px 0px 10px 50px;
+}
+button{
+    position: absolute;
+    color: #000000;
+    text-decoration: none;
+}
+.perf{
+    right: 40px;
+    top: 35px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+button:hover{
+    background: #000000;
+    color: #fff;
+}
+.hist{
+    right: 220px;
+    top: 35px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+img.ic1{
+    position: absolute;
+    right: 310px;
+    top: 25px;
+}
+img.ic2{
+    position: absolute;
+    right: 110px;
+    top: 25px;
+}
+.container {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 98vw;
+    height: 87vh;
+    background-color: #082c57;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.computadores{
+    background: #082c57;
+    width: 920px;
+    height: 800px;
+    border-radius: 50px;
+    text-align: center;
+}
+figure img{
+    padding: 10px 30px 60px 30px;
+}
+footer{
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    background: #ffffff;
+    width: 100%;
+    bottom: 0px;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+    color: #000000;
+    border-radius: 20px;
+}

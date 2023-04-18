@@ -1,0 +1,228 @@
+body {
+    background: #082c57;
+    margin: 0px;
+
+}
+.nav{
+    background: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 20px;
+}
+img#logo{
+    padding: 10px 0px 10px 100px;
+}
+.perf{
+    right: 40px;
+    top: 35px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    color: #000000;
+    text-decoration: none;
+}
+button:hover{
+    background: #000000;
+    color: #fff;
+}
+.hist{
+    right: 220px;
+    top: 35px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    color: #000000;
+    text-decoration: none;
+}
+img.ic1{
+    position: absolute;
+    right: 310px;
+    top: 25px;
+}
+img.ic2{
+    position: absolute;
+    right: 110px;
+    top: 25px;
+}
+.container {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 99vw;
+    height: 87vh;
+    background-color: #082c57;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.elementos{
+    background: #082c57;
+    width: 850px;
+    height: 800px;
+    border-radius: 20px;
+    text-align: center;
+}
+figure#telas img{
+    border-radius: 50%;
+    padding: 10px 30px 60px 30px;
+}
+footer{
+    position: absolute;
+    text-align: center;
+    background: #ffffff;
+    width: 100%;
+    bottom: 0px;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    color: #000000;
+    border-radius: 20px;
+}
+/*  Página Login */
+
+.caixa{
+    background: #082c57;
+    width: 650px;
+    height: 400px;
+    border-radius: 20px;
+}
+h1{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+input#email1{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#email{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#senha1{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#senha{
+    color: #fff;
+    margin-left: 5px;
+    font-size: 20px;
+}
+button{
+    padding: 10px 30px 10px 30px;
+    margin: 30px 0px 0px 150px;
+}
+p#logo{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+/* Página Cadastro */
+
+.caixote{
+    background: #082c57;
+    width: 650px;
+    height: 600px;
+    border-radius: 20px;
+}
+h1#text{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+input#nome{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#nome1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#curso{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#curso1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#email{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#email1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#senha{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#senha1{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+input#senha3{
+    color: #000000;
+    background: #f1af06;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+p#senha2{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+button#cad{
+    padding: 15px 40px 15px 40px;
+    margin: 30px 0px 0px 250px;
+}
+h3#footer{
+    color: #fff;
+    font-size: 20px;
+    margin: 35px 0px 0px 270px;
+}
+/* Página dos laboratórios*/
+
+.computadores{
+    background: #082c57;
+    width: 920px;
+    height: 800px;
+    text-align: center;
+}
+figure#comput img{
+    padding: 10px 30px 60px 30px;
+}

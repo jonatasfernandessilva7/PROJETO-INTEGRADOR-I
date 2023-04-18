@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="nav">
+        <img id="logo" src="../Projeto WEB/figmaSchoolLab/brasao2_vertical_cor_72dpi.png" alt="logo UFC" width="120" height="85">
+        <button class="hist">Histórico</button>
+        <button class="perf" onclick="funcaoperfil()">Perfil</button>
+            <img class="ic1" src="../Projeto WEB/figmaSchoolLab/histórico.png" alt="" width="50" height="50">
+            <img class="ic2" src="../Projeto WEB/figmaSchoolLab/perfil.png" alt="" width="50" height="50">
+    </div>
+    <div class="container">
+    <div class="elementos">
+        <figure id="telas">
+            <img id="lab1" src="../Projeto WEB/figmaSchoolLab/lab.png" alt="" width="290" height="270" onclick="mudarpagina1()">
+            <img id="lab2" src="../Projeto WEB/figmaSchoolLab/lab.png" alt="" width="290" height="270" onclick="mudarpagina2()"><br>
+            <img id="lab3" src="../Projeto WEB/figmaSchoolLab/lab.png" alt="" width="290" height="270" onclick="mudarpagina3()">
+            <img id="lab4" src="../Projeto WEB/figmaSchoolLab/lab.png" alt="" width="290" height="270" onclick="mudarpagina4()">
+        </figure>
+    </div>
+    <footer id="final">
+        <h3>&copy;School Lab UFC</h3>
+    </footer>
+    <script>
+        function funcaoperfil(){
+            window.location.href = 'login.html'
+        }
+        var img1 = document.getElementById('lab1');
+        var img2 = document.getElementById('lab2');
+        var img3 = document.getElementById('lab3');
+        var img4 = document.getElementById('lab4');
+        function mudarpagina1(){
+            img1 = window.location.href = 'Lab1.html' 
+        }
+        function mudarpagina2(){
+            img2 = window.location.href = 'Lab2.html' 
+        }
+        function mudarpagina3(){
+            img3 = window.location.href = 'Lab3.html'  
+        }
+        function mudarpagina4(){
+            img4 = window.location.href = 'Lab4.html'  
+        }
+    </script>
+</body>
+</html>

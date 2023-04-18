@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>School Lab</title>
+</head>
+<body>
+    <div class="container">
+    <div class="caixa">
+        <h1>Seja bem vindo!</h1>
+        <p id="email">Email <input id="email1"type="email" placeholder="Digite seu email institucional" maxlength="50" size="65"></p>
+        <p id="senha">Senha <input id="senha1" type="password" placeholder="Digite sua senha" maxlength="50" size="65"></p>
+        <button id="but">Entrar</button>
+         <button id="but" onclick="paginacadastro()">Fazer cadastro</button>
+        <p id="logo">&copy;School Lab</p>
+    </div>
+    <script>
+        function paginacadastro(){
+            window.location.href = 'cadastro.html'
+        }
+    </script>
+</body>
+</html>
