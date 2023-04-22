@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pc-row">
+        <div class="locations-colors pc-col quote-sizes">
+          <h4>Choose location below</h4>
+           <label for="location_one"><span>Location</span>
+            <select name="location_one" id="location_one">
+             <option value="">choose location</option>
+             <option value="Full_Chest">Full Chest</option>
+             <option value="Full_Back">Full Back</option>
+             <option value="Front_Left_Chest">Front Left Chest</option>
+             <option value="Front_Right_Chest">Front Right Chest</option>
+             <option value="Left_Sleeve">Left Sleeve</option>
+             <option value="Right_Sleeve">Right Sleeve</option>		 
+            </select></label>
+            
+        </div>
+        <div class="locations-colors pc-col quote-sizes">
+          <h4>Choose number of colors for location</h4>
+           <label for="color_one"><span>Number of Colors</span>
+            <select name="color_one" id="color_one">
+             <option value="">choose colors</option>
+             <option value="0">One Color</option>
+             <option value="1">Two Colors</option>
+             <option value="2">Three Colors</option>
+             <option value="3">Four Colors</option>
+            </select></label>
+            
+        </div>
+        </div>
+        
+            <div class="pc-row">
+        <div class="locations-colors pc-col quote-sizes">
+           <label for="location_two"><span>Location</span>
+            <select name="location_two" id="location_two">
+             <option value="">choose location</option>
+             <option value="Full_Chest">Full Chest</option>
+             <option value="Full_Back">Full Back</option>
+             <option value="Front_Left_Chest">Front Left Chest</option>
+             <option value="Front_Right_Chest">Front Right Chest</option>
+             <option value="Left_Sleeve">Left Sleeve</option>
+             <option value="Right_Sleeve">Right Sleeve</option>			 
+            </select></label>
+            
+        </div>
+        <div class="locations-colors pc-col quote-sizes">
+           <label for="color_two"><span>Number of Colors</span>
+            <select name="color_two" id="color_two">
+             <option value="">choose colors</option>
+             <option value="1">One Color</option>
+             <option value="2">Two Colors</option>
+             <option value="3">Three Colors</option>
+             <option value="4">Four Colors</option>
+            </select></label>
+            
+        </div>
+        </div>
+        <script>
+        $('select[name*="location"]').change(function() {
+            var selectedOptions = $('select option:selected');
+            $('select option').removeAttr('disabled');
+            selectedOptions.each(function() {        
+                var value = this.value;
+                if (value !== ''){           
+                var id = $(this).parent('select[name*="location"]').attr('id');
+                var options = $('select:not(#' + id + ') option[value=' + value + ']');
+                options.attr('disabled', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

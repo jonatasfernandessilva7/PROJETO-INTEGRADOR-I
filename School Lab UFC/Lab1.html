@@ -9,37 +9,55 @@
 </head>
 <body>
     <div class="nav">
-        <img id="logo" src="../Projeto WEB/figmaSchoolLab/brasao2_vertical_cor_72dpi.png" alt="logo UFC" width="120" height="85">
+        <img id="logo" src="../School Lab UFC/figmaSchoolLab/brasao2_vertical_cor_72dpi.png" alt="logo UFC" width="120" height="85">
         <button class="hist">Histórico</button>
         <button class="perf">Perfil</button>
-            <img class="ic1" src="../Projeto WEB/figmaSchoolLab/histórico.png" alt="" width="50" height="50">
-            <img class="ic2" src="../Projeto WEB/figmaSchoolLab/perfil.png" alt="" width="50" height="50">
+            <img class="ic1" src="../School Lab UFC/figmaSchoolLab/histórico.png" alt="" width="50" height="50">
+            <img class="ic2" src="../School Lab UFC/figmaSchoolLab/perfil.png" alt="" width="50" height="50">
     </div>
     <div class="container">
     <div class="computadores">
-        <figure id="comput">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"><br>
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"><br>
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"><br>
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        <img src="../Projeto WEB/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
-        </figure>
-    </div>
-    <footer>
+        <p id="text"><span id="select">Selecione um dos computadores</span>:</p>
+        <ol id="selectable">
+        <li class="ui-widget-content"><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li>
+        <li class="ui-widget-content"><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li>
+        <li class="ui-widget-content"><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li>
+        <li><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li>
+        <li><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li><br>
+        <li><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li>
+        <li><img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"></li>
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"><br>
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px"><br>
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        <img src="../School Lab UFC/figmaSchoolLab/imgcomputador.png" alt="" width="100px" height="100px">
+        </ol>
+    <footer id="fot">
         <h3>&copy;School Lab UFC</h3>
     </footer>
+    </div>
+    <script>
+$(function(){
+  $("#selectable").selectable({
+    stop: function() {
+      var result = $( "#select-result" ).empty();
+      $( ".ui-selected", this ).each(function() {
+         var index = $( "#selectable li" ).index( this );
+         result.append( " #" + ( index + 1 ) );
+      });
+    }
+  });
+});
+        function mudarcor(){
+            var img1 = document.getElementById("c1");
+            img1.style.border = "px solid blue";
+        }
+    </script>
 </body>
 </html>
