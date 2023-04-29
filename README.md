@@ -2,7 +2,6 @@
 
 # School Lab UFC
 
-<img src="/documentsSchoolLab/printSL.odg" />
 
 Monitoramento e controle do fluxo de entrada e saída nos laboratórios e biblioteca.
 
