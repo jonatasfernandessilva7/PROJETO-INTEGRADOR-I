@@ -86,7 +86,7 @@ html, body {
     background-color:#181818;
 }
 .telas{
-    background-image: url('/SLUFC/views/figmaSchoolLab/9069.jpg');
+    background-image: url('../figmaSchoolLab/9069.jpg');
     background-color: #aaaaaa;
     width: 180px;
     color: #fff;
