@@ -2,8 +2,11 @@
 
 # School Lab UFC
 
-
 Monitoramento e controle do fluxo de entrada e saída nos laboratórios e biblioteca.
+
+# Link da aplicação em produção
+
+https://jonatasfernandessilva7.github.io/PROJETO-INTEGRADOR-I/
 
 # Objetivo Geral
 
