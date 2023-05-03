@@ -4,10 +4,6 @@
 
 Monitoramento e controle do fluxo de entrada e saída nos laboratórios e biblioteca.
 
-# Link da aplicação em produção
-
-https://jonatasfernandessilva7.github.io/PROJETO-INTEGRADOR-I/
-
 # Objetivo Geral
 
 Auxiliar no monitoramento e no controle de entrada e saída dos laboratórios e da biblioteca da UFC. 
