@@ -68,11 +68,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #d89b00;
+ 
 }
 .text{
     width: 100%;
-    background-color: #181818;
+    
 }
 .text h4{
     color: #fff;
@@ -81,7 +81,7 @@ html, body {
     align-items: center;
     justify-content: center;
     text-align: justify;
-    background-color:#181818;
+
     margin: 0px 10px 0px 10px;
 }
 .option{
@@ -90,11 +90,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color:#181818;
+
 }
 .telas{
     background-image: url('../figmaSchoolLab/9069.jpg');
-    background-color: #aaaaaa;
+
     width: 180px;
     color: #fff;
     height: 200px;
