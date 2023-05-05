@@ -15,23 +15,23 @@ router.get('/cadastro.html', (req, res) => {
     res.render('cadastro.html');
 });
 
-router.get('/Lab1.html', (req, res) => {
+router.get('/views/Lab1.html', (req, res) => {
     res.render('Lab1.html');
 });
 
-router.get('/Lab2.html', (req, res) => {
+router.get('/views/Lab2.html', (req, res) => {
     res.render('Lab2.html');
 });
 
-router.get('/Lab3.html', (req, res) => {
+router.get('/views/Lab3.html', (req, res) => {
     res.render('Lab3.html');
 });
 
-router.get('/Lab4.html', (req, res) => {
+router.get('/views/Lab4.html', (req, res) => {
     res.render('Lab4.html');
 });
 
-router.get('/Biblioteca.html', (req, res) => {
+router.get('/views/Biblioteca.html', (req, res) => {
     res.render('Biblioteca.html');
 });
 
