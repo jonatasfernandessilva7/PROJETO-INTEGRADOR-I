@@ -1,3 +1,5 @@
+import {insertTable} from "../../src/models/database/insert";
+
 function paginaAluno(){
     window.location.href = 'home.html'
 }
@@ -7,7 +9,7 @@ function alerts () {
     wwindow.location.href = 'cadastro.html'
 }
 //cadastrar novo aluno
-function cadastrar(){
+async function cadastrar(){
     var nomeAluno = document.getElementById("nome").value;
     var cursoAluno = document.getElementById("curso").value;
     var emailAluno = document.getElementById("email").value;
@@ -15,11 +17,13 @@ function cadastrar(){
     var senhaAlunoConfirm = document.getElementById("senhaConfirm").value;
     var hostEmail = "@alu.ufc.br";
 
-    if ( senhaAluno != senhaAlunoConfirm) {
+    if (senhaAluno != senhaAlunoConfirm) {
         alerts();
     }else if (!emailAluno.includes(hostEmail)){
         alerts();
     }
+
+    insertTable(nomeAluno,emailAluno,cursoAluno,senhaAluno);
 
     paginaAluno();
 
