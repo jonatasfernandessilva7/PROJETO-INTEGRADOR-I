@@ -1,6 +1,8 @@
 const { getEventListeners } = require('events');
 var express = require('express');
 var router = express.Router();
+const Sequelize = require("sequelize");
+const insertUser = require("../models/InsertUser");
 
 //rotas get
 router.get('/', (req, res) => {
@@ -37,7 +39,17 @@ router.get('/views/Biblioteca.html', (req, res) => {
 
 //rotas post
 router.post('/home.html', (req, res) => {
-    res.render('home.html');
-});
+    insertUser.create({
+        nome: req.body.nome,
+        email: req.body.email,
+        curso: req.body.curso,
+        senha: req.body.senha
+    }).then(function(){
+        res.render('home.html');
+    }).catch(function(erro){
+        res.render('cadastro.html');
+    })
+});    
+
 
 module.exports = router;
