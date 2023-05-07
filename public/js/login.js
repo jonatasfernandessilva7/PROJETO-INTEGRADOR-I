@@ -1,3 +1,6 @@
+const Sequelize = require("sequelize");
+const insertUser = require("../../src/models/InsertUser");
+
 function paginaCadastro(){
     window.location.href = 'cadastro.html'
 }
@@ -20,7 +23,7 @@ function userLogin () {
 		alerts();
 	} else if (!userInputEmail.includes(hostEmail)) {
 		alerts();
-	}
+	} 
 
 	paginaAluno();
 }

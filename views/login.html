@@ -12,12 +12,11 @@
 <body>
     <form action="/home.html" method="POST" class="caixa">
         <h1>Seja bem vindo!</h1>
-            <input required id="email1" type="email" placeholder="Email" maxlength="50" size="40" value="" autocomplete=""><br>
-            <input required id="senha1" type="password" placeholder="Senha" maxlength="8" size="40" value=""><br>
+            <input required name="email1"" id="email1" type="email" placeholder="Email" maxlength="50" size="40" value="" autocomplete=""><br>
+            <input required name="senha1" id="senha1" type="password" placeholder="Senha" minlength="8" size="40" value=""><br>
             <button id="butEnter">Entrar</button>
-            <button id="butCad">Cadastrar</button>
-        </form>
-        <p id="logo">&copy;School Lab</p>
-    </div>
+            <button id="butCad"><a href="cadastro.html">Cadastrar</a></button>
+            <p id="logo">&copy;School Lab</p>
+    </form>
 </body>
 </html>
