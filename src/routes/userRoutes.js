@@ -49,8 +49,14 @@ router.post('/home.html', (req, res) => {
     }).catch(function(erro){
         res.render('cadastro.html');
     })
-});   
+});
 
+
+router.post('/login/home.html', (req, res) => {
+
+    res.render('home.html');
+
+});
 
 
 module.exports = router;
