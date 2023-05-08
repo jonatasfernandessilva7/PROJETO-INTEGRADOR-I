@@ -1,5 +1,5 @@
 function paginaAluno() {
-    window.location.href = 'home.html'
+    window.location.href = 'login.html'
 }
 
 //cadastrar novo aluno

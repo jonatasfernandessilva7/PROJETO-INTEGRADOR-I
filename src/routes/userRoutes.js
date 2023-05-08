@@ -38,14 +38,14 @@ router.get('/views/Biblioteca.html', (req, res) => {
 });
 
 //rotas post
-router.post('/home.html', (req, res) => {
+router.post('/cadastro/login.html', (req, res) => {
     insertUser.create({
         nome: req.body.nome,
         email: req.body.email,
         curso: req.body.curso,
         senha: req.body.senha
     }).then(function(){
-        res.render('home.html');
+        res.render('login.html');
     }).catch(function(erro){
         res.render('cadastro.html');
     })
