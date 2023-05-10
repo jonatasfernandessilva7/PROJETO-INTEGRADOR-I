@@ -45,6 +45,18 @@ router.get('/views/Biblioteca.html', (req, res) => {
     res.render('Biblioteca.html');
 });
 
+router.get('/views/home.html', (req, res) => {
+    res.render('home.html');
+});
+
+router.get('/views/Ajuda.html', (req, res) => {
+    res.render('Ajuda.html');
+});
+
+router.get('/views/Contato.html', (req, res) => {
+    res.render('Contato.html');
+});
+
 //rota para pagina de perfil
 router.get('/home/perfil.html', (req, res) => {
     res.render('perfil.html');
@@ -52,7 +64,7 @@ router.get('/home/perfil.html', (req, res) => {
 
 //rota para logout
 router.get('/logout.html', (req, res) => {
-    res.render('/');
+    res.render('index.htm');
 })
 
 //rotas post

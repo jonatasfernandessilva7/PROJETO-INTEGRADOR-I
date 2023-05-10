@@ -88,7 +88,7 @@ window.onload = () => {
 
     //quando o botao for acionado atualiza os dados do usuário
     BotaoPerfilAtualizar.onclick = () => {
-        userPerfilAtt();
+        Perfil();
     }
 
     //quando o botão entrar é acionado, a função de login é chamada
