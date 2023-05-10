@@ -13,8 +13,6 @@ class Aluno {
 
     }
 
-
-
     //cadastrar novo aluno
     cadastrar() {
 
