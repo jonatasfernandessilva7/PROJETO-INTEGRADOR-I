@@ -37,7 +37,7 @@ class Aluno {
     }
 
     //logout
-    sair(){
+    sair() {
         window.location.href = 'index.html'
     }
 
@@ -51,8 +51,13 @@ function paginaCadastro() {
 
 //função que emite alerta de erro no login
 function alerts() {
-    window.alert("campos incompletos ou não encontrados, por favor preencha-os corretamente");
-    wwindow.location.href = 'Aluno/login.html'
+
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Dados incorretos ou não cadastrados, insira-os novamente',
+        footer: '<a href="Aluno/login.html">Esqueceu seu usuário ou senha?</a>'
+      })
 }
 
 //função para chamar a página home

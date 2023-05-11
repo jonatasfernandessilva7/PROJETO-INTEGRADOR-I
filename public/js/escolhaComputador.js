@@ -1,39 +1,44 @@
-// ES6 Modules or TypeScript
-import Swal from 'sweetalert2'
-
-// CommonJS
-const Swal = require('sweetalert2')
-
 function escolherComputador() {
         var x; 
         swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
                  if (willDelete) { 
-                        swal("Concluido!", { icon: "success", }); x = 'Em uso ...'; document.getElementById("tel1").innerHTML = x; 
+                        swal("Concluido!", { icon: "success", }); 
+                        x = 'Em uso ...'; 
+                        document.querySelector("#compEscolhe").innerHTML = x; 
+                        document.querySelector("#compEscolhe").disabled = true;
                 } else {
-                         swal("Escolha outro computador!"); 
+                        document.querySelector("#compEscolhe").disabled = false;
                 }
         });
+}
+
+function cancelarUso() {
+
+        var y; 
+        swal({ title: "cancelar o uso deste Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+                 if (willDelete) { 
+                        swal("Concluido!", { icon: "success", }); 
+                        x = 'Escolher'; 
+                        document.querySelector("#compEscolhe").innerHTML = x; 
+                        document.querySelector("#compEscolhe").disabled = false;
+                } else {
+                        document.querySelector("#compEscolhe").disable = true;
+                }
+        });
+
 }
 
 
 window.onload = () => {
-        var botaoEScolha = document.getElementById("tel1");
+        var botaoEScolha = document.querySelector("#compEscolhe");
 
         botaoEScolha.onclick = () => {
                 escolherComputador();
         }
-}
 
-//descobrir um jeito de utilizar apenas uma função pra todos os pcs
-/*
-function funcao2() { 
-        var x; 
-        swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
-                 if (willDelete) { 
-                        swal("Concluido!", { icon: "success", }); x = 'Em uso ...'; document.getElementById("tel2").innerHTML = x; 
-                } else {
-                         swal("Escolha outro computador!"); 
-                }
-        });
+        var botaoCancelar = document.querySelector("#compcancela");
+
+        botaoCancelar.onclick = () => {
+                cancelarUso();
+        }
 }
-*/
