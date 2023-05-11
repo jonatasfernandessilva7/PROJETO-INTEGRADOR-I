@@ -17,6 +17,7 @@ class Aluno {
     cadastrar() {
 
         var senhaAlunoConfirm = document.getElementById("senhaConfirm").value;
+        wwindow.location.href = 'login.html'
 
     }
 

@@ -27,6 +27,36 @@ html, body {
     text-align: center;
     margin: 0px 20px 0px 20px;
 }
+h4{
+    display: flex;
+    padding: 30px 0px 30px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+}
+#texto{
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    padding: 30px 0px 30px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+    font-size: 15pt;
+}
+ul{
+    color: #fff;
+    text-align: justify;
+    margin: 0px 20px 0px 20px;
+}
+.list{
+    color: #fff;
+    text-align: justify;
+    font-weight: 500;
+    margin: 20px;
+}
 .option{
     width: 100%;
     text-align: center;
@@ -53,17 +83,31 @@ html, body {
     text-align: center;
     margin-top: 30px;
 }
-#enviar{
+.enviar{
     width: 150px;
     padding: 10px 0px 10px 0px;
     border-radius: 10px;
     background-color: #8344ff;
     color: #fff;
+    font-size: 13pt;
+    font-weight: 500;
+}
+.enviar:hover{
+    background-color: #ffffff;
+    color: #000000;
 }
 label{
-    color: #8344ff;
+    color: #fff;
     font-weight: 700;
     font-size: 15pt;
+}
+.but{
+    background-color: #2e2e2e;
+    color: #fff;
+}
+.but:hover{
+    background-color: #fff;
+    color: #000000;
 }
 .footer{
     width: 100%;
