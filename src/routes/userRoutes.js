@@ -57,6 +57,10 @@ router.get('/views/Contato.html', (req, res) => {
     res.render('Contato.html');
 });
 
+router.get('/views/Historico.html', (req, res) => {
+    res.render('Historico.html');
+});
+
 //rota para pagina de perfil
 router.get('/home/perfil.html', (req, res) => {
     res.render('perfil.html');
