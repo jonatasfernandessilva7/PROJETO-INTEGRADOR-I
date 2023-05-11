@@ -13,68 +13,68 @@ router.get('/', (req, res) => {
 
 
 //rota para página de login
-router.get('/login.html', (req, res) => {
-    res.render('login.html');
+router.get('/Aluno/login.html', (req, res) => {
+    res.render('Aluno/login.html');
 });
 
 
 //rota para página de cadastro
-router.get('/cadastro.html', (req, res) => {
-    res.render('cadastro.html');
+router.get('/Aluno/cadastro.html', (req, res) => {
+    res.render('Aluno/cadastro.html');
 });
 
 
 //rotas para os laboratórios e a biblioteca
 router.get('/views/Lab1.html', (req, res) => {
-    res.render('Lab1.html');
+    res.render('Aluno/Lab1.html');
 });
 
 router.get('/views/Lab2.html', (req, res) => {
-    res.render('Lab2.html');
+    res.render('Aluno/Lab2.html');
 });
 
 router.get('/views/Lab3.html', (req, res) => {
-    res.render('Lab3.html');
+    res.render('Aluno/Lab3.html');
 });
 
 router.get('/views/Lab4.html', (req, res) => {
-    res.render('Lab4.html');
+    res.render('Aluno/Lab4.html');
 });
 
 router.get('/views/Biblioteca.html', (req, res) => {
-    res.render('Biblioteca.html');
+    res.render('Aluno/Biblioteca.html');
 });
 
 router.get('/views/home.html', (req, res) => {
     res.render('home.html');
 });
 
-router.get('/views/Ajuda.html', (req, res) => {
-    res.render('Ajuda.html');
+router.get('/views/Aluno/Ajuda.html', (req, res) => {
+    res.render('Aluno/Ajuda.html');
 });
 
-router.get('/views/Contato.html', (req, res) => {
+router.get('/views/Aluno/Contato.html', (req, res) => {
     res.render('Contato.html');
 });
 
-router.get('/views/Historico.html', (req, res) => {
-    res.render('Historico.html');
+router.get('/views/Aluno/Historico.html', (req, res) => {
+    res.render('Aluno/Historico.html');
 });
 
 //rota para pagina de perfil
-router.get('/home/perfil.html', (req, res) => {
-    res.render('perfil.html');
+router.get('/views/Aluno/perfil.html', (req, res) => {
+    res.render('Aluno/perfil.html');
 });
 
 //rota para logout
 router.get('/logout.html', (req, res) => {
-    res.render('index.htm');
+    res.render('Aluno/index.htm');
 })
 
 //rotas post
 
 //rota após o cadastro estar feito
-router.post('/cadastro/login.html', (req, res) => {
+router.post('/Aluno/cadastro/login.html', (req, res) => {
 
     insertUser.create({
         nome: req.body.nome,
@@ -82,15 +82,15 @@ router.post('/cadastro/login.html', (req, res) => {
         curso: req.body.curso,
         senha: req.body.senha
     }).then(function(){
-        res.render('login.html');
+        res.render('Aluno/login.html');
     }).catch(function(erro){
-        res.render('cadastro.html');
+        res.render('Aluno/cadastro.html');
     })
 });
 
 
 //rota para pagina home após fazer login
-router.post('/login/home.html', (req, res) => {
+router.post('/Aluno/login/home.html', (req, res) => {
 
     res.render('home.html');
 
@@ -100,14 +100,14 @@ router.post('/login/home.html', (req, res) => {
 
 
 //rota para fazer update dos dados do perfil
-router.put('/home/perfil.html', (req, res) => {
+router.put('/views/Aluno/perfil.html', (req, res) => {
     insertUser.update({
         nome : req.body.nomeAlunoPerfil,
         curso : req.body.cursoAlunoPerfil,
         email : req.body.emailAlunoPerfil,
         senha : req.body.senhaAlunoPerfil
     })
-    res.render('perfil.html')
+    res.render('Aluno/perfil.html')
 });
 
 

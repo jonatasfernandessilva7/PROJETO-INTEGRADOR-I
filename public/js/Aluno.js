@@ -17,7 +17,7 @@ class Aluno {
     cadastrar() {
 
         var senhaAlunoConfirm = document.getElementById("senhaConfirm").value;
-        wwindow.location.href = 'login.html'
+        wwindow.location.href = 'Aluno/login.html'
 
     }
 
@@ -36,16 +36,6 @@ class Aluno {
         paginaAluno();
     }
 
-    //informações do usuário no perfil
-    Perfil() {
-
-        document.getElementById("nomeAlunoPerfil").value.innerHTML = this.nomeAluno;
-        document.getElementById("cursoAlunoPerfil").value.innerHTML = this.cursoAluno;
-        document.getElementById("emailAlunoPerfil").value.innerHTML = this.emailAluno;
-        document.getElementById("senhaAlunoPerfil").value.innerHTML = this.senhaAluno;
-
-    }
-
     //logout
     sair(){
         window.location.href = 'index.html'
@@ -56,18 +46,18 @@ class Aluno {
 
 //função que leva a página de padastro quando o botão cadastrar é acionado
 function paginaCadastro() {
-    window.location.href = 'cadastro.html'
+    window.location.href = 'Aluno/cadastro.html'
 }
 
 //função que emite alerta de erro no login
 function alerts() {
     window.alert("campos incompletos ou não encontrados, por favor preencha-os corretamente");
-    wwindow.location.href = 'login.html'
+    wwindow.location.href = 'Aluno/login.html'
 }
 
 //função para chamar a página home
 function paginaAluno() {
-    window.location.href = 'login.html'
+    window.location.href = 'Aluno/login.html'
 }
 
 //ação realizada quando o botão de cadastrar é acionado
@@ -82,13 +72,8 @@ BotaoCadastrar.addEventListener('click', (event) => {
 window.onload = () => {
     var BotaoEntrar = document.getElementById("butEnter");
     var BotaoCad = document.getElementById("butCad");
-    var BotaoPerfilAtualizar = document.getElementById("att");
     var botaoSair = document.getElementById("exit");
 
-    //quando o botao for acionado atualiza os dados do usuário
-    BotaoPerfilAtualizar.onclick = () => {
-        Perfil();
-    }
 
     //quando o botão entrar é acionado, a função de login é chamada
     BotaoEntrar.onclick = () => {
