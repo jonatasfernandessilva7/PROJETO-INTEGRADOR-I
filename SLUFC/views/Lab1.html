@@ -188,5 +188,42 @@
             Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
         </address>
     </footer>
+        <script>
+
+function escolherComputador() { var x; swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) { swal("Concluido!", { icon: "success", }); x = 'Em uso ...'; document.querySelector("#compEscolhe").innerHTML = x; document.querySelector("#compEscolhe").disabled = true;}
+        else {document.querySelector("#compEscolhe").disabled = false;}});}
+
+    function cancelarUso() { var y; swal({ title: "cancelar o uso deste Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) { swal("Concluido!", { icon: "success", }); x = 'Escolher'; document.querySelector("#compEscolhe").innerHTML = x; document.querySelector("#compEscolhe").disabled = false;}
+        else {document.querySelector("#compEscolhe").disable = true;}});}
+
+    window.onload = () => {var botaoEScolha = document.querySelector("#compEscolhe"); botaoEScolha.onclick = () => {escolherComputador();} 
+    var botaoCancelar = document.querySelector("#compcancela"); botaoCancelar.onclick = () => { cancelarUso();}}
+
+    function escolherComputador1() { var x; swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) { swal("Concluido!", { icon: "success", }); x = 'Em uso ...'; document.querySelector("#compEscolhe1").innerHTML = x; document.querySelector("#compEscolhe1").disabled = true;}
+        else {document.querySelector("#compEscolhe1").disabled = false;}});}
+
+    function cancelarUso1() { var y; swal({ title: "cancelar o uso deste Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) { swal("Concluido!", { icon: "success", }); x = 'Escolher'; document.querySelector("#compEscolhe1").innerHTML = x; document.querySelector("#compEscolhe1").disabled = false;}
+        else {document.querySelector("#compEscolhe1").disable = true;}});}
+
+    window.onload = () => {var botaoEScolha = document.querySelector("#compEscolhe1"); botaoEScolha.onclick = () => {escolherComputador1();} 
+    var botaoCancelar = document.querySelector("#compcancela1"); botaoCancelar.onclick = () => { cancelarUso1();}}
+
+    function escolherComputador2() { var x; swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) { swal("Concluido!", { icon: "success", }); x = 'Em uso ...'; document.querySelector("#compEscolhe2").innerHTML = x; document.querySelector("#compEscolhe2").disabled = true;}
+        else {document.querySelector("#compEscolhe2").disabled = false;}});}
+
+    function cancelarUso2() { var y; swal({ title: "cancelar o uso deste Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) { swal("Concluido!", { icon: "success", }); x = 'Escolher'; document.querySelector("#compEscolhe2").innerHTML = x; document.querySelector("#compEscolhe2").disabled = false;}
+        else {document.querySelector("#compEscolhe2").disable = true;}});}
+
+
+    window.onload = () => {var botaoEScolha = document.querySelector("#compEscolhe2"); botaoEScolha.onclick = () => {escolherComputador2();} 
+    var botaoCancelar = document.querySelector("#compcancela2"); botaoCancelar.onclick = () => { cancelarUso2();}}
+
+</script>
 </body>
 </html>
