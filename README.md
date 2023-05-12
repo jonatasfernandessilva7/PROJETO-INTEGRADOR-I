@@ -1,40 +1,115 @@
-# PROJETO-INTEGRADOR-I
-
-# School Lab UFC
+# :checkered_flag: SCHOOL LAB UFC
 
 Monitoramento e controle do fluxo de entrada e saída nos laboratórios e biblioteca.
 
-# Objetivo Geral
+## :technologist: Membros da equipe e Orientador
 
-Auxiliar no monitoramento e no controle de entrada e saída dos laboratórios e da biblioteca da UFC. 
+Membro 538429 - Gustavo Menezes De Sousa - Análise e Desenvolvimento De Sistemas
 
-# Objetivos Específicos
+Membro 540089 - Jônatas Fernandes Silva - Análise e Desenvolvimento De Sistemas
 
-Melhorar a segurança nos laboratórios e nas bibliotecas.
+Membro 539644 - Robert Michael Ávila - Análise e Desenvolvimento De Sistemas
 
-identificar quem entra e sai dos laboratórios e da biblioteca e os horários em que estes eventos ocorreram, para que desta maneira caso haja algum estrago na máquina e/ou nos materiais que o estudante usou/consumiu se possa saber que foi ele mesmo ou outra pessoa, desta forma evitando que alguém seja acusado injustamente e, que providencias sejam tomadas diante disto.
+Prof. Orientador - Anderson Uchôa.
 
-# Motivação
+## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-O uso das listas de chamadas manuais é retrógrado e falho, pois alguém pode esquecer de colocar seu nome nela, propositalmente ou não, ou pode até mesmo informar o horário de forma equivocada, dessa maneira dificultando o trabalho dos monitores no controle e monitoramento do fluxo de alunos. Por isso, nós, da UFC de Itpajé Campus Jardins de Anita, estamos desenvolvendo uma aplicação web que facilite esse controle de fluxo, dessa forma auxiliando os monitores e o campus.
+- administrador
+- aluno
+- monitor
+- aluno não logado
+
+## :spiral_calendar: Entidades ou tabelas do sistema
+
+- usuários
+- monitores
+- laboratórios
+- computadores
+
+## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
+
+**Funcionalidades gerais e de usuário comum:**
+
+- login com autenticação
+- perfil de usuário 
+- cadastro de usuário
+- reserva do computador no laboratório especificado
+- histórico de uso
+- Atualização de dados do perfil
+- Ver um tutorial de como mexer no site
+- Ter uma aba de sugestões para emitir opiniões e sugestões sobre o site
+
+**Funcionalidades monitores:**
+
+- Escolha do laboratório onde ele monitora
+- Visualização dos computadores em uso do laboratório
+- Visualização do usuário de cada computador 
+
+**Funcionalidades adm geral:**
+
+- escolha de qual laboratório em que vai supervisionar
+- escolha de qual computador vai supervisionar
+- poder ver detalhes do histórico do computador
+- poder ver detalhes do histórico do usuário 
+- poder excluir a conta do usuário 
+- Cadastrar monitores
+- Excluir monitores
+- Cadastrar o número de computadores dos laboratórios
 
 
-# Stakeholders
+## :desktop_computer: Tecnologias e frameworks utilizados
 
-Corpo discente, monitores dos laboratórios, UFC.
+**Frontend:**
 
-# Impacto
+- Html
+- css
+- bootstrap 
+- javascript 
+- swetAlert
 
-Melhorar a segurança dos hardwares, pois caso haja alguma infração o estudante que estava naquela máquina, naquele horário irá ser responsabilizado pelos seus atos.
+**Backend:**
 
-# Usuários
+- Node js
+- express js
+- sequelize
+- bcrypt 
+- express-session
+- body-parser 
+- connect-flash
 
-Administrador geral (Acesso a tudo)
-Administrador monitor (Acesso apenas dados referentes ao seu laboratório em específico) 
-usuário comum, aluno (vai ter acesso apenas dados referentes à sua conta)
 
-# Como vai funcionar
+## :shipit: Operações implementadas para cada entidade da aplicação
 
-A aplicação funcionará via web. Inicialmente o usuário irá acessar o site, se ele não estiver logado, terá que realizar o login, que o levará a sua página de perfil, caso não tenha conta registrada, ele terá que fazer o cadastro, utilizando seus dados institucionais. Após este procedimento, o usuário de acordo com seu nível de acesso será redirecionado para a página correspondente, podendo escolher o laboratório e reservar o computador, ir para o seu histórico de uso ou acessar seu perfil para alterar dados, se ele desejar. 
 
-Caso seja um usuário administrador, ele terá acesso a uma página exclusiva onde ele poderá ver dados (a hora que ele entrou, saiu, email de quem está utilizando determinado computador e o que ele está acessando) dos usuários comuns. Além disso,  ele também terá funcionalidades exclusivas, como mudar o nível de acesso dos alunos (caso eles sejam monitores, ou deixem de ser). 
+| Entidade| Criação | Leitura | Atualização | Remoção |
+| --- | --- | --- | --- | --- |
+| Entidade 1 | X |  X  |  |  |
+| Entidade 2 | X |   X |   | |
+
+## :neckbeard: Rotas da API REST utilizadas
+
+| Método HTTP | URL |
+| --- | --- |
+| GET | /|
+| GET | /Aluno/login.html|
+| GET | Aluno/cadastro.html|
+| GET | /views/Lab1.html|
+| GET | /views/Lab2.html|
+| GET | /views/Lab3.html|
+| GET | /views/Lab4.html/|
+| GET | /views/Biblioteca.html|
+| GET | /views/home.html|
+| GET | /views/Aluno/Ajuda.html|
+| GET | /views/Aluno/Contato.html|
+| GET | /views/Aluno/Historico.html|
+| GET | /views/Aluno/perfil.html|
+| GET | /logout.html|
+| POST | /Aluno/cadastro/login.html |
+| POST | /Aluno/login/home.html |
+| PUT | /views/Aluno/perfil.html |
+
+## Documentação
+* [Documento de visão do projeto](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/documento_visao.docx)
+* [Regras gerais da disciplina](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/regras_gerais.pdf)
+* [Apresentação do Projeto] - Vídeo a ser criado
+
