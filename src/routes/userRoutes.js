@@ -2,6 +2,7 @@ const { getEventListeners } = require('events');
 var express = require('express');
 var router = express.Router();
 const Sequelize = require("sequelize");
+const { default: Swal } = require('sweetalert2');
 const insertUser = require("../models/InsertUser");
 
 //rotas get
@@ -62,8 +63,8 @@ router.get('/views/Aluno/Historico.html', (req, res) => {
 });
 
 //rota para pagina de perfil
-router.get('/views/Aluno/perfil.html', (req, res) => {
-    res.render('Aluno/perfil.html');
+router.get('/views/Aluno/perfil.html/:id', async (req, res) => {
+    res.render('Aluno/perfil.html')
 });
 
 //rota para logout
@@ -101,7 +102,7 @@ router.post('/Aluno/login/home.html', async (req, res) => {
     })
 
     if (searchUser === null){
-        return res.status(400).send("erro, user not found")
+        return res.status(400).send('user not found')
     } else {
         res.render('home.html')
     }
@@ -112,13 +113,7 @@ router.post('/Aluno/login/home.html', async (req, res) => {
 
 
 //rota para fazer update dos dados do perfil
-router.put('/views/Aluno/perfil.html', (req, res) => {
-    insertUser.update({
-        nome : req.body.nomeAlunoPerfil,
-        curso : req.body.cursoAlunoPerfil,
-        email : req.body.emailAlunoPerfil,
-        senha : req.body.senhaAlunoPerfil
-    })
+router.put('/views/Aluno/perfil.html/:id', (req, res) => {
     res.render('Aluno/perfil.html')
 });
 

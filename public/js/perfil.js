@@ -2,6 +2,8 @@ function alert() {
     var entrada1 = document.getElementById("exampleFormControlInput1");
     var entrada3 = document.getElementById("exampleFormControlInput3");
     var entrada4 = document.getElementById("exampleFormControlInput4");
+
+
     swal({ title: "Confirmar alterações?", icon: "info", buttons: true, dagerMode: true }).then((willDelete) => {
         if (willDelete) {
             swal("Concluído!", { icon: "success", });

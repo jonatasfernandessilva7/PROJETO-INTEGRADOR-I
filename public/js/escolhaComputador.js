@@ -1,34 +1,47 @@
-function escolherComputador(id) {
+function escolherComputador(idEscolha) {
+        computador = document.getElementById('compescolha');
+        computador.id = idEscolha;
         var x; 
         swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
                  if (willDelete) { 
-                        swal("Concluido!", { icon: "success", }); 
+                        swal("Concluiso!", { icon: "success", }); 
                         x = 'Em uso ...'; 
-                        document.getElementById(id).innerHTML = x; 
-                        document.getElementById(id).disabled = true;
+                        computador.innerHTML = x; 
+                        computador.disabled = true;
                 } else {
-                        document.getElementById(id).disabled = false;
+                        computador.disabled = false;
                 }
         });
 }
 
-function cancelarUso (id) { 
+function cancelarUso (idCancela) {
+        computadorcancelamento = document.getElementById("compcancelar");
+        computadorcancelamento.id = idCancela;
+        var x;
         swal({ title: "cancelar o uso deste Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
                  if (willDelete) { 
                         swal("Concluido!", { icon: "success", }); 
                         x = 'Escolher'; 
-                        document.getElementById(id).innerHTML = x; 
-                        document.getElementById(id).disabled = false;
+                        computador.innerHTML = x; 
+                        computador.disabled = false;
                 } else {
-                        document.getElementById(id);disabled = true;
+                        computador.disabled = true;
                 }
         });
 
 }
-window.onload = (id) => {
-        var botaoEscolher = document.getElementById(id);
+window.onload = () => {
+        var botaoEscolher = document.getElementById('compescolha');
+        botaoEscolher.id = idEscolha;
 
         botaoEscolher.onclick = () => {
-                escolherComputador(id);
+                escolherComputador(idEscolha);
+        }
+
+        var botaocancelar = document.getElementById('compcancelar');
+        botaocancelar.id = idCancela;
+
+        botaocancelar.onclick = () => {
+                cancelarUso(idCancela);
         }
 }
