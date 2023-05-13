@@ -90,9 +90,21 @@ router.post('/Aluno/cadastro/login.html', (req, res) => {
 
 
 //rota para pagina home após fazer login
-router.post('/Aluno/login/home.html', (req, res) => {
+router.post('/Aluno/login/home.html', async (req, res) => {
 
-    res.render('home.html');
+    var searchUser = await insertUser.findOne({
+        attributes : ['email','senha'],
+        where: {
+            email : req.body.email1,
+            senha : req.body.senha1
+        }
+    })
+
+    if (searchUser === null){
+        return res.status(400).send("erro, user not found")
+    } else {
+        res.render('home.html')
+    }
 
 });
 

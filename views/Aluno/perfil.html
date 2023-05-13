@@ -41,31 +41,31 @@
           </div>
         </div>
       </nav><br><br><br>
-      <div>
+      <form action="/views/Aluno/perfil.html" method="PUT"> 
         <div style="text-align: center;">
             <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
         </div>
         <div class="mb-3" style="margin: 0px 100px 0px 100px;">
             <label for="exampleFormControlInput1" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" disabled value="Jonatas Fernandes">
+            <input name="nome" type="text" class="form-control" id="exampleFormControlInput1" disabled value="">
           </div>
           <div class="mb-3" style="margin: 0px 100px 0px 100px;">
             <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput2" disabled value="jonatasfernandes@alu.ufc.br">
+            <input name="email" type="email" class="form-control" id="exampleFormControlInput2" disabled value="">
           </div>
           <div class="mb-3" style="margin: 0px 100px 0px 100px;">
             <label for="exampleFormControlInput1" class="form-label">Curso</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" disabled value="Analise e desenvolvimento de sistemas">
+            <input name="curso" type="text" class="form-control" id="exampleFormControlInput3" disabled value="">
           </div>
           <div class="mb-3" style="margin: 0px 100px 0px 100px;">
             <label for="exampleFormControlInput1" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="exampleFormControlInput4" disabled value="Jonatas1">
+            <input name="senha" type="password" class="form-control" id="exampleFormControlInput4" disabled value="">
           </div><br>
       <div style="text-align: center;">
         <button class="enviar" style="margin:0px 30px 0px 10px;" onclick="alert()">Salvar dados</button>
         <button class="enviar" style="margin: 0px 10px 0px 30px;" onclick="habilitar()">Alterar dados</button>
       </div>
-    </div><br>
+    </form><br>
       <footer class="footer">
         <address>
             Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
