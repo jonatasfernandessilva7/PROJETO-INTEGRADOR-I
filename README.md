@@ -76,6 +76,7 @@ Prof. Orientador - Anderson Uchôa.
 - express-session
 - body-parser 
 - connect-flash
+- Postgres
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
@@ -83,8 +84,8 @@ Prof. Orientador - Anderson Uchôa.
 
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
-| Entidade 1 | X |  X  |  |  |
-| Entidade 2 | X |   X |   | |
+| Usuários | X |  X  |  |  |
+| Monitor | X |   X |   | |
 
 ## :neckbeard: Rotas da API REST utilizadas
 
