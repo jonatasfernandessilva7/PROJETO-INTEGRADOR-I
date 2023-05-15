@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../views/figmaSchoolLab/icone.jpg">
+        <title>School Lab UFC</title>
+        <link rel="stylesheet" href="../views/css/pages-styles.css">
+        <script src="../src/controllers/navigation.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab UFC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../views/home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../views/Perfil.html">Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Histórico</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../views/Ajuda.html">Ajuda</a>
+                      </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../views/Contato.html">Contato</a>
+                  </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav><br><br><br>
+      <div>
+        <div style="text-align: center;">
+            <img src="../views/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
+        </div>
+        <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" disabled value="Jonatas Fernandes">
+          </div>
+          <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" disabled value="jonatasfernandes@alu.ufc.br">
+          </div>
+          <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+            <label for="exampleFormControlInput1" class="form-label">Curso</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3" disabled value="Analise e desenvolvimento de sistemas">
+          </div>
+          <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+            <label for="exampleFormControlInput1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleFormControlInput4" disabled value="Jonatas1">
+          </div><br>
+      <div style="text-align: center;">
+        <button class="enviar" style="margin:0px 30px 0px 10px;" onclick="alert()">Salvar dados</button>
+        <button class="enviar" style="margin: 0px 10px 0px 30px;" onclick="habilitar()">Alterar dados</button>
+      </div>
+    </div><br>
+      <footer class="footer">
+        <address>
+            Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
+        </address>
+    </footer>
+<script>
+      function alert(){
+        var entrada1 = document.getElementById("exampleFormControlInput1");
+        var entrada3 = document.getElementById("exampleFormControlInput3");
+        var entrada4 = document.getElementById("exampleFormControlInput4");
+        swal({title:"Confirmar alterações?",icon:"info", buttons: true,dagerMode: true}).then((willDelete) => {
+          if(willDelete){
+            swal("Concluído!", {icon:"success",});
+            entrada1.disabled = true;
+            entrada3.disabled = true;
+            entrada4.disabled = true;
+          }
+          else{
+            entrada1.disabled = false;
+            entrada3.disabled = false;
+            entrada4.disabled = false;
+          }
+        })
+      }
+      function habilitar(){
+        var entrada1 = document.getElementById("exampleFormControlInput1");
+        var entrada3 = document.getElementById("exampleFormControlInput3");
+        var entrada4 = document.getElementById("exampleFormControlInput4");
+          entrada1.disabled = false;
+          entrada3.disabled = false;
+          entrada4.disabled = false;
+      }
+    </script>
+</body>
+</html>
