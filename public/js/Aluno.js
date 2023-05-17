@@ -1,6 +1,3 @@
-const Sequelize = require("sequelize");
-const insertUser = require("../../src/models/InsertUser");
-
 class Aluno {
 
     //atributos de um aluno
@@ -49,27 +46,9 @@ class Aluno {
 
 }
 
-function userLoginMonitor() {
-    var userInputEmail = document.getElementById("email1").value;
-    var userInputPassword = document.getElementById("senha1").value;
-    var hostEmail = "@alu.ufc.br";
-
-    if (userInputEmail == '' || userInputPassword == '') {
-        alerts();
-    } else if (!userInputEmail.includes(hostEmail)) {
-        alerts();
-    }
-
-    paginaAlunoMonitor();
-}
-
 //função que leva a página de padastro quando o botão cadastrar é acionado
 function paginaCadastro() {
     window.location.href = 'Aluno/cadastro.html'
-}
-
-function paginaCadastroMonitor() {
-    window.location.href = 'Monitor/cadastroMonitor.html'
 }
 
 //função que emite alerta de erro no login
@@ -88,10 +67,6 @@ function paginaAluno() {
     window.location.href = 'Aluno/login.html'
 }
 
-function paginaAlunoMonitor() {
-    window.location.href = 'Monitor/loginMonitor.html'
-}
-
 
 //ação realizada quando o botão de cadastrar é acionado
 var BotaoCadastrar = document.getElementById("cad");
@@ -106,9 +81,7 @@ window.onload = () => {
     var BotaoEntrar = document.getElementById("butEnter");
     var BotaoCad = document.getElementById("butCad");
     var botaoSair = document.getElementById("exit");
-    var botaoCadastroMonitor = document.getElementById("cadMonitor");
     var BotaoEntrarMonitor = document.getElementById("butEnterMonitor");
-    var BotaoCMadonitor = document.getElementById("butCadMonitor");
 
 
     //quando o botão entrar é acionado, a função de login é chamada
@@ -124,13 +97,5 @@ window.onload = () => {
     //botaologout
     botaoSair.onclick = () => {
         sair();
-    }
-
-    BotaoEntrarMonitor.onclick = () => {
-        userLoginMonitor();
-    }
-
-    BotaoCaMdonitor.onclick = () => {
-        paginaCadastroMonitor();
     }
 }
