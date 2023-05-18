@@ -5,8 +5,11 @@ const insertUser = require("../models/InsertUser");
 
 const PerfilAluno = async (req, res) => {
 
-    res.render('Aluno/perfil.html');   
+    const viewUser = await insertUser.findOne({
+        nome: req.body.email1
+    })
 
+    res.json({viewUser})
 
 }
 
