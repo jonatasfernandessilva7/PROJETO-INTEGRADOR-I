@@ -1,7 +1,7 @@
 function alert() {
-    var entrada1 = document.getElementById("exampleFormControlInput1");
-    var entrada3 = document.getElementById("exampleFormControlInput3");
-    var entrada4 = document.getElementById("exampleFormControlInput4");
+    var entrada1 = document.getElementById("nome");
+    var entrada3 = document.getElementById("curso");
+    var entrada4 = document.getElementById("senha");
 
 
     swal({ title: "Confirmar alterações?", icon: "info", buttons: true, dagerMode: true }).then((willDelete) => {
@@ -19,9 +19,9 @@ function alert() {
     })
 }
 function habilitar() {
-    var entrada1 = document.getElementById("exampleFormControlInput1");
-    var entrada3 = document.getElementById("exampleFormControlInput3");
-    var entrada4 = document.getElementById("exampleFormControlInput4");
+    var entrada1 = document.getElementById("nome");
+    var entrada3 = document.getElementById("curso");
+    var entrada4 = document.getElementById("senha");
     entrada1.disabled = false;
     entrada3.disabled = false;
     entrada4.disabled = false;

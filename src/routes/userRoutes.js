@@ -73,7 +73,7 @@ router.get('/views/Aluno/Historico.html', (req, res) => {
 });
 
 //rota para pagina de perfil
-router.get('/views/Aluno/perfil.html/', perfilAluno);
+router.get('/views/Aluno/perfil.html', perfilAluno);
 
 //rota para logout
 router.get('/logout.html', (req, res) => {
