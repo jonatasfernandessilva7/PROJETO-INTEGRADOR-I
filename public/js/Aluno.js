@@ -1,20 +1,31 @@
-class Aluno {
+export class Aluno {
 
     //atributos de um aluno
-    constructor() {
+    constructor(nomeAluno, cursoAluno, emailAluno, senhaAluno) {
 
-        this.nomeAluno = document.getElementById("nome").value;
-        this.cursoAluno = document.getElementById("curso").value;
-        this.emailAluno = document.getElementById("email").value;
-        this.senhaAluno = document.getElementById("senha").value;
+        this.nomeAluno = nomeAluno;
+        this.cursoAluno = cursoAluno;
+        this.emailAluno = emailAluno;
+        this.senhaAluno = senhaAluno;
 
     }
 
     //cadastrar novo aluno
     cadastrar() {
 
+        this.nomeAluno = document.getElementById("nome");
+        this.cursoAluno = document.getElementById("curso");
+        this.emailAluno = document.getElementById("email");
+        this.senhaAluno = document.getElementById("senha");
+
         var senhaAlunoConfirm = document.getElementById("senhaConfirm").value;
-        wwindow.location.href = 'Aluno/login.html'
+
+        if (senhaAluno === senhaAlunoConfirm){
+            wwindow.location.href = 'Aluno/login.html';
+        }else{
+            alertsCadastro();
+        }
+
 
     }
 
@@ -35,12 +46,7 @@ class Aluno {
 
     //logout
     sair() {
-        window.location.href = 'index.html'
-    }
-
-    //logout
-    sair() {
-        window.location.href = 'index.html'
+        window.location.href = 'index.html';
     }
 
 
@@ -48,7 +54,7 @@ class Aluno {
 
 //função que leva a página de padastro quando o botão cadastrar é acionado
 function paginaCadastro() {
-    window.location.href = 'Aluno/cadastro.html'
+    window.location.href = 'Aluno/cadastro.html';
 }
 
 //função que emite alerta de erro no login
@@ -59,18 +65,31 @@ function alerts() {
         title: 'Oops...',
         text: 'Dados incorretos ou não cadastrados, insira-os novamente',
         footer: '<a href="Aluno/login.html">Esqueceu seu usuário ou senha?</a>'
-      })
+      });
+}
+
+//função que emite alerta de erro no cadastro
+function alertsCadastro() {
+
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Dados de cadastro não correspondem, tente novamente',
+        footer: '<a href="Aluno/login.html">Esqueceu seu usuário ou senha?</a>'
+      });
 }
 
 //função para chamar a página home
 function paginaAluno() {
-    window.location.href = 'Aluno/login.html'
+    window.location.href = 'Aluno/login.html';
 }
 
 
 //ação realizada quando o botão de cadastrar é acionado
 var BotaoCadastrar = document.getElementById("cad");
 BotaoCadastrar.addEventListener('click', (event) => {
+
+    let Aluno = new Aluno(nomeAluno, emailAluno, cursoAluno, senhaAluno);
 
     cadastrar();
 
