@@ -9,7 +9,7 @@ const flash = require("connect-flash");
 
 //configurando a sessão
 app.use(session({
-    secret : 'testedesession',
+    secret : 'sessionStorage',
     resave : true,
     saveUninitialized : true
 }));

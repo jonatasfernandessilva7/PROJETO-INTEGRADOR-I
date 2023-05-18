@@ -1,4 +1,6 @@
-function alert() {
+const alert = function alert() {
+    
+
     var entrada1 = document.getElementById("nome");
     var entrada3 = document.getElementById("curso");
     var entrada4 = document.getElementById("senha");
@@ -17,6 +19,7 @@ function alert() {
             entrada4.disabled = false;
         }
     })
+
 }
 function habilitar() {
     var entrada1 = document.getElementById("nome");
@@ -26,3 +29,5 @@ function habilitar() {
     entrada3.disabled = false;
     entrada4.disabled = false;
 }
+
+module.exports = alert;

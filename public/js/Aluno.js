@@ -1,4 +1,4 @@
-export class Aluno {
+class Aluno {
 
     //atributos de um aluno
     constructor(nomeAluno, cursoAluno, emailAluno, senhaAluno) {
@@ -118,3 +118,4 @@ window.onload = () => {
         sair();
     }
 }
+module.exports = Aluno;
