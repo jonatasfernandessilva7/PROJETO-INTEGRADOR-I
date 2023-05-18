@@ -43,8 +43,9 @@
       <ul class="nav" style="margin-bottom: 30px;margin-left: 0px;">
         <li><a href="#laboratorios">Laboratórios</a></li>
         <li><a href="#computadores">Computadores</a></li>
+        <li><a href="#monitores">Monitores</a></li>
+        <li><a href="#usuarios">Usuários</a></li>
         <li><a href="#historico">Histórico de Navegação</a></li>
-        <li><a href="#contas">Contas</a></li>
       </ul>
 
       <div id="laboratorios">
@@ -113,6 +114,79 @@
         </div>
   </div>
 
+      <div id="monitores">
+        <h1>Monitores</h1>
+        <p>Nesta sessão você pode analisar e remover a conta dos Monitores do site.</p>
+        <input type="text" size="50" style="height: 45px;margin-right: 10px;" placeholder="Pesquisar por usuário"><button id="btn-add" class="but" onclick="clicar()" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
+        <br><br><table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">N°</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Curso</th>
+                  <th scope="col">Email</th>
+                </tr>
+              </thead>
+              <tbody style="display: none;">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+          </table>
+          <button id="btn-add" class="but" onclick="clicar()" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Adicionar Monitor</button>
+          <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Remover Monitor</button><br>
+      </div>
+
+      <div id="usuarios">
+        <h1>Usuários</h1>
+        <p>Nesta sessão você pode analisar e remover a conta dos usuários do site.</p>
+        <input type="text" size="50" style="height: 45px;margin-right: 10px;" placeholder="Pesquisar por usuário"><button id="btn-add" class="but" onclick="clicar()" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
+        <br><br><table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">N°</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Curso</th>
+                  <th scope="col">Email</th>
+                </tr>
+              </thead>
+              <tbody style="display: none;">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+          </table>
+          <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Remover Usuário</button><br>
+      </div>
+
       <div id="historico"><br><br>
         <h1>Histórico</h1>
         <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
@@ -156,7 +230,7 @@
                   <th scope="col">Email</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style="display: none;">
                 <tr>
                   <th scope="row">1</th>
                   <td>Mark</td>
@@ -177,42 +251,6 @@
               </tbody>
           </table>
       </div>
-
-      <div id="contas">
-        <h1>Contas</h1>
-        <p>Nesta sessão você pode analisar e remover a conta dos usuários do site.</p>
-        <input type="text" size="50" style="height: 45px;margin-right: 10px;" placeholder="Pesquisar por usuário"><button id="btn-add" class="but" onclick="clicar()" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
-        <br><br><table class="table table-dark table-striped">
-            <thead>
-                <tr>
-                  <th scope="col">N°</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Curso</th>
-                  <th scope="col">Email</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-          </table>
-      </div>
-
       <footer class="footer">
         <address>
             Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
