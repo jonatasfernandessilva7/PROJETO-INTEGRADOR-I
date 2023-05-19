@@ -110,6 +110,6 @@ Prof. Orientador - Anderson Uchôa.
 | PUT | /views/Aluno/perfil.html |
 
 ## Documentação
-* [Documento de visão do projeto](https://github.com/jonatasfernandessilva7/github-template-projeto-integrador/main/documentsSchoolLab/TemplateDocumentodeVisão.doc.pdf)
+* [Documento de visão do projeto](https://github.com/jonatasfernandessilva7/github-template-projeto-integrador/blob/main/documentsSchoolLab/TemplateDocumentodeVisão.doc.pdf)
 * [Regras gerais da disciplina](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/regras_gerais.pdf)
 * [Apresentação do Projeto] - Vídeo a ser criado
