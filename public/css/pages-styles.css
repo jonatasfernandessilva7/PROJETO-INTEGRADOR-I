@@ -1,12 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 html, body {
     font-family: 'Roboto Condensed', sans-serif;
-    margin: 0px;
+    margin: 0;
     background-image: url("../figmaSchoolLab/Tela_fundo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+.nav{
+    position: sticky;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #8344ff;
+    padding: 20px 0px 10px 0px;
+}
+.nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 10px 0px  10px;
+}
+.nav a:hover{
+    color: #000000;
+    transition: 0.5s;
+}
+#laboratorios{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#computadores{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#historico{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#contas{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+
+
 /*#8c52ff*/
 .titulo{
     color: #fff;

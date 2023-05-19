@@ -2,10 +2,11 @@ const { getEventListeners } = require('events');
 var express = require('express');
 var router = express.Router();
 const createAluno = require("../controllers/CreateAlunoControler");
-const perfilAluno = require("../controllers/CreateAlunoPerfilController")
-const LoginAluno = require("../controllers/CreateAlunoLoginController")
-const createMonitor = require("../controllers/CreateMonitorController")
-const LoginMonitor = require("../controllers/CreateMonitorLoginController")
+const perfilAluno = require("../controllers/CreateAlunoPerfilController");
+const LoginAluno = require("../controllers/CreateAlunoLoginController");
+const updateAluno = require("../controllers/updateAlunoData");
+const createMonitor = require("../controllers/CreateMonitorController");
+const LoginMonitor = require("../controllers/CreateMonitorLoginController");
 
 
 //rota para page principal
@@ -91,9 +92,7 @@ router.post('/Aluno/login/home.html', LoginAluno);
 //rotas put Aluno
 
 //rota para fazer update dos dados do perfil
-router.put('/views/Aluno/perfil.html/:id', (req, res) => {
-    res.render('Aluno/perfil.html')
-});
+router.put('/views/Aluno/perfil.html', updateAluno);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

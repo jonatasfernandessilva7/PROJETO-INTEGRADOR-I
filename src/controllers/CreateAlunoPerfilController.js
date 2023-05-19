@@ -3,10 +3,14 @@ var express = require('express');
 const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
 
+
 const PerfilAluno = async (req, res) => {
 
-    res.render('Aluno/perfil.html');   
+    const viewUser = await insertUser.findOne({
+        email: req.body.email1
+    })
 
+    res.render('Aluno/perfil.html')
 
 }
 
