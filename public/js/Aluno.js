@@ -35,7 +35,7 @@ class Aluno {
         var userInputPassword = document.getElementById("senha1").value;
         var hostEmail = "@alu.ufc.br";
 
-        if (userInputEmail == '' || userInputPassword == '') {
+        if (userInputEmail === '' || userInputPassword === '') {
             alerts();
         } else if (!userInputEmail.includes(hostEmail)) {
             alerts();
@@ -89,8 +89,6 @@ function paginaAluno() {
 var BotaoCadastrar = document.getElementById("cad");
 BotaoCadastrar.addEventListener('click', (event) => {
 
-    let Aluno = new Aluno(nomeAluno, emailAluno, cursoAluno, senhaAluno);
-
     cadastrar();
 
 });
@@ -118,4 +116,13 @@ window.onload = () => {
         sair();
     }
 }
+
+var nomeAluno = document.getElementById("nome");
+var cursoAluno = document.getElementById("curso");
+var emailAluno = document.getElementById("email");
+var senhaAluno = document.getElementById("senha");
+
+
+let aluno = new Aluno(nomeAluno, cursoAluno, emailAluno, senhaAluno)
+
 module.exports = Aluno;

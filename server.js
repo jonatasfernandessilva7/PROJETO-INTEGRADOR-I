@@ -19,15 +19,15 @@ app.use(flash());
 
 //configurando middleware
 app.use((req, res, next) => {
-    res.locals.successMessage = req.flash('succesMessage')
-    res.locals.errorMessage = req.flash('errorMessage')
-    next()
+    res.locals.successMessage = req.flash('succesMessage');
+    res.locals.errorMessage = req.flash('errorMessage');
+    next();
 })
 
 //configurando engine de views e leitura de json
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 
 //configuring view

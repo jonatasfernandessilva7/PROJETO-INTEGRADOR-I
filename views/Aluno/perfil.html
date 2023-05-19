@@ -13,6 +13,7 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="/js/perfil.js"></script>
+  <script src="../../src//controllers/CreateAlunoPerfilController.js"></script>
 </head>
 
 <body>
@@ -33,19 +34,18 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/views/Historico.html">Histórico</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/views/Ajuda.html">Ajuda</a>
           </li>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="/views/Contato.html">Contato</a>
-          </li>
           </li>
         </ul>
       </div>
     </div>
   </nav><br><br><br>
-  <div>
+  <div id="dadosUser">
     <form action="/views/Aluno/perfil.html" method="PUT">
       <div style="text-align: center;">
         <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">

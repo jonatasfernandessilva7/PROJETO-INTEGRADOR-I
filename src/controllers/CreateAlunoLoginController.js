@@ -29,4 +29,5 @@ const LoginAluno = async (req, res) => {
 
 }
 
+
 module.exports = LoginAluno;

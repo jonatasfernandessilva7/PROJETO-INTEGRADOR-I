@@ -3,10 +3,11 @@ var express = require('express');
 const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
 
-const createAluno = (req,res) => {
-    const userFind = insertUser.findOne({where:{
-        email : req.body
-    }})
+const createAluno = async (req,res) => {
+
+    const userFind = await insertUser.findOne({where:{
+        email : req.body.email
+    }});
     if (userFind){
         res.send('ja existe um usuario com esse email')
     }else{
