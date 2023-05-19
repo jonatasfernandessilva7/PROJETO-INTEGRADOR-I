@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    width: 100%;
+    margin: 0px;
+    background-image: url("../../views/figmaSchoolLab/Tela_fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav{
+    position: sticky;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #8344ff;
+    padding: 20px 0px 10px 0px;
+}
+.nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 10px 0px  10px;
+}
+.nav a:hover{
+    color: #000000;
+    transition: 0.5s;
+}
+#laboratorios{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#computadores{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#historico{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#usuarios{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+#monitores{
+    color: #fff;
+    margin: 0px 10px 0px  10px;
+}
+
+
+/*#8c52ff*/
+.titulo{
+    color: #fff;
+    font-size: 15pt;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 10px 0px;
+}
+.text{
+    width: 100%;
+}
+.text h5{
+    color: #fff;
+    display: flex;
+    padding: 30px 0px 30px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
+h4{
+    display: flex;
+    padding: 30px 0px 30px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+}
+#texto{
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    padding: 30px 0px 30px 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+    font-size: 15pt;
+}
+ul{
+    color: #fff;
+    text-align: justify;
+    margin: 0px 20px 0px 20px;
+}
+.list{
+    color: #fff;
+    text-align: justify;
+    font-weight: 500;
+    margin: 20px;
+}
+.option{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.caixa{
+    background-color: #00000081;
+    text-align: center;
+    width: 400px;
+    height: 330px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+#button{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.enviar{
+    width: 150px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    background-color: #8344ff;
+    color: #fff;
+    font-size: 13pt;
+    font-weight: 500;
+}
+.enviar:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+label{
+    color: #fff;
+    font-weight: 700;
+    font-size: 15pt;
+}
+.but{
+    background-color: #2e2e2e;
+    color: #fff;
+}
+.but:hover{
+    background-color: #fff;
+    color: #000000;
+}
+.footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    color: #aaaaaa;
+}
+.footer address{
+    font-weight: 400;
+    overflow: hidden;
+}
+.footer address a{
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
