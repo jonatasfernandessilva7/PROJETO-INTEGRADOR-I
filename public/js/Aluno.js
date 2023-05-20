@@ -1,128 +1,82 @@
+//classe aluno, onde é criado o aluno e instituído suas funções
 class Aluno {
 
-    //atributos de um aluno
-    constructor(nomeAluno, cursoAluno, emailAluno, senhaAluno) {
+    /*
+    * Atributos do aluno
+    * atrbutor que iniciam em "_", são attr privados, os que não tem nada no início, são públicos*/
+    _nome
+    _email
+    _curso
+    _senha
+    _senhaDeConfirmacao
 
-        this.nomeAluno = nomeAluno;
-        this.cursoAluno = cursoAluno;
-        this.emailAluno = emailAluno;
-        this.senhaAluno = senhaAluno;
-
+    //construtor do aluno
+    constructor(nomeAluno, emailAluno, cursoAluno, senhaAluno, senhaDeConfirmacao) {
+        this._nome = nomeAluno;
+        this._email = emailAluno;
+        this._curso = cursoAluno;
+        this._senha = senhaAluno;
+        this._senhaDeConfirmacao = senhaDeConfirmacao;
     }
 
-    //cadastrar novo aluno
-    cadastrar() {
+    //método de cadastro
+    cadastrarAluno () {
+        //operador ternário, comparando as senhas
+        this._senha === this._senhaDeConfirmacao ? window.location.href = 'Aluno/login.html': alertaDeErro();
+    }
 
-        this.nomeAluno = document.getElementById("nome");
-        this.cursoAluno = document.getElementById("curso");
-        this.emailAluno = document.getElementById("email");
-        this.senhaAluno = document.getElementById("senha");
+    //Login do Aluno
+    logarAluno () {
+        let localEmail = '@alu.ufc.br'; // domínio da UFC
 
-        var senhaAlunoConfirm = document.getElementById("senhaConfirm").value;
-
-        if (senhaAluno === senhaAlunoConfirm){
-            wwindow.location.href = 'Aluno/login.html';
-        }else{
-            alertsCadastro();
+        //verifica se os dados informados não são nulos e se o email está com o domínio da UFC
+        if (this._email === "" || this._senha === "") {
+            alertaDeErro();
+        } else if (!this._email.includes(localEmail)){
+            alertaDeErro();
         }
-
-
+        //se as condições forem falsas o Aluno será direcionado a página de login
+        window.location.href = "Aluno/login.html"
     }
-
-    //login do aluno
-    userLogin() {
-        var userInputEmail = document.getElementById("email1").value;
-        var userInputPassword = document.getElementById("senha1").value;
-        var hostEmail = "@alu.ufc.br";
-
-        if (userInputEmail === '' || userInputPassword === '') {
-            alerts();
-        } else if (!userInputEmail.includes(hostEmail)) {
-            alerts();
-        }
-
-        paginaAluno();
-    }
-
-    //logout
-    sair() {
-        window.location.href = 'index.html';
-    }
-
-
 }
 
-//função que leva a página de padastro quando o botão cadastrar é acionado
-function paginaCadastro() {
-    window.location.href = 'Aluno/cadastro.html';
-}
-
-//função que emite alerta de erro no login
-function alerts() {
+//nessa função é mostrado um alerta que os dados estão inseridos de forma incorreta
+function alertaDeErro() {
 
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Dados incorretos ou não cadastrados, insira-os novamente',
         footer: '<a href="Aluno/login.html">Esqueceu seu usuário ou senha?</a>'
-      });
+    });
 }
 
-//função que emite alerta de erro no cadastro
-function alertsCadastro() {
+//criando novo aluno
+let nome = document.getElementById("nome");
+let email = document.getElementById("email");
+let curso = document.getElementById("curso");
+let senha = document.getElementById("senha");
+let senhaDeConfirmacao = document.getElementById("senhaConfirm");
 
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Dados de cadastro não correspondem, tente novamente',
-        footer: '<a href="Aluno/login.html">Esqueceu seu usuário ou senha?</a>'
-      });
+for (let i = 0; i < 1; i++) {
+    let aluno = new Aluno(nome, email, curso, senhaDeConfirmacao)
 }
 
-//função para chamar a página home
-function paginaAluno() {
-    window.location.href = 'Aluno/login.html';
-}
-
-
-//ação realizada quando o botão de cadastrar é acionado
-var BotaoCadastrar = document.getElementById("cad");
-BotaoCadastrar.addEventListener('click', (event) => {
-
-    cadastrar();
-
-});
-
-//ação de click dos botões
+//ações dos botões ao serem clicados
 window.onload = () => {
-    var BotaoEntrar = document.getElementById("butEnter");
-    var BotaoCad = document.getElementById("butCad");
-    var botaoSair = document.getElementById("exit");
-    var BotaoEntrarMonitor = document.getElementById("butEnterMonitor");
+    let botaoCadastro = document.getElementById("cad");
+    let botaoLogar = document.getElementById("butEnter");
+    let botaoPaginaDeCadastro = document.getElementById("butCad"); //direciona para a página de cadastro
 
-
-    //quando o botão entrar é acionado, a função de login é chamada
-    BotaoEntrar.onclick = () => {
-        userLogin();
+    botaoCadastro.onclick = () => {
+        aluno.cadastrarAluno();
     }
 
-    //quando o botão de cadastrar é acionado, a função de cadastro é chamada
-    BotaoCad.onclick = () => {
-        paginaCadastro();
+    botaoLogar.onclick = () => {
+        aluno.logarAluno();
     }
 
-    //botaologout
-    botaoSair.onclick = () => {
-        sair();
+    botaoPaginaDeCadastro.onclick = () => {
+        window.location.href = "Aluno/cadastro.html";
     }
 }
-
-var nomeAluno = document.getElementById("nome");
-var cursoAluno = document.getElementById("curso");
-var emailAluno = document.getElementById("email");
-var senhaAluno = document.getElementById("senha");
-
-
-let aluno = new Aluno(nomeAluno, cursoAluno, emailAluno, senhaAluno)
-
-module.exports = Aluno;
