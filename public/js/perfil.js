@@ -1,13 +1,10 @@
-
-
 function alert() {
-
 
     let entrada1 = document.getElementById("nome");
     let entrada3 = document.getElementById("curso");
     let entrada4 = document.getElementById("senha");
 
-
+    
 
     swal({ title: "Confirmar alterações?", icon: "info", buttons: true, dagerMode: true }).then((willDelete) => {
         if (willDelete) {
