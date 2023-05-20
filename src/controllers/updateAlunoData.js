@@ -6,11 +6,11 @@ const alert = require("../../public/js/perfil");
 
 const updateAluno = async (req, res) => {
 
-    const {email} = req.body;
+    const {email} = req.session.email;
     const {nome, curso, senha} = req.body;
 
     const userFind = await insertUser.findOne({
-        id
+        email
     })
 
     if (!userFind){
