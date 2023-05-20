@@ -2,14 +2,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const porta = 3000;
 const bodyParser = require('body-parser');
 const session = require("express-session");
 const flash = require("connect-flash");
+require("dotenv").config();
+const port = process.env.PORT_SERVER|| 5000;
 
 //configurando a sessão
 app.use(session({
-    secret : 'sessionStorage',
+    secret : process.env.SESSION_SECRET,
     resave : true,
     saveUninitialized : true
 }));
@@ -42,6 +43,6 @@ var userRoute = require('./src/routes/userRoutes');
 app.use('/', userRoute);
 
 //open server
-app.listen(porta, () => {
+app.listen(port, () => {
     console.log('this is ok!');
 });
