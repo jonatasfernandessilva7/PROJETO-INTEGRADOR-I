@@ -163,6 +163,8 @@ router.post('/Monitor/cadastro/loginMonitor.html', createMonitor);
 router.post('/Monitor/login/home.html', LoginMonitor);
 
 
-
+router.get('/admgeral/Adm.html', (req, res) => {
+    res.render("admgeral/Adm.html")
+})
 
 module.exports = router;
