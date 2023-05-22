@@ -7,9 +7,9 @@ function escolherComputador(idEscolha) {
                         swal("Concluiso!", { icon: "success", }); 
                         x = 'Em uso ...'; 
                         computador.innerHTML = x; 
-                        computador.disabled = true;
+                        computador.hidden = true;
                 } else {
-                        computador.disabled = false;
+                        computador.hidden = false;
                 }
         });
 }
@@ -23,9 +23,9 @@ function cancelarUso (idCancela) {
                         swal("Concluido!", { icon: "success", }); 
                         x = 'Escolher'; 
                         computador.innerHTML = x; 
-                        computador.disabled = false;
+                        computador.hidden = false;
                 } else {
-                        computador.disabled = true;
+                        computador.hidden = true;
                 }
         });
 

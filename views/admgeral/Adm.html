@@ -1,262 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-    <title>School Lab UFC</title>
-    <link rel="stylesheet" href="/css/pages-styles.css">
-    <script src="../src/controllers/navigation.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/figmaSchoolLab/icone.jpg">
+  <title>School Lab UFC</title>
+  <link rel="stylesheet" href="/css/pages-styles.css">
+  <script src="/js/navigation.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab UFC</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/views/admgeral/home.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/views/admgeral/perfil.html">Perfil</a>
-                  </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/views/admgeral/Ajuda.html">Ajuda</a>
-                      </li>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/views/admgeral/Contato.html">Contato</a>
-                  </li>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav><br><br>
-      <ul class="nav" style="margin-bottom: 30px;margin-left: 0px;">
-        <li><a href="#laboratorios">Laboratórios</a></li>
-        <li><a href="#computadores">Computadores</a></li>
-        <li><a href="#historico">Histórico de Navegação</a></li>
-        <li><a href="#contas">Contas</a></li>
-      </ul>
-
-      <div id="laboratorios">
-        <h1>Laboratórios</h1>
-        <p>Nesta sessão você pode inserir e remover os laboratórios da página de escolha do usuário.</p>
-            <div class="card" style="width: 18rem; display: inline-block; margin:30px;text-align: center;">
-                <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Laboratório 1</h5><br>
-                  <button class="btn btn-primary">Entrar</button>
-                </div>
-            </div><br>
-            <p>Digite o nome do laboratório:</p><input type="text" size="40" maxlength="30"><br><br>
-            <button class="but" id="btn-add" onclick="clicar()" style="width: 200px;height: 50px;"> Adicionar </button>
-            <button class="but" id="btn-add" style="width: 200px;height: 50px;"> Remover </button><br><br>
-            <div style="display: flex;justify-content: center;">
-                <button style="width: 300px;height: 40px;"><a href="/views/home.html" style="text-decoration: none;">Ir para a página de laboratórios</a></button>
-            </div>
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab UFC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/views/admgeral/Adm.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/admgeral/Adm_perfil.html">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/admgeral/Adm_Ajuda.html">Ajuda</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/admgeral/Adm_Contato.html">Contato</a>
+          </li>
+          </li>
+        </ul>
       </div>
-    </div><br><br>
+    </div>
+  </nav><br><br>
+  <ul class="nav" style="margin-bottom: 30px;margin-left: 0px;">
+    <li><a href="#laboratorios">Laboratórios</a></li>
+    <li><a href="#computadores">Computadores</a></li>
+    <li><a href="#historico">Histórico de Navegação</a></li>
+    <li><a href="#contas">Contas</a></li>
+  </ul>
 
-      <div id="computadores">
-        <h1>Computadores</h1>
-        <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
-        <div class="card" style="width: 18rem; display: inline-block; margin:30px;text-align: center;">
-            <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Computador 1</h5>
-              <p class="card-text">Quer escolher esse computador? Então clique no botão abaixo!</p>
-              <button class="btn btn-primary">Escolher</button>
-            </div>
-        </div><br>
-            <select name="select" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
-            <option selected disabled>Laboratórios</option>
-            <option id="op1" value="valor1" onclick="habilitar()">Laboratório 1</option>
-            <option id="op2" value="valor2" onclick="habilitar()">Laboratório 2</option>
-            <option id="op3" value="valor3" onclick="habilitar()">Laboratório 3</option>
-            <option id="op4" value="valor3" onclick="habilitar()">Laboratório 4</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Biblioteca</option>
-            </select>
-            <select name="select" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
-                <option selected disabled>Computadores</option>
-                <option id="op1" value="valor1" onclick="habilitar()">Computador 1</option>
-                <option id="op2" value="valor2" onclick="habilitar()">Computador 2</option>
-                <option id="op3" value="valor3" onclick="habilitar()">Computador 3</option>
-                <option id="op4" value="valor3" onclick="habilitar()">Computador 4</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 5</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 6</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 7</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 8</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 9</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 10</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 11</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 12</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 13</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 14</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 15</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 16</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 17</option>
-                <option id="op5" value="valor3" onclick="habilitar()">Computador 18</option>
-              </select>
-            <button id="btn-add" class="but" onclick="clicar()" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Adicionar </button>
-            <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Remover </button><br>
-        <div style="display: flex;justify-content: center;">
-            <button style="width: 300px;height: 40px;"><a href="s/views/home.html" style="text-decoration: none;">Ir para a página de laboratórios</a></button>
-        </div>
+  <div id="laboratorios">
+    <h1>Laboratórios</h1>
+    <p>Nesta sessão você pode inserir e remover os laboratórios da página de escolha do usuário.</p>
+    <div class="card" style="width: 18rem; display: inline-block; margin:30px;text-align: center;">
+      <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Laboratório 1</h5><br>
+        <button class="btn btn-primary">Entrar</button>
+      </div>
+    </div><br>
+    <p>Digite o nome do laboratório:</p><input type="text" size="40" maxlength="30"><br><br>
+    <button class="but" id="btn-add" onclick="clicar()" style="width: 200px;height: 50px;"> Adicionar </button>
+    <button class="but" id="btn-add" style="width: 200px;height: 50px;"> Remover </button><br><br>
+    <div style="display: flex;justify-content: center;">
+      <button style="width: 300px;height: 40px;"><a href="/views/home.html" style="text-decoration: none;">Ir para a
+          página de laboratórios</a></button>
+    </div>
+  </div>
+  </div><br><br>
+
+  <div id="computadores">
+    <h1>Computadores</h1>
+    <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
+    <div class="card" style="width: 18rem; display: inline-block; margin:30px;text-align: center;">
+      <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Computador 1</h5>
+        <p class="card-text">Quer escolher esse computador? Então clique no botão abaixo!</p>
+        <button class="btn btn-primary">Escolher</button>
+      </div>
+    </div><br>
+    <select name="select" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
+      <option selected disabled>Laboratórios</option>
+      <option id="op1" value="valor1" onclick="habilitar()">Laboratório 1</option>
+      <option id="op2" value="valor2" onclick="habilitar()">Laboratório 2</option>
+      <option id="op3" value="valor3" onclick="habilitar()">Laboratório 3</option>
+      <option id="op4" value="valor3" onclick="habilitar()">Laboratório 4</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Biblioteca</option>
+    </select>
+    <select name="select" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
+      <option selected disabled>Computadores</option>
+      <option id="op1" value="valor1" onclick="habilitar()">Computador 1</option>
+      <option id="op2" value="valor2" onclick="habilitar()">Computador 2</option>
+      <option id="op3" value="valor3" onclick="habilitar()">Computador 3</option>
+      <option id="op4" value="valor3" onclick="habilitar()">Computador 4</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 5</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 6</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 7</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 8</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 9</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 10</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 11</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 12</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 13</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 14</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 15</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 16</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 17</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 18</option>
+    </select>
+    <button id="btn-add" class="but" onclick="clicar()" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
+      Adicionar </button>
+    <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Remover
+    </button><br>
+    <div style="display: flex;justify-content: center;">
+      <button style="width: 300px;height: 40px;"><a href="s/views/home.html" style="text-decoration: none;">Ir para a
+          página de laboratórios</a></button>
+    </div>
   </div>
 
-      <div id="historico"><br><br>
-        <h1>Histórico</h1>
-        <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
-        <select name="select" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">
-            <option selected disabled>Laboratórios</option>
-            <option id="op1" value="valor1" onclick="habilitar()">Laboratório 1</option>
-            <option id="op2" value="valor2" onclick="habilitar()">Laboratório 2</option>
-            <option id="op3" value="valor3" onclick="habilitar()">Laboratório 3</option>
-            <option id="op4" value="valor3" onclick="habilitar()">Laboratório 4</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Biblioteca</option>
-          </select>
-          <select name="select" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">
-            <option selected disabled>Computadores</option>
-            <option id="op1" value="valor1" onclick="habilitar()">Computador 1</option>
-            <option id="op2" value="valor2" onclick="habilitar()">Computador 2</option>
-            <option id="op3" value="valor3" onclick="habilitar()">Computador 3</option>
-            <option id="op4" value="valor3" onclick="habilitar()">Computador 4</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 5</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 6</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 7</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 8</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 9</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 10</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 11</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 12</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 13</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 14</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 15</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 16</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 17</option>
-            <option id="op5" value="valor3" onclick="habilitar()">Computador 18</option>
-          </select>
-          <button id="btn-add" class="but" onclick="clicar()" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
-          <input type="text" size="50" style="height: 45px;margin-right: 5px;" placeholder="Pesquisar por usuário"><button id="btn-add" class="but" onclick="clicar()" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
-          <br><br><table class="table table-dark table-striped">
-            <thead>
-                <tr>
-                  <th scope="col">N°</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Curso</th>
-                  <th scope="col">Email</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-          </table>
-      </div>
+  <div id="historico"><br><br>
+    <h1>Histórico</h1>
+    <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
+    <select name="select" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">
+      <option selected disabled>Laboratórios</option>
+      <option id="op1" value="valor1" onclick="habilitar()">Laboratório 1</option>
+      <option id="op2" value="valor2" onclick="habilitar()">Laboratório 2</option>
+      <option id="op3" value="valor3" onclick="habilitar()">Laboratório 3</option>
+      <option id="op4" value="valor3" onclick="habilitar()">Laboratório 4</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Biblioteca</option>
+    </select>
+    <select name="select" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">
+      <option selected disabled>Computadores</option>
+      <option id="op1" value="valor1" onclick="habilitar()">Computador 1</option>
+      <option id="op2" value="valor2" onclick="habilitar()">Computador 2</option>
+      <option id="op3" value="valor3" onclick="habilitar()">Computador 3</option>
+      <option id="op4" value="valor3" onclick="habilitar()">Computador 4</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 5</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 6</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 7</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 8</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 9</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 10</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 11</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 12</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 13</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 14</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 15</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 16</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 17</option>
+      <option id="op5" value="valor3" onclick="habilitar()">Computador 18</option>
+    </select>
+    <button id="btn-add" class="but" onclick="clicar()"
+      style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
+    <input type="text" size="50" style="height: 45px;margin-right: 5px;" placeholder="Pesquisar por usuário"><button
+      id="btn-add" class="but" onclick="clicar()"
+      style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
+    <br><br>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">N°</th>
+          <th scope="col">Name</th>
+          <th scope="col">Curso</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-      <div id="contas">
-        <h1>Contas</h1>
-        <p>Nesta sessão você pode analisar e remover a conta dos usuários do site.</p>
-        <input type="text" size="50" style="height: 45px;margin-right: 10px;" placeholder="Pesquisar por usuário"><button id="btn-add" class="but" onclick="clicar()" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
-        <br><br><table class="table table-dark table-striped">
-            <thead>
-                <tr>
-                  <th scope="col">N°</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Curso</th>
-                  <th scope="col">Email</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-          </table>
-      </div>
+  <div id="contas">
+    <h1>Contas</h1>
+    <p>Nesta sessão você pode analisar e remover a conta dos usuários do site.</p>
+    <input type="text" size="50" style="height: 45px;margin-right: 10px;" placeholder="Pesquisar por usuário"><button
+      id="btn-add" class="but" onclick="clicar()"
+      style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
+    <br><br>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">N°</th>
+          <th scope="col">Name</th>
+          <th scope="col">Curso</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-      <footer class="footer">
-        <address>
-            Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
-        </address>
-    </footer>
+  <footer class="footer">
+    <address>
+      Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a
+        href="">UFC Itapaje</a>
+    </address>
+  </footer>
 
 
-      <script>
-        $('.nav a[href^="#"]').on('click', function(e) {
-	e.preventDefault();
-	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-	$('html, body').animate({ 
-		scrollTop: targetOffset - 100
-	}, 200);
-});
-      </script>
-      <script>
-        let cont = 1;
-$('#btn-add').on('click',function(){
-    $('.checks').append('<input type="text" id="'+cont+'">')
-    cont++;
-});
-      </script>
-      <script>
-        function clicar(){
-            swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
-                 if (willDelete) { 
-                        swal("Concluiso!", { icon: "success", }); 
-                        x = 'Em uso ...'; 
-                        computador.innerHTML = x; 
-                        computador.disabled = true;
-                } else {
-                        computador.disabled = false;
-                }
-        });
+  <script>
+    $('.nav a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+      var id = $(this).attr('href'),
+        targetOffset = $(id).offset().top;
+
+      $('html, body').animate({
+        scrollTop: targetOffset - 100
+      }, 200);
+    });
+  </script>
+  <script>
+    let cont = 1;
+    $('#btn-add').on('click', function () {
+      $('.checks').append('<input type="text" id="' + cont + '">')
+      cont++;
+    });
+  </script>
+  <script>
+    function clicar() {
+      swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
+        if (willDelete) {
+          swal("Concluiso!", { icon: "success", });
+          x = 'Em uso ...';
+          computador.innerHTML = x;
+          computador.disabled = true;
+        } else {
+          computador.disabled = false;
+        }
+      });
     }
-      </script>
-      <script>
-              function habilitar(){
-        var entrada1 = document.getElementsByClassName("but"); 
-        entrada1.disabled = false;
-      }
-      </script>
+  </script>
+  <script>
+    function habilitar() {
+      var entrada1 = document.getElementsByClassName("but");
+      entrada1.disabled = false;
+    }
+  </script>
 </body>
+
 </html>

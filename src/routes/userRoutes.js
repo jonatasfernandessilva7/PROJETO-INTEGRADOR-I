@@ -162,7 +162,27 @@ router.post('/Monitor/cadastro/loginMonitor.html', createMonitor);
 //rota para login
 router.post('/Monitor/login/home.html', LoginMonitor);
 
+///////////////////////////////////////////////////////////////////////////
 
+//rotas get adm geral
+router.get('/admgeral/Adm.html', (req, res) => {
+    res.render("admgeral/Adm.html")
+});
 
+router.get('/views/admgeral/Adm.html', async (req, res) => {
+    res.render('admgeral/Adm.html')
+});
+
+router.get('/views/admgeral/Adm_perfil.html', async (req, res) => {
+    res.render('admgeral/Adm_Perfil.html')
+});
+
+router.get('/views/admgeral/Adm_Ajuda.html', async (req, res) => {
+    res.render('admgeral/Adm_Ajuda.html')
+});
+
+router.get('/views/admgeral/Adm_Contato.html', async (req, res) => {
+    res.render('admgeral/Adm_Contato.html')
+});
 
 module.exports = router;
