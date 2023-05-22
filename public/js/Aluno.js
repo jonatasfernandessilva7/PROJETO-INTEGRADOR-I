@@ -1,7 +1,7 @@
 //classe aluno, onde é criado o aluno e instituído suas funções
 require("dotenv").config();
 
-export class Aluno {
+class Aluno {
 
     /*
     * Atributos do aluno
@@ -13,12 +13,12 @@ export class Aluno {
     _senhaDeConfirmacao
 
     //construtor do aluno
-    constructor(nomeAluno, emailAluno, cursoAluno, senhaAluno, senhaDeConfirmacao) {
-        this._nome = nomeAluno;
-        this._email = emailAluno;
-        this._curso = cursoAluno;
-        this._senha = senhaAluno;
-        this._senhaDeConfirmacao = senhaDeConfirmacao;
+    constructor() {
+        this._nome = document.getElementById("nome");
+        this._email = document.getElementById("email");
+        this._curso = document.getElementById("curso");
+        this._senha = document.getElementById("senha");
+        this._senhaDeConfirmacao = document.getElementById("senhaConfirm");
     }
 
     //método de cadastro
@@ -87,15 +87,6 @@ function alertaDeErro() {
     });
 }
 
-//criando novo aluno
-let nome = document.getElementById("nome");
-let email = document.getElementById("email");
-let curso = document.getElementById("curso");
-let senha = document.getElementById("senha");
-let senhaDeConfirmacao = document.getElementById("senhaConfirm");
-
-
-var aluno = new Aluno(nome, email, curso, senha, senhaDeConfirmacao);
 
 
 //ações dos botões ao serem clicados
@@ -105,11 +96,11 @@ window.onload = () => {
     let botaoPaginaDeCadastro = document.getElementById("butCad"); //direciona para a página de cadastro
 
     botaoCadastro.onclick = () => {
-        aluno.cadastrarAluno();
+        cadastrarAluno();
     }
 
     botaoLogar.onclick = () => {
-        aluno.logarAluno();
+        logarAluno();
     }
 
     botaoPaginaDeCadastro.onclick = () => {
