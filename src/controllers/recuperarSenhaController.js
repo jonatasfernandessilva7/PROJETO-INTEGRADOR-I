@@ -33,8 +33,8 @@ function mailerEnviaEmail(email) {
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
             host: "smtp.alu.ufc.br",
-            port: 465,
-            secure: true, // verdadeiro para portas 465, 587 = false
+            port: 587,
+            secure: false, // verdadeiro para portas 465, 587 = false
             logger:true,
             debug: true,
             secureconnection: false,
