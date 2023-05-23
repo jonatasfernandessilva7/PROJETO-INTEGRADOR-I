@@ -19,19 +19,17 @@ const LoginMonitor = async (req, res) => {
             email: req.body.email1,
             senha: req.body.senha1
         }
-    }).then(async (resp) => {
-        var status = resp.text();
-        if (status == 'concetado') {
+    }).then(async () => {
 
-            if (searchUser === null) {
-                return res.status(400).send('user not found')
-            } else {
-                res.render('Monitor/Monitor_home.html')
-            }
-        }else{
-            alert('dados incorretos')
+        if (searchUser === null) {
+            return res.status(400).send('user not found')
+        } else if(!req.body.email1.includes("@alu.ufc.br")){
+            return res.status(400).send('email errado')
+        }else {
+            res.render('Monitor/Monitor_home.html')
         }
-    })
+
+    });
 
 
 }

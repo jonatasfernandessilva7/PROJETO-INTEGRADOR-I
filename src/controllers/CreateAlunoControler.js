@@ -8,6 +8,13 @@ const createAluno = async (req,res) => {
     const userFind = await insertUser.findOne({where:{
         email : req.body.email
     }});
+
+    if (req.body.senhaConfirm != req.body.senha) {
+        res.send("senhas não batem, por favor volte e corrija");
+    } else if (!req.body.email.includes("@alu.ufc.br")){
+        res.send("por favor volte e insira um email da ufc")
+    } 
+
     if (userFind){
         res.send('ja existe um usuario com esse email')
     }else{
