@@ -20,7 +20,7 @@ router.get('/esqueceuASenha.html', (req, res) => {
     res.render('esqueceuASenha.html');
 });
 
-router.put('/esqueceuASenha.html', recuperandoSenha);
+router.post('/esqueceuASenha.html', recuperandoSenha);
 
 
 //rotas get para aluno
