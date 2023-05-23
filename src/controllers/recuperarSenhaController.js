@@ -2,6 +2,7 @@ const { getEventListeners } = require('events');
 var express = require('express');
 const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
+require("dotenv").config();
 
 
 const recuperandoSenha = async (req, res) => {
@@ -16,7 +17,7 @@ const recuperandoSenha = async (req, res) => {
         if (searchUser === null) {
             return res.status(400).send('user not found')
         } else {
-            await mailerEnviaEmail();
+            await mailerEnviaEmail(req.body.emailRecuperacao);
             res.send("email, enviado");
         }
     });
@@ -32,15 +33,15 @@ function mailerEnviaEmail(email) {
 
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
-            host: "smtp.alu.ufc.br",
+            host: "smtp.gmail.com",
             port: 587,
             secure: false, // verdadeiro para portas 465, 587 = false
             logger:true,
             debug: true,
             secureconnection: false,
             auth:{
-                user:"jonatasfernandes@alu.ufc.br",
-                pass:"JONATAS12"
+                user:process.env.EMAIL_USER,
+                pass: process.env.SENHA_EMAIL_USER
             },
             tls:{
                 rejectUnAuthorized: true
@@ -49,7 +50,7 @@ function mailerEnviaEmail(email) {
 
         // send mail with defined transport object
         let info = await transporter.sendMail({
-            from: 'jonatasfernandes@alu.ufc.br', // sender address
+            from: process.env.EMAIL_ENVIAR, // sender address
             to: email, // list of receivers
             subject: "Recurepação de Senha ✔", // Subject line
             text: "olá ${email} para recuperar sua conta insira o código a seguir: ", // plain text body
