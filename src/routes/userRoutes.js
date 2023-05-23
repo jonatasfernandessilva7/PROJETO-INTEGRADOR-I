@@ -7,6 +7,7 @@ const LoginAluno = require("../controllers/CreateAlunoLoginController");
 const updateAluno = require("../controllers/updateAlunoData");
 const createMonitor = require("../controllers/CreateMonitorController");
 const LoginMonitor = require("../controllers/CreateMonitorLoginController");
+const recuperandoSenha = require ("../controllers/recuperarSenhaController")
 
 
 //rota para page principal
@@ -14,6 +15,12 @@ const LoginMonitor = require("../controllers/CreateMonitorLoginController");
 router.get('/', (req, res) => {
     res.render('index.html');
 });
+
+router.get('/esqueceuASenha.html', (req, res) => {
+    res.render('esqueceuASenha.html');
+});
+
+router.put('/esqueceuASenha.html', recuperandoSenha);
 
 
 //rotas get para aluno

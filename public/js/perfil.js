@@ -1,5 +1,3 @@
-
-
 function alert() {
 
     var inputNome = document.getElementById("NomePerfil");
