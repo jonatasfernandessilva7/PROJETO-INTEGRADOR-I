@@ -76,6 +76,7 @@ Prof. Orientador - Anderson Uchôa.
 - express-session
 - body-parser 
 - connect-flash
+- NodeMailer
 - Postgres
 
 
