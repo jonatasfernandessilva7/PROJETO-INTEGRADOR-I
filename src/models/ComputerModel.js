@@ -13,6 +13,6 @@ const Computer = sequelize.define('computadores', {
         type: db.Sequelize.INTEGER,
         allowNull: false
     }
-})
+});
 
 module.exports = Computer

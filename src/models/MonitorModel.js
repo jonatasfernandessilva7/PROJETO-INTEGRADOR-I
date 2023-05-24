@@ -1,32 +1,32 @@
 const { sequelize } = require("./db");
 const db = require("./db");
+require("pg");
 
 //criando modelo do banco
 
-const InsertUser = sequelize.define('usuarios', {
+const Monitor = sequelize.define('monitores', {
     id: {
         type: db.Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true
     },
-    nome:{
+    nomeMonitor:{
         type: db.Sequelize.STRING,
         allowNull: false,
         primaryKey: true
     },
-    email: {
+    emailMonitor: {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    curso: {
+    cursoMonitor: {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    senha: {
+    senhaMonitor: {
         type: db.Sequelize.STRING,
         allowNull: false
     }
 });
 
-
-module.exports = InsertUser
+Monitor.sync({force: true})
