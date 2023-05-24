@@ -55,7 +55,7 @@ html, body{
 
 /*#8c52ff*/
 .titulo{
-    color: #fff;
+    color: #ffffff;
     font-size: 15pt;
     display: flex;
     justify-content: center;
@@ -133,7 +133,7 @@ ul{
     width: 150px;
     padding: 10px 0px 10px 0px;
     border-radius: 10px;
-    background-color: #8344ff;
+    background-color: #0065fd;
     color: #fff;
     font-size: 13pt;
     font-weight: 500;
@@ -173,3 +173,4 @@ label{
     text-decoration: none;
     font-weight: bold;
 }
+/*Modo escuro*/
