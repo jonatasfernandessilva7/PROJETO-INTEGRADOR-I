@@ -13,31 +13,31 @@ const recuperandoSenha = require ("../controllers/recuperarSenhaController")
 //rota para page principal
 
 router.get('/', (req, res) => {
-    res.render('index.html');
+    res.render('index');
 });
 
-router.get('/esqueceuASenha.html', (req, res) => {
-    res.render('esqueceuASenha.html');
+router.get('/esqueceuASenha', (req, res) => {
+    res.render('esqueceuASenha');
 });
 
-router.post('/esqueceuASenha.html', recuperandoSenha);
+router.post('/esqueceuASenha', recuperandoSenha);
 
 
 //rotas get para aluno
 
 //rota para página de login
-router.get('/Aluno/login.html', (req, res) => {
-    res.render('Aluno/login.html');
+router.get('/Aluno/login', (req, res) => {
+    res.render('Aluno/login');
 });
 
 //rota para página de cadastro
-router.get('/Aluno/cadastro.html', (req, res) => {
-    res.render('Aluno/cadastro.html');
+router.get('/Aluno/cadastro', (req, res) => {
+    res.render('Aluno/cadastro');
 });
 
 //rota lab1
-router.get('/views/Lab1.html', (req, res) => {
-    res.render('Aluno/Lab1.html');
+router.get('/views/Lab1', (req, res) => {
+    res.render('Aluno/Lab1');
 });
 
 //rota para lab2
@@ -46,60 +46,60 @@ router.get('/views/Lab2.html', (req, res) => {
 });
 
 //rota lab3
-router.get('/views/Lab3.html', (req, res) => {
-    res.render('Aluno/Lab3.html');
+router.get('/views/Lab3', (req, res) => {
+    res.render('Aluno/Lab3');
 });
 
 //rota lab4
-router.get('/views/Lab4.html', (req, res) => {
-    res.render('Aluno/Lab4.html');
+router.get('/views/Lab4', (req, res) => {
+    res.render('Aluno/Lab4');
 });
 
 //rota biblioteca
-router.get('/views/Biblioteca.html', (req, res) => {
-    res.render('Aluno/Biblioteca.html');
+router.get('/views/Biblioteca', (req, res) => {
+    res.render('Aluno/Biblioteca');
 });
 
 //rota home
-router.get('/views/home.html', (req, res) => {
-    res.render('home.html');
+router.get('/views/home', (req, res) => {
+    res.render('home');
 });
 
 //rota ajuda
-router.get('/views/Aluno/Ajuda.html', (req, res) => {
-    res.render('Aluno/Ajuda.html');
+router.get('/views/Aluno/Ajuda', (req, res) => {
+    res.render('Aluno/Ajuda');
 });
 
 //rota contato
-router.get('/views/Aluno/Contato.html', (req, res) => {
-    res.render('Contato.html');
+router.get('/views/Aluno/Contato', (req, res) => {
+    res.render('Contato');
 });
 
 //rota historico do aluno
-router.get('/views/Aluno/Historico.html', (req, res) => {
-    res.render('Aluno/Historico.html');
+router.get('/views/Aluno/Historico', (req, res) => {
+    res.render('Aluno/Historico');
 });
 
 //rota para pagina de perfil
-router.get('/views/Aluno/perfil.html', perfilAluno);
+router.get('/views/Aluno/perfil', perfilAluno);
 
 //rota para logout
-router.get('/logout.html', (req, res) => {
+router.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
 //rotas post Aluno
 
 //rota após o cadastro estar feito
-router.post('/Aluno/cadastro/login.html', createAluno);
+router.post('/Aluno/cadastro/login', createAluno);
 
 //rota para pagina home após fazer login
-router.post('/Aluno/login/home.html', LoginAluno);
+router.post('/Aluno/login/home', LoginAluno);
 
 //rotas put Aluno
 
 //rota para fazer update dos dados do perfil
-router.put('/views/Aluno/perfil.html', updateAluno);
+router.put('/views/Aluno/perfil', updateAluno);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -107,89 +107,89 @@ router.put('/views/Aluno/perfil.html', updateAluno);
 //rotas get Monitor
 
 //rota para pagina de login
-router.get('/Monitor/loginMonitor.html', (req, res) => {
-    res.render('Monitor/loginMonitor.html');
+router.get('/Monitor/loginMonitor', (req, res) => {
+    res.render('Monitor/loginMonitor');
 });
 
 //rota para pagina de cadastro
-router.get('/Monitor/cadastroMonitor.html', (req, res) => {
-    res.render('Monitor/cadastroMonitor.html');
+router.get('/Monitor/cadastroMonitor', (req, res) => {
+    res.render('Monitor/cadastroMonitor');
 });
 
 //rota para lab1
-router.get('/views/Monitor_Lab1.html', (req, res) => {
-    res.render('Monitor/Monitor_Lab1.html');
+router.get('/views/Monitor_Lab1', (req, res) => {
+    res.render('Monitor/Monitor_Lab1');
 });
 
 //rota para lab2
-router.get('/views/Monitor_Lab2.html', (req, res) => {
-    res.render('Monitor/Monitor_Lab2.html');
+router.get('/views/Monitor_Lab2', (req, res) => {
+    res.render('Monitor/Monitor_Lab2');
 });
 
 //rota para lab3
-router.get('/views/Monitor_Lab3.html', (req, res) => {
-    res.render('Monitor/Monitor_Lab3.html');
+router.get('/views/Monitor_Lab3', (req, res) => {
+    res.render('Monitor/Monitor_Lab3');
 });
 
 //rota para lab4
-router.get('/views/Monitor_Lab4.html', (req, res) => {
-    res.render('Monitor/Monitor_Lab4.html');
+router.get('/views/Monitor_Lab4', (req, res) => {
+    res.render('Monitor/Monitor_Lab4');
 });
 
 //rota para biblioteca
-router.get('/views/Monitor_Biblioteca.html', (req, res) => {
-    res.render('Monitor/Monitor_Biblioteca.html');
+router.get('/views/Monitor_Biblioteca', (req, res) => {
+    res.render('Monitor/Monitor_Biblioteca');
 });
 
 //rota para home
-router.get('/views/Monitor/Monitor_home.html', (req, res) => {
-    res.render('Monitor/Monitor_home.html');
+router.get('/views/Monitor/Monitor_home', (req, res) => {
+    res.render('Monitor/Monitor_home');
 });
 
 //rota para ajuda
-router.get('/views/Monitor/AjudaMonitor.html', (req, res) => {
-    res.render('Monitor/AjudaMonitor.html');
+router.get('/views/Monitor/AjudaMonitor', (req, res) => {
+    res.render('Monitor/AjudaMonitor');
 });
 
 //rota para contato
-router.get('/views/Monitor/Contato.html', (req, res) => {
-    res.render('Contato.html');
+router.get('/views/Monitor/Contato', (req, res) => {
+    res.render('Contato');
 });
 
 //rota para perfil
-router.get('/views/Monitor/Monitor_perfil.html', async (req, res) => {
-    res.render('Monitor/Monitor_Perfil.html')
+router.get('/views/Monitor/Monitor_perfil', async (req, res) => {
+    res.render('Monitor/Monitor_Perfil')
 });
 
 //rotas post Monitor
 
 //rota para cadastro
-router.post('/Monitor/cadastro/loginMonitor.html', createMonitor);
+router.post('/Monitor/cadastro/loginMonitor', createMonitor);
 
 //rota para login
-router.post('/Monitor/login/home.html', LoginMonitor);
+router.post('/Monitor/login/home', LoginMonitor);
 
 ///////////////////////////////////////////////////////////////////////////
 
 //rotas get adm geral
-router.get('/admgeral/Adm.html', (req, res) => {
-    res.render("admgeral/Adm.html")
+router.get('/admgeral/Adm', (req, res) => {
+    res.render("admgeral/Adm")
 });
 
-router.get('/views/admgeral/Adm.html', async (req, res) => {
-    res.render('admgeral/Adm.html')
+router.get('/views/admgeral/Adm', async (req, res) => {
+    res.render('admgeral/Adm')
 });
 
-router.get('/views/admgeral/Adm_perfil.html', async (req, res) => {
-    res.render('admgeral/Adm_Perfil.html')
+router.get('/views/admgeral/Adm_perfil', async (req, res) => {
+    res.render('admgeral/Adm_Perfil')
 });
 
-router.get('/views/admgeral/Adm_Ajuda.html', async (req, res) => {
-    res.render('admgeral/Adm_Ajuda.html')
+router.get('/views/admgeral/Adm_Ajuda', async (req, res) => {
+    res.render('admgeral/Adm_Ajuda')
 });
 
-router.get('/views/admgeral/Adm_Contato.html', async (req, res) => {
-    res.render('admgeral/Adm_Contato.html')
+router.get('/views/admgeral/Adm_Contato', async (req, res) => {
+    res.render('admgeral/Adm_Contato')
 });
 
 module.exports = router;

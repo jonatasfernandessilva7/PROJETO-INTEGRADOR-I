@@ -1,10 +1,10 @@
 const { getEventListeners } = require('events');
 var express = require('express');
 const Sequelize = require("sequelize");
-const insertUser = require("../models/InsertUser");
+const Monitor = require("../models/MonitorModel");
 
 const createMonitor = (req, res) => {
-    const userFind = insertUser.findOne({
+    const userFind = Monitor.findOne({
         where: {
             email: req.body
         }
@@ -12,15 +12,15 @@ const createMonitor = (req, res) => {
     if (userFind) {
         res.send('ja existe um usuario com esse email')
     } else {
-        insertUser.create({
-            nome: req.body.nome,
-            email: req.body.email,
-            curso: req.body.curso,
-            senha: req.body.senha
+        Monitor.create({
+            nome: req.body.nomeMonitor,
+            email: req.body.emailMonitor,
+            curso: req.body.cursoMonitor,
+            senha: req.body.senhaMonitor
         }).then(function () {
-            res.render('Monitor/loginMonitor.html');
+            res.render('Monitor/loginMonitor');
         }).catch(function (erro) {
-            res.render('Monitor/cadastroMonitor.html');
+            res.render('Monitor/cadastroMonitor');
         })
     }
 }

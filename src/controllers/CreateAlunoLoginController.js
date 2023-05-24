@@ -19,12 +19,12 @@ const LoginAluno = async (req, res) => {
             email: req.body.email1,
             senha: req.body.senha1
         }
-    })
+    });
 
     if (searchUser === null) {
         return res.status(400).send('user not found')
     } else {
-        res.render('home.html')
+        res.redirect('/views/home')
     }
 
 }

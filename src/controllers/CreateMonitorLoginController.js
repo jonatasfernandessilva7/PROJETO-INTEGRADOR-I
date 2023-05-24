@@ -26,7 +26,7 @@ const LoginMonitor = async (req, res) => {
         } else if(!req.body.email1.includes("@alu.ufc.br")){
             return res.status(400).send('email errado')
         }else {
-            res.render('Monitor/Monitor_home.html')
+            res.render('Monitor/Monitor_home')
         }
 
     });
