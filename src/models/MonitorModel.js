@@ -29,4 +29,4 @@ const Monitor = sequelize.define('monitores', {
     }
 });
 
-Monitor.sync({force: true})
+module.exports = Monitor;;

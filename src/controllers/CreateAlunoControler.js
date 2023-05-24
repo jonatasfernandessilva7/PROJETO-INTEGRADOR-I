@@ -24,10 +24,10 @@ const createAluno = async (req,res) => {
             curso: req.body.curso,
             senha: req.body.senha
         }).then(function () {
-            res.render('Aluno/login');
+            res.redirect('/Aluno/login');
         }).catch(function (erro) {
-            res.render('Aluno/cadastro');
-        })
+            res.redirect('/Aluno/cadastro');
+        });
     }
 }
 

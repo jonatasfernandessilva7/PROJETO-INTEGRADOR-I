@@ -6,8 +6,6 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     dialect: 'postgres'
 });
 
-console.log("concetado")
-
 module.exports = {
     Sequelize : Sequelize,
     sequelize: sequelize
