@@ -18,7 +18,7 @@ const updateAluno = async (req, res) => {
     }else{
 
     const updateUser = await insertUser.update({nome, curso, senha},{email}).then(() => {
-        res.redirect('/views/Aluno/perfil.html');
+        res.redirect('/views/Aluno/perfil');
     }).catch(() => {
         console.log('não att');
     });

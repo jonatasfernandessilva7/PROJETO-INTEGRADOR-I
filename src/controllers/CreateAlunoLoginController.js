@@ -24,7 +24,7 @@ const LoginAluno = async (req, res) => {
     if (searchUser === null) {
         return res.status(400).send('user not found')
     } else {
-        res.render('home.html')
+        res.render('home')
     }
 
 }

@@ -24,9 +24,9 @@ const createAluno = async (req,res) => {
             curso: req.body.curso,
             senha: req.body.senha
         }).then(function () {
-            res.render('Aluno/login.html');
+            res.render('Aluno/login');
         }).catch(function (erro) {
-            res.render('Aluno/cadastro.html');
+            res.render('Aluno/cadastro');
         })
     }
 }

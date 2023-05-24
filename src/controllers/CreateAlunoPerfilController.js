@@ -10,7 +10,7 @@ const PerfilAluno = async (req, res) => {
         email: req.body.email1
     })
 
-    res.render('Aluno/perfil.html')
+    res.render('Aluno/perfil')
 
 }
 

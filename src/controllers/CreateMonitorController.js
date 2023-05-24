@@ -18,9 +18,9 @@ const createMonitor = (req, res) => {
             curso: req.body.curso,
             senha: req.body.senha
         }).then(function () {
-            res.render('Monitor/loginMonitor.html');
+            res.render('Monitor/loginMonitor');
         }).catch(function (erro) {
-            res.render('Monitor/cadastroMonitor.html');
+            res.render('Monitor/cadastroMonitor');
         })
     }
 }
