@@ -72,7 +72,6 @@ Prof. Orientador - Anderson Uchôa.
 - Node js
 - express js
 - sequelize
-- bcrypt 
 - express-session
 - body-parser 
 - connect-flash
