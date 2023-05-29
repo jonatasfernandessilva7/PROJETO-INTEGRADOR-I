@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/figmaSchoolLab/icone.jpg">
+    <title>School Lab UFC</title>
+    <link rel="stylesheet" href="/css/sty.css">
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <form action="/admgeral/cadastro/Adm_login" method="POST" class="caixote">
+        <h1 id="text">Página de cadastro</h1>
+            <input required name="nomeAdm" id="nomeAdm" type="text" placeholder="Nome completo" maxlength="50" size="50" value="">
+            <input required name ="cursoAdm" id="cursoAdm" type="text" placeholder="Curso" maxlength="50" size="50" value="">
+            <input required name ="emailAdm" id="emailAdm" type="email" placeholder="Email institucional" maxlength="50" maxlength="50" size="50" value="">
+            <input required name ="senhaAdm" id="senhaAdm" type="password" placeholder="Senha" minlength="8" size="50" value="">
+            <input required name ="senhaConfirmAdm" id="senhaConfirmAdm" type="password" placeholder="Confirme sua senha" minlength="8" size="50" value="">
+            <button id="cadAdm">Cadastrar</button>
+        <p id="footer">&copy;School Lab</p>
+    </form>
+</body>
+</html>
