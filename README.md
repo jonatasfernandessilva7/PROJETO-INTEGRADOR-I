@@ -92,22 +92,43 @@ Prof. Orientador - Anderson Uchôa.
 | Método HTTP | URL |
 | --- | --- |
 | GET | /|
-| GET | /Aluno/login.html|
-| GET | Aluno/cadastro.html|
-| GET | /views/Lab1.html|
-| GET | /views/Lab2.html|
-| GET | /views/Lab3.html|
-| GET | /views/Lab4.html/|
-| GET | /views/Biblioteca.html|
-| GET | /views/home.html|
-| GET | /views/Aluno/Ajuda.html|
-| GET | /views/Aluno/Contato.html|
-| GET | /views/Aluno/Historico.html|
-| GET | /views/Aluno/perfil.html|
-| GET | /logout.html|
-| POST | /Aluno/cadastro/login.html |
-| POST | /Aluno/login/home.html |
-| PUT | /views/Aluno/perfil.html |
+| GET | /esqueceuASenha|
+| GET | /Aluno/login|
+| GET | Aluno/cadastro|
+| GET | /views/Lab1|
+| GET | /views/Lab2|
+| GET | /views/Lab3|
+| GET | /views/Lab4|
+| GET | /views/Biblioteca|
+| GET | /views/home|
+| GET | /views/Aluno/Ajuda|
+| GET | /views/Aluno/Contato|
+| GET | /views/Aluno/Historico|
+| GET | /views/Aluno/perfil|
+| GET | /logout|
+| GET | /Monitor/loginMonitor|
+| GET | /Monitor/cadastroMonitor|
+| GET | /views/Monitor_Lab1|
+| GET | /views/Monitor_Lab2|
+| GET | /views/Monitor_Lab3|
+| GET | /views/Monitor_Lab4|
+| GET | /views/Monitor_Biblioteca|
+| GET | /views/Monitor/Monitor_home|
+| GET | /views/Monitor/Monitor_Ajuda|
+| GET | /views/Monitor/Contato|
+| GET | /views/Monitor/Monitor_perfil|
+| GET | /admgeral/Adm|
+| GET | /views/admgeral_Adm|
+| GET | /views/admgeral/Adm_perfil|
+| GET | /views/admgeral/Adm_Ajuda|
+| GET | /views/admgeral/Adm_Contato|
+| POST | /Aluno/cadastro/login |
+| POST | /Aluno/login/home |
+| POST | /esqueceuASenha|
+| POST | /Monitor/cadastro/loginMonitor|
+| POST | /Monitor/login/home|
+| PUT | /views/Aluno/perfil |
+| PUT | /Aluno/login |
 
 ## Documentação
 * [Documento de visão do projeto](https://github.com/jonatasfernandessilva7/PROJETO-INTEGRADOR-I/blob/main/documentsSchoolLab/TemplateDocumentodeVisão.doc.pdf)
