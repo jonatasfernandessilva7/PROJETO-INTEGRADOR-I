@@ -15,34 +15,9 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/views/home.html"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab
-        UFC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/views/home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/views/Perfil.html">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/Historico.html">Histórico</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/Ajuda.html">Ajuda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/Contato.html">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav><br><br><br>
+<header>
+  <%- include('../partials/headerAluno'); -%>
+</header>
   <div id="dadosUser">
     <form action="">
       <div style="text-align: center;">
@@ -71,10 +46,7 @@
       </div><br>
   </div><br>
   <footer class="footer">
-    <address>
-      Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a
-        href="">UFC Itapaje</a>
-    </address>
+    <%- include('../partials/footer'); -%>
   </footer>
 </body>
 

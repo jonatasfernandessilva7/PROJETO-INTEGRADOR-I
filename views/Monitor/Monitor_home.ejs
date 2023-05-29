@@ -12,31 +12,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab UFC</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/views/Monitor/Monitor_home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/views/Monitor/Monitor_Perfil">Perfil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/views/Monitor/AjudaMonitor">Ajuda</a>
-                  </li>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/views/Monitor/Contato">Contato</a>
-                  </li>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav><br><br>
+  <header>
+    <%- include('../partials/header'); -%>
+  </header>
         <div class="text">
             <h5>Olá! Seja bem vindo ao SCHOOL LAB UFC, aqui você poderá verificar o uso dos computadores dos laboratóros da Universidade. O site tem uma usabilidade simples para que todos possam acessar as funções disponiveis sem nenhum problema. Para ver os computadores que estão sendo utilizados primeiro escolha o laboratório que deseja verificar, dentro dos laboratórios estaram os computadores com as informações sobre o usuário que está usando.
             </h5>
@@ -81,9 +59,9 @@
                 </div>
             </div><br><br>
         <footer class="footer">
-            <address>
-                Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
-            </address>
+
+            <%- include('../partials/footer'); -%>
+
         </footer>
 </body>
 </html>
