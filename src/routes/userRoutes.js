@@ -164,8 +164,8 @@ router.get('/views/Monitor/Contato', (req, res) => {
 });
 
 //rota para perfil
-router.get('/views/Monitor/Monitor_perfil', async (req, res) => {
-    res.render('Monitor/Monitor_Perfil')
+router.get('/views/Monitor/Monitor_perfil', (req, res) => {
+    res.render('Monitor/Monitor_Perfil');
 });
 
 //rotas post Monitor
