@@ -66,6 +66,7 @@ Prof. Orientador - Anderson Uchôa.
 - bootstrap 
 - javascript 
 - swetAlert
+- ejs
 
 **Backend:**
 
@@ -84,8 +85,8 @@ Prof. Orientador - Anderson Uchôa.
 
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
-| Usuários | X |  X  | X |  |
-| Monitores | X |   X |  X | |
+| Usuários | X |  X  |  |  |
+| Monitores | X |   X |   | |
 
 ## :neckbeard: Rotas da API REST utilizadas
 
