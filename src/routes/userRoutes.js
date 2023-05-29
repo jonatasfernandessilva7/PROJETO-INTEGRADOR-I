@@ -8,6 +8,7 @@ const updateAluno = require("../controllers/updateAlunoData");
 const createMonitor = require("../controllers/CreateMonitorController");
 const LoginMonitor = require("../controllers/CreateMonitorLoginController");
 const recuperandoSenha = require ("../controllers/recuperarSenhaController")
+const updateAlunoSenha = require("../controllers/updateAlunoSenha");
 
 
 //rota para page principal
@@ -41,8 +42,8 @@ router.get('/views/Lab1', (req, res) => {
 });
 
 //rota para lab2
-router.get('/views/Lab2.html', (req, res) => {
-    res.render('Aluno/Lab2.html');
+router.get('/views/Lab2', (req, res) => {
+    res.render('Aluno/Lab2');
 });
 
 //rota lab3
@@ -88,6 +89,10 @@ router.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
+router.get("/Aluno/recuperacao/inserirNovaSenha", (req, res)=>{
+    res.render("Aluno/inserirNovaSenha")
+});
+
 //rotas post Aluno
 
 //rota após o cadastro estar feito
@@ -100,6 +105,8 @@ router.post('/Aluno/login/home', LoginAluno);
 
 //rota para fazer update dos dados do perfil
 router.put('/views/Aluno/perfil', updateAluno);
+
+router.put('/Aluno/login', updateAlunoSenha);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

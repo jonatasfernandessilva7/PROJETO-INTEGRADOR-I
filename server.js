@@ -7,6 +7,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 require("dotenv").config();
 const port = process.env.PORT_SERVER|| 5000;
+const ejs = require("ejs")
 
 //configurando a sessão
 app.use(session({
@@ -32,11 +33,11 @@ app.use(bodyParser.json());
 
 
 //configuring view
-var engines = require('consolidate');
+//var engines = require('consolidate');
 
 app.set('views', __dirname + '/views');
-app.engine('html', engines.mustache);
-app.set('view engine', 'html');
+//app.engine('html', engines.mustache);
+app.set('view engine', 'ejs');
 
 //callback routes
 var userRoute = require('./src/routes/userRoutes');

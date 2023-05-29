@@ -5,6 +5,7 @@ const insertUser = require("../models/InsertUser");
 require("dotenv").config();
 
 
+
 const recuperandoSenha = async (req, res) => {
 
     var searchUser = await insertUser.findOne({
@@ -18,7 +19,7 @@ const recuperandoSenha = async (req, res) => {
             return res.status(400).send('user not found')
         } else {
             await mailerEnviaEmail(req.body.emailRecuperacao);
-            res.send("email, enviado");
+            res.redirect("/Aluno/recuperacao/inserirNovaSenha");
         }
     });
 }
@@ -54,7 +55,7 @@ function mailerEnviaEmail(email) {
             to: email, // list of receivers
             subject: "Recurepação de Senha ✔", // Subject line
             text: "olá ${email} para recuperar sua conta insira o código a seguir: ", // plain text body
-            html: "<strong>00988</strong>", // html body
+            html: cod, // html body
         });
 
         console.log("Message sent: %s", info.messageId);
