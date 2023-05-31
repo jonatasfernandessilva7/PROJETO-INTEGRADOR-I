@@ -3,7 +3,7 @@ const db = require("./db");
 
 //criando modelo dos labs
 
-const Lab = sequelize.define('computadores', {
+const Lab = sequelize.define('laboratorios', {
     nome:{
         type: db.Sequelize.STRING,
         allowNull: false,
@@ -15,4 +15,4 @@ const Lab = sequelize.define('computadores', {
     }
 });
 
-module.exports = Lab
+module.exports = Lab;

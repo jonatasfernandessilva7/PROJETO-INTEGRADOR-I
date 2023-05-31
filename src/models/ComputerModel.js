@@ -15,4 +15,4 @@ const Computer = sequelize.define('computadores', {
     }
 });
 
-module.exports = Computer
+module.exports = Computer;

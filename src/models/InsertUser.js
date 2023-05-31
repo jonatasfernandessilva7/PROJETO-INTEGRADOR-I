@@ -29,4 +29,4 @@ const InsertUser = sequelize.define('usuarios', {
 });
 
 
-module.exports = InsertUser
+module.exports = InsertUser;
