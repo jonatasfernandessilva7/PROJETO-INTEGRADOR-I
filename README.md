@@ -78,6 +78,7 @@ Prof. Orientador - Anderson Uchôa.
 - connect-flash
 - NodeMailer
 - Postgres
+- Amazon Web Server
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
