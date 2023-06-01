@@ -37,33 +37,33 @@ router.get('/Aluno/cadastro', (req, res) => {
 });
 
 //rota lab1
-router.get('/views/Lab1', (req, res) => {
+router.get('/views/Aluno/Lab1', (req, res) => {
     res.render('Aluno/Lab1');
 });
 
 //rota para lab2
-router.get('/views/Lab2', (req, res) => {
+router.get('/views/Aluno/Lab2', (req, res) => {
     res.render('Aluno/Lab2');
 });
 
 //rota lab3
-router.get('/views/Lab3', (req, res) => {
+router.get('/views/Aluno/Lab3', (req, res) => {
     res.render('Aluno/Lab3');
 });
 
 //rota lab4
-router.get('/views/Lab4', (req, res) => {
+router.get('/views/Aluno/Lab4', (req, res) => {
     res.render('Aluno/Lab4');
 });
 
 //rota biblioteca
-router.get('/views/Biblioteca', (req, res) => {
+router.get('/views/Aluno/Biblioteca', (req, res) => {
     res.render('Aluno/Biblioteca');
 });
 
 //rota home
-router.get('/views/home', (req, res) => {
-    res.render('home');
+router.get('/views/Aluno/home', (req, res) => {
+    res.render('Aluno/home');
 });
 
 //rota ajuda
@@ -73,7 +73,7 @@ router.get('/views/Aluno/Ajuda', (req, res) => {
 
 //rota contato
 router.get('/views/Aluno/Contato', (req, res) => {
-    res.render('Contato');
+    res.render('Aluno/Contato'); 
 });
 
 //rota historico do aluno
@@ -106,7 +106,7 @@ router.post('/Aluno/login/home', LoginAluno);
 //rota para fazer update dos dados do perfil
 router.put('/views/Aluno/perfil', updateAluno);
 
-router.put('/Aluno/login', updateAlunoSenha);
+router.put('/Aluno/recuperacao/inserirNovaSenha', updateAlunoSenha);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,7 +160,7 @@ router.get('/views/Monitor/AjudaMonitor', (req, res) => {
 
 //rota para contato
 router.get('/views/Monitor/Contato', (req, res) => {
-    res.render('Contato');
+    res.render('Monitor/contatoMonitor');
 });
 
 //rota para perfil

@@ -5,14 +5,6 @@ const insertUser = require("../models/InsertUser");
 
 const LoginAluno = async (req, res) => {
 
-    const verificando = (req, res, next) => {
-        if (req.session.email && req.session.senha) {
-            next();
-        }else{
-            res.redirect("/");
-        }
-    }
-
     var searchUser = await insertUser.findOne({
         attributes: ['email', 'senha'],
         where: {
@@ -21,10 +13,21 @@ const LoginAluno = async (req, res) => {
         }
     });
 
+    req.session.email = req.body.email1;
+    req.session.senha = req.body.senha1;
+
+    const verificando = (req, res, next) => {
+        if (req.session.email && req.session.senha) {
+            next();
+        }else{
+            res.redirect("/");
+        }
+    }
+
     if (searchUser === null) {
         return res.status(400).send('user not found')
     } else {
-        res.redirect('/views/home')
+        res.redirect('/views/Aluno/home');
     }
 
 }

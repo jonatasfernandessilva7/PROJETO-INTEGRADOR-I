@@ -2,30 +2,25 @@ const { getEventListeners } = require('events');
 var express = require('express');
 const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
-const cod = 1234;
 
 
 const updateAlunoSenha = async (req, res) => {
 
-    const { email } = req.body.emailRecuperacaoSenha
-    const { senha } = req.body.novaSenha
-
-    const userFind = await insertUser.findOne({
-        attributes : ['email'],
-        where :{
-            email,
-        }
-    }).then(async () => {
+    const userFind = await insertUser.findOne({where:{
+        email : req.body.emailRecuperacaoSenha
+    }}).then(async () => {
 
         if (userFind === null) {
             return res.status(400).send('user not found')
         } else {
-            await insertUser.update({senha}, {
+            await userFind.update({
+                senha: req.body.novaSenha
+            } , {
                 where: {
-                    email,
+                    email: req.body.emailRecuperacaoSenha
                 }
-            });
-            res.render("Aluno/login");
+            })
+            res.redirect("/Aluno/login");
         }
     });
 

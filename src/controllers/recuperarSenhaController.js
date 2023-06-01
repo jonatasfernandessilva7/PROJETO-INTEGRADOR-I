@@ -38,7 +38,6 @@ function mailerEnviaEmail(email) {
             port: 587,
             secure: false, // verdadeiro para portas 465, 587 = false
             logger:true,
-            debug: true,
             secureconnection: false,
             auth:{
                 user:process.env.EMAIL_USER,
@@ -55,7 +54,7 @@ function mailerEnviaEmail(email) {
             to: email, // list of receivers
             subject: "Recurepação de Senha ✔", // Subject line
             text: "olá ${email} para recuperar sua conta insira o código a seguir: ", // plain text body
-            html: cod, // html body
+            html: '<strong>seu codigo é: 1234</strong>', // html body
         });
 
         console.log("Message sent: %s", info.messageId);
