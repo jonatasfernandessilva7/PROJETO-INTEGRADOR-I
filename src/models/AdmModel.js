@@ -1,10 +1,9 @@
 const { sequelize } = require("./db");
 const db = require("./db");
-require("pg");
 
 //criando modelo do banco
 
-const Monitor = sequelize.define('monitores', {
+const administrador = sequelize.define('administradores', {
     id: {
         type: db.Sequelize.INTEGER,
         allowNull: false,
@@ -19,14 +18,11 @@ const Monitor = sequelize.define('monitores', {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    curso: {
-        type: db.Sequelize.STRING,
-        allowNull: false
-    },
     senha: {
         type: db.Sequelize.STRING,
         allowNull: false
     }
 });
 
-module.exports = Monitor;
+
+module.exports = administrador;

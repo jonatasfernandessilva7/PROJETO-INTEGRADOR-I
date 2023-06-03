@@ -7,8 +7,10 @@ const LoginAluno = require("../controllers/CreateAlunoLoginController");
 const updateAluno = require("../controllers/updateAlunoData");
 const createMonitor = require("../controllers/CreateMonitorController");
 const LoginMonitor = require("../controllers/CreateMonitorLoginController");
+const loginAdm = require("../controllers/admLoginController");
 const recuperandoSenha = require ("../controllers/recuperarSenhaController")
 const updateAlunoSenha = require("../controllers/updateAlunoSenha");
+const deleteMonitor = require("../controllers/deleteMonitorController");
 
 
 //rota para page principal
@@ -63,6 +65,7 @@ router.get('/views/Aluno/Biblioteca', (req, res) => {
 
 //rota home
 router.get('/views/Aluno/home', (req, res) => {
+    req.session.email = req.body.email1;
     res.render('Aluno/home');
 });
 
@@ -118,10 +121,6 @@ router.get('/Monitor/loginMonitor', (req, res) => {
     res.render('Monitor/loginMonitor');
 });
 
-//rota para pagina de cadastro
-router.get('/Monitor/cadastroMonitor', (req, res) => {
-    res.render('Monitor/cadastroMonitor');
-});
 
 //rota para lab1
 router.get('/views/Monitor_Lab1', (req, res) => {
@@ -170,17 +169,14 @@ router.get('/views/Monitor/Monitor_perfil', (req, res) => {
 
 //rotas post Monitor
 
-//rota para cadastro
-router.post('/Monitor/cadastro/loginMonitor', createMonitor);
-
 //rota para login
 router.post('/Monitor/login/home', LoginMonitor);
 
 ///////////////////////////////////////////////////////////////////////////
 
 //rotas get adm geral
-router.get('/admgeral/Adm', (req, res) => {
-    res.render("admgeral/Adm")
+router.get('/admgeral/Adm/Login', (req, res) => {
+    res.render("admgeral/Adm_login")
 });
 
 router.get('/views/admgeral/Adm', async (req, res) => {
@@ -198,5 +194,21 @@ router.get('/views/admgeral/Adm_Ajuda', async (req, res) => {
 router.get('/views/admgeral/Adm_Contato', async (req, res) => {
     res.render('admgeral/Adm_Contato')
 });
+
+router.get('/views/admgeral/AdicionarMonitor', async (req, res) => {
+    res.render('admgeral/Adm_cadastroDeMonitor')
+});
+
+router.get('/views/admgeral/DeletarMonitor', async (req, res) => {
+    res.render('admgeral/AdmDeletarMonitor')
+});
+
+//rotas post para adm
+router.post('/admgeral/Adm/home', loginAdm);
+
+router.post('/admgeral/CadastroMonitor', createMonitor);
+
+//rotas del adm
+router.delete('/views/admgeral/DeletarMonitor', deleteMonitor);
 
 module.exports = router;

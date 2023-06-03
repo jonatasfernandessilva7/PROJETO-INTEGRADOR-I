@@ -12,32 +12,9 @@
         <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab UFC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/views/admgeral/Adm.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_perfil.html">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_Ajuda.html">Ajuda</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_Contato.html">Contato</a>
-          </li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav><br><br><br>
+  <header>
+    <%- include('../partials/headerAdm') -%>
+  </header>
       <div>
         <div style="text-align: center;">
             <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
@@ -64,9 +41,7 @@
       </div>
     </div><br>
       <footer class="footer">
-        <address>
-            Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a href="">UFC Itapaje</a>
-        </address>
+          <%- include('../partials/footer') -%>
     </footer>
 </body>
 </html>

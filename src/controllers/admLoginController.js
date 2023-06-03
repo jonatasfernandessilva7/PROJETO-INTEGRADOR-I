@@ -1,33 +1,33 @@
 const { getEventListeners } = require('events');
 var express = require('express');
 const Sequelize = require("sequelize");
-const insertUser = require("../models/InsertUser");
+const administrador = require("../models/InsertUser");
 
-const LoginAluno = async (req, res) => {
+const AdmLogin = async (req, res) => {
 
-    var searchUser = await insertUser.findOne({
+    var buscaAdm = await administrador.findOne({
         attributes: ['email', 'senha'],
         where: {
-            email: req.body.email1,
-            senha: req.body.senha1
+            email: req.body.emailAdm,
+            senha: req.body.senhaAdm
         }
     });
 
     const verificando = (req, res, next) => {
-        if (req.session.email1 && req.session.senha1) {
+        if (req.session.emailAdm && req.session.senhaAdm) {
             next();
         }else{
             res.redirect("/");
         }
     }
 
-    if (searchUser === null) {
+    if (buscaAdm === null) {
         return res.status(400).send('user not found')
     } else {
-        res.redirect('/views/Aluno/home');
+        res.render('admgeral/Adm');
     }
 
 }
 
 
-module.exports = LoginAluno;
+module.exports = AdmLogin;

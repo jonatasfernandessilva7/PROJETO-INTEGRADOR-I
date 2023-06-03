@@ -13,7 +13,8 @@ const ejs = require("ejs")
 app.use(session({
     secret : process.env.SESSION_SECRET,
     resave : true,
-    saveUninitialized : true
+    saveUninitialized : true,
+    cookie: {secure:false}
 }));
 
 //configurando flash
