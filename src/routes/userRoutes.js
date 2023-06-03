@@ -11,6 +11,7 @@ const loginAdm = require("../controllers/admLoginController");
 const recuperandoSenha = require ("../controllers/recuperarSenhaController")
 const updateAlunoSenha = require("../controllers/updateAlunoSenha");
 const deleteMonitor = require("../controllers/deleteMonitorController");
+const sugestao = require("../controllers/emailSugestaoController");
 
 
 //rota para page principal
@@ -103,6 +104,8 @@ router.post('/Aluno/cadastro/login', createAluno);
 
 //rota para pagina home após fazer login
 router.post('/Aluno/login/home', LoginAluno);
+
+router.post('/views/Aluno/Contato', sugestao);
 
 //rotas put Aluno
 
