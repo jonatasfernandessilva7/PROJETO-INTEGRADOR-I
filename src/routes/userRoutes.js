@@ -206,12 +206,16 @@ router.get('/views/admgeral/DeletarMonitor', async (req, res) => {
     res.render('admgeral/AdmDeletarMonitor')
 });
 
+//router.get('/admgeral/DeletarMonitor', (req, res) => {
+    //res.redirect('/admgeral/DeletarMonitor')
+//})
+
 //rotas post para adm
 router.post('/admgeral/Adm/home', loginAdm);
 
 router.post('/admgeral/CadastroMonitor', createMonitor);
 
 //rotas del adm
-router.delete('/views/admgeral/DeletarMonitor', deleteMonitor);
+router.get('/admgeral/DeletarMonitor', deleteMonitor);
 
 module.exports = router;
