@@ -4,22 +4,20 @@ const Sequelize = require("sequelize");
 const monitorDelete = require("../models/MonitorModel");
 
 const delMonitor = async (req, res) => {
-    const monitorFind = await monitorDelete.findOne({
-        email: req.body.emailMonitorDelete
-    });
 
 
-    if (monitorFind) {
-        delMonitor.destroy({
-            where :{
-                nome: req.body.emailMonitorDelete,
-            }
-        }).then(function () {
+    const buscaADeletar = await monitorDelete.findOne({
+        email : req.body.emailMonitorDelete
+    }).then(() => {
+        monitorDelete.destroy({email:req.body.emailMonitorDelete, force: true, truncate: true}).then(function () {
             res.redirect('/views/admgeral/DeletarMonitor');
         }).catch(function (erro) {
-            res.send("error")
+            res.send("error" + erro);
         });
-    }
+    }).catch((erro) => {
+        res.send("error" + erro)
+    });
+
 }
 
 module.exports = delMonitor;
