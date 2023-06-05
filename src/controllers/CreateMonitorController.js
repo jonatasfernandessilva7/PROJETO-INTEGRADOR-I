@@ -10,11 +10,9 @@ const createMonitor = async (req, res) => {
 
 
     if (monitorFind) {
-        res.send('ja existe um usuario com esse email')
-    } else {
         Monitor.create({
             nome: req.body.nomeMonitorCadastro,
-            email: req.body.emailmonitorCadastro,
+            email: req.body.emailMonitorCadastro,
             curso: req.body.cursoMonitorCadastro,
             senha: req.body.senhaMonitorCadastro
         }).then(function () {
