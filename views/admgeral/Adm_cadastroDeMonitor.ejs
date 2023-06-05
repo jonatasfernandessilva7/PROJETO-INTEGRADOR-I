@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,21 @@
     <link rel="stylesheet" href="/css/sty.css">
     <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+
 <body>
     <form action="/admgeral/CadastroMonitor" method="POST" class="caixote">
         <h1 id="text">Cadastre o Monitor</h1>
-            <input required name="nomeMonitorCadastro" id="nomeMonitorCadastro" type="text" placeholder="Nome completo" maxlength="50" size="50" value="">
-            <input required name ="cursoMonitorCadastro" id="cursoMonitorCadastro" type="text" placeholder="Curso" maxlength="50" size="50" value="">
-            <input required name ="emailmonitorCadastro" id="emailmonitorCadastro" type="email" placeholder="Email institucional" maxlength="50" maxlength="50" size="50" value="">
-            <input required name ="senhaMonitorCadastro" id="senhaMonitorCadastro" type="password" placeholder="Senha" minlength="8" size="50" value="">
-            <button id="cadAdm">Cadastrar</button>
+        <input required name="nomeMonitorCadastro" id="nomeMonitorCadastro" type="text" placeholder="Nome completo"
+            maxlength="50" size="50" value="">
+        <input required name="emailMonitorCadastro" id="emailMonitorCadastro" type="email"
+            placeholder="Email institucional" maxlength="50" maxlength="50" size="50" value="">
+        <input required name="cursoMonitorCadastro" id="cursoMonitorCadastro" type="text" placeholder="Curso"
+            maxlength="50" size="50" value="">
+        <input required name="senhaMonitorCadastro" id="senhaMonitorCadastro" type="password" placeholder="Senha"
+            minlength="8" size="50" value="">
+        <button id="cadAdm">Cadastrar</button>
         <p id="footer">&copy;School Lab</p>
     </form>
 </body>
+
 </html>
