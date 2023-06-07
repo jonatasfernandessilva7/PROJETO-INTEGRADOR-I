@@ -13,7 +13,7 @@ html, body{
 }
 
 h3{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 .menu{
@@ -25,6 +25,8 @@ h3{
     justify-content: center;
 }
 .nav{
+    position: absolute;
+    top: 70%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -36,9 +38,11 @@ h3{
     background-color: #8344ff;
     border-right: solid 1px black;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     width: 700px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 .nav a:hover{
     background-color: #4d4d4d;
