@@ -7,7 +7,12 @@ const session = require("express-session");
 const flash = require("connect-flash");
 require("dotenv").config();
 const port = process.env.PORT_SERVER|| 5000;
-const ejs = require("ejs")
+const ejs = require("ejs");
+
+//socket io
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
 
 //configurando a sessão
 app.use(session({
@@ -44,7 +49,9 @@ app.set('view engine', 'ejs');
 var userRoute = require('./src/routes/userRoutes');
 app.use('/', userRoute);
 
+io.on('connection', (socket) => { console.log(socket.id) });
+
 //open server
-app.listen(port, () => {
+server.listen(port, () => {
     console.log('this is ok!');
 });

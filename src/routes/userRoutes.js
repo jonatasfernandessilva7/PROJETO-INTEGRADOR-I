@@ -59,10 +59,6 @@ router.get('/views/Aluno/Lab4', (req, res) => {
     res.render('Aluno/Lab4');
 });
 
-//rota biblioteca
-router.get('/views/Aluno/Biblioteca', (req, res) => {
-    res.render('Aluno/Biblioteca');
-});
 
 //rota home
 router.get('/views/Aluno/home', (req, res) => {
@@ -145,11 +141,6 @@ router.get('/views/Monitor_Lab4', (req, res) => {
     res.render('Monitor/Monitor_Lab4');
 });
 
-//rota para biblioteca
-router.get('/views/Monitor_Biblioteca', (req, res) => {
-    res.render('Monitor/Monitor_Biblioteca');
-});
-
 //rota para home
 router.get('/views/Monitor/Monitor_home', (req, res) => {
     res.render('Monitor/Monitor_home');
@@ -205,10 +196,6 @@ router.get('/views/admgeral/AdicionarMonitor', async (req, res) => {
 router.get('/views/admgeral/DeletarMonitor', async (req, res) => {
     res.render('admgeral/AdmDeletarMonitor')
 });
-
-//router.get('/admgeral/DeletarMonitor', (req, res) => {
-    //res.redirect('/admgeral/DeletarMonitor')
-//})
 
 //rotas post para adm
 router.post('/admgeral/Adm/home', loginAdm);

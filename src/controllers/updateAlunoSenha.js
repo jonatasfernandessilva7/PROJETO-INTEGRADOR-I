@@ -16,10 +16,8 @@ const updateAlunoSenha = async (req, res) => {
             await insertUser.update({
                 senha: req.body.novaSenha
             },{
-                where: {
                     email : req.body.emailRecuperacaoSenha
-                }
-            })
+            });
             res.redirect("/Aluno/login");
         }
     });

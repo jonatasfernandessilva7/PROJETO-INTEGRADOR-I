@@ -4,12 +4,13 @@ const Sequelize = require("sequelize");
 const Monitor = require("../models/MonitorModel");
 
 const createMonitor = async (req, res) => {
+
     const monitorFind = await Monitor.findOne({
         email: req.body.emailMonitorCadastro
     });
 
 
-    if (monitorFind) {
+    if (!monitorFind) {
         Monitor.create({
             nome: req.body.nomeMonitorCadastro,
             email: req.body.emailMonitorCadastro,

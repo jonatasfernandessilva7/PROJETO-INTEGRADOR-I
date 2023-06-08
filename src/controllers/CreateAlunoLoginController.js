@@ -13,8 +13,11 @@ const LoginAluno = async (req, res) => {
         }
     });
 
+    req.body.email1 = req.session.email;
+    req.body.senha1 = req.session.senha;
+
     const verificando = (req, res, next) => {
-        if (req.session.email1 && req.session.senha1) {
+        if (req.session.email && req.session.senha) {
             next();
         }else{
             res.redirect("/");
@@ -28,6 +31,7 @@ const LoginAluno = async (req, res) => {
     }
 
 }
+
 
 
 module.exports = LoginAluno;
