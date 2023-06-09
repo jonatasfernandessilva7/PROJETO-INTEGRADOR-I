@@ -16,7 +16,7 @@ const updateAluno = async (req, res) => {
         res.send("user não encontrado")
     }else{
 
-    const updateUser = await insertUser.update({nome, curso, senha},{email}).then(() => {
+    await insertUser.update({nome, curso, senha},{email}).then(() => {
         res.redirect('/views/Aluno/perfil');
     }).catch(() => {
         console.log('não att');

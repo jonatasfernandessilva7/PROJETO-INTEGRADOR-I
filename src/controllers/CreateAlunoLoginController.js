@@ -13,8 +13,8 @@ const LoginAluno = async (req, res) => {
         }
     });
 
-    req.session.email = req.body.email1;
-    req.session.senha = req.body.senha1;
+    req.body.email1 = req.session.email;
+    req.body.senha1 = req.session.senha;
 
     const verificando = (req, res, next) => {
         if (req.session.email && req.session.senha) {
@@ -31,6 +31,7 @@ const LoginAluno = async (req, res) => {
     }
 
 }
+
 
 
 module.exports = LoginAluno;

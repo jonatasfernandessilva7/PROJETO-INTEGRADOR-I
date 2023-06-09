@@ -6,24 +6,15 @@ const insertUser = require("../models/InsertUser");
 
 const PerfilAluno = async (req, res) => {
 
-    const nomeUser = await insertUser.findOne({
+    const User = await insertUser.findOne({
+        email: req.session.email,
+        senha: req.session.senha,
+        curso: req.session.curso,
         nome: req.session.nome,
     });
 
-    const emailUser = await insertUser.findOne({
-        email: req.session.email,
-    });
-
-    const cursoUser = await insertUser.findOne({
-        curso: req.session.curso,
-    });
-
-    const senhaUser = await insertUser.findOne({
-        senha: req.session.senha,
-    });
-
-    if (emailUser) {
-        res.render("Aluno/perfil", {nomeUser: nomeUser.nome, emailUser: emailUser.email, cursoUser:cursoUser.curso, senhaUser: senhaUser.senha});
+    if (User) {
+        res.render("Aluno/perfil", {nomeUser: User.nome, emailUser: User.email, cursoUser:User.curso, senhaUser: User.senha});
     } else {
         res.send("erro inesperado, desculpe");
     }

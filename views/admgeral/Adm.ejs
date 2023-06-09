@@ -12,36 +12,14 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
   <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script defer src="/js/admiteracoes.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><span style="color: #8344ff;font-size: 17pt;">School</span> Lab UFC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/views/admgeral/Adm">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_perfil">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_Ajuda">Ajuda</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_Contato">Contato</a>
-          </li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav><br><br>
+  <header>
+    <%- include('../partials/headerAdm') -%>
+  </header>
   <ul class="nav" style="margin-bottom: 30px;margin-left: 0px;">
     <li><a href="#laboratorios">Laboratórios</a></li>
     <li><a href="#computadores">Computadores</a></li>
@@ -63,7 +41,7 @@
     <button class="but" id="btn-add" onclick="clicar()" style="width: 200px;height: 50px;"> Adicionar </button>
     <button class="but" id="btn-add" style="width: 200px;height: 50px;"> Remover </button><br><br>
     <div style="display: flex;justify-content: center;">
-      <button style="width: 300px;height: 40px;"><a href="/views/home.html" style="text-decoration: none;">Ir para a
+      <button style="width: 300px;height: 40px;"><a href="/views/Aluno/home" style="text-decoration: none;">Ir para a
           página de laboratórios</a></button>
     </div>
   </div>
@@ -114,7 +92,7 @@
     <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Remover
     </button><br>
     <div style="display: flex;justify-content: center;">
-      <button style="width: 300px;height: 40px;"><a href="s/views/home.html" style="text-decoration: none;">Ir para a
+      <button style="width: 300px;height: 40px;"><a href="/views/Aluno/home" style="text-decoration: none;">Ir para a
           página de laboratórios</a></button>
     </div>
   </div>
@@ -227,51 +205,8 @@
   </div>
 
   <footer class="footer">
-    <address>
-      Criação e desenvolvimento: <a href="">Robert</a>, <a href="">Jonatas</a>, <a href="">Gustavo</a> &copy; 2023 <a
-        href="">UFC Itapaje</a>
-    </address>
+    <%- include('../partials/footer') -%>
   </footer>
-
-
-  <script>
-    $('.nav a[href^="#"]').on('click', function (e) {
-      e.preventDefault();
-      var id = $(this).attr('href'),
-        targetOffset = $(id).offset().top;
-
-      $('html, body').animate({
-        scrollTop: targetOffset - 100
-      }, 200);
-    });
-  </script>
-  <script>
-    let cont = 1;
-    $('#btn-add').on('click', function () {
-      $('.checks').append('<input type="text" id="' + cont + '">')
-      cont++;
-    });
-  </script>
-  <script>
-    function clicar() {
-      swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
-        if (willDelete) {
-          swal("Concluiso!", { icon: "success", });
-          x = 'Em uso ...';
-          computador.innerHTML = x;
-          computador.disabled = true;
-        } else {
-          computador.disabled = false;
-        }
-      });
-    }
-  </script>
-  <script>
-    function habilitar() {
-      var entrada1 = document.getElementsByClassName("but");
-      entrada1.disabled = false;
-    }
-  </script>
 </body>
 
 </html>

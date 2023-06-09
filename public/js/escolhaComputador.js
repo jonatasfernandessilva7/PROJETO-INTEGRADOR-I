@@ -1,16 +1,16 @@
-function esconder(){
-        for (let i = 1; i <=18; i++){
-                document.getElementById("E"+i).hidden=true;
-                document.getElementById("c"+i).hidden=true;
+function esconder() {
+        for (let i = 1; i <= 18; i++) {
+                document.getElementById("E" + i).hidden = true;
+                document.getElementById("c" + i).hidden = true;
         }
         var id = event.target.dataset.nome;
-        document.getElementById(id).hidden=false;
+        document.getElementById(id).hidden = false;
 }
 
-function mostrar(){
-        for (let i = 1; i <=18; i++){
-                document.getElementById("E"+i).hidden=false;
-                document.getElementById("E"+i).hidden=false;
+function mostrar() {
+        for (let i = 1; i <= 18; i++) {
+                document.getElementById("E" + i).hidden = false;
+                document.getElementById("E" + i).hidden = false;
         }
 }
 
@@ -40,9 +40,9 @@ function iniciar() {
         document.getElementById("E16").addEventListener("click", (esconder));
         document.getElementById("E17").addEventListener("click", (esconder));
         document.getElementById("E18").addEventListener("click", (esconder));
-/////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////
 
-//botões de cancelar
+        //botões de cancelar
         document.getElementById("c1").addEventListener("click", (mostrar));
         document.getElementById("c2").addEventListener("click", (mostrar));
         document.getElementById("c3").addEventListener("click", (mostrar));

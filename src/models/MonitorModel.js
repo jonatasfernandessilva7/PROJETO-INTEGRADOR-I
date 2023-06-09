@@ -1,6 +1,5 @@
 const { sequelize } = require("./db");
 const db = require("./db");
-require("pg");
 
 //criando modelo do banco
 
@@ -10,20 +9,20 @@ const Monitor = sequelize.define('monitores', {
         allowNull: false,
         autoIncrement: true
     },
-    nomeMonitor:{
+    nome:{
         type: db.Sequelize.STRING,
         allowNull: false,
         primaryKey: true
     },
-    emailMonitor: {
+    email: {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    cursoMonitor: {
+    curso: {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    senhaMonitor: {
+    senha: {
         type: db.Sequelize.STRING,
         allowNull: false
     }

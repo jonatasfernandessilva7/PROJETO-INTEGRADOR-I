@@ -3,25 +3,24 @@ var express = require('express');
 const Sequelize = require("sequelize");
 const Monitor = require("../models/MonitorModel");
 
-const createMonitor = (req, res) => {
-    const userFind = Monitor.findOne({
-        where: {
-            email: req.body
-        }
-    })
-    if (userFind) {
-        res.send('ja existe um usuario com esse email')
-    } else {
+const createMonitor = async (req, res) => {
+
+    const monitorFind = await Monitor.findOne({
+        email: req.body.emailMonitorCadastro
+    });
+
+
+    if (!monitorFind) {
         Monitor.create({
-            nome: req.body.nomeMonitor,
-            email: req.body.emailMonitor,
-            curso: req.body.cursoMonitor,
-            senha: req.body.senhaMonitor
+            nome: req.body.nomeMonitorCadastro,
+            email: req.body.emailMonitorCadastro,
+            curso: req.body.cursoMonitorCadastro,
+            senha: req.body.senhaMonitorCadastro
         }).then(function () {
-            res.render('Monitor/loginMonitor');
+            res.redirect('/views/admgeral/AdicionarMonitor');
         }).catch(function (erro) {
-            res.render('Monitor/cadastroMonitor');
-        })
+            res.send("error")
+        });
     }
 }
 

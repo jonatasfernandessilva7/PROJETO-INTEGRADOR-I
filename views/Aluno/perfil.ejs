@@ -18,31 +18,32 @@
   <header>
     <%- include('../partials/headerAluno'); -%>
   </header>
-  <div id="dadosUser">
-    <form action="">
-      <div style="text-align: center;">
-        <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
-      </div>
-      <div class="mb-3" style="margin: 0px 100px 0px 100px;">
-        <label for="alunoOn" class="form-label">Nome</label>
-        <input name="nomePerfil" type="text" class="form-control" id="NomePerfil" disabled value="<%=nomeUser%>">
-      </div>
-      <div class="mb-3" style="margin: 0px 100px 0px 100px;">
-        <label for="alunoOn" class="form-label">Email</label>
-        <input name="emailPerfil" type="email" class="form-control" id="email" disabled value="<%=emailUser%>">
-      </div>
-      <div class="mb-3" style="margin: 0px 100px 0px 100px;">
-        <label for="alunoOn" class="form-label">Curso</label>
-        <input name="cursoPerfil" type="text" class="form-control" id="curso" disabled value="<%=cursoUser%>">
-      </div>
-      <div class="mb-3" style="margin: 0px 100px 0px 100px;">
-        <label for="alunoOn" class="form-label">Senha</label>
-        <input name="senha" type="password" class="form-control" id="senha" disabled value="<%=senhaUser%>">
-      </form><br>
-      <div style="text-align: center;">
-        <button class="enviar" style="margin:0px 30px 0px 10px;" onclick="alert()">Salvar dados</button>
-      </div>
-  </div><br>
+
+  <form action="">
+    <div style="text-align: center;">
+      <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
+    </div>
+    <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+      <label for="alunoOn" class="form-label">Nome</label>
+      <input name="nomePerfil" type="text" class="form-control" id="NomePerfil" disabled value="<%=nomeUser%>">
+    </div>
+    <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+      <label for="alunoOn" class="form-label">Email</label>
+      <input name="emailPerfil" type="email" class="form-control" id="email" disabled value="<%=emailUser%>">
+    </div>
+    <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+      <label for="alunoOn" class="form-label">Curso</label>
+      <input name="cursoPerfil" type="text" class="form-control" id="curso" disabled value="<%=cursoUser%>">
+    </div>
+    <div class="mb-3" style="margin: 0px 100px 0px 100px;">
+      <label for="alunoOn" class="form-label">Senha</label>
+      <input name="senha" type="password" class="form-control" id="senha" disabled value="<%=senhaUser%>">
+    </div><br>
+    <div style="text-align: center;">
+      <button class="enviar" style="margin:0px 30px 0px 10px;" onclick="alert()">Salvar dados</button>
+    </div>
+  </form><br>
+
   <div style="text-align: center;">
     <button class="enviar" style="margin: 0px 30px 0px 10px;" onclick="habilitar()">Alterar dados</button>
   </div>

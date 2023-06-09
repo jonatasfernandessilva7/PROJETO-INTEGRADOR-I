@@ -1,19 +1,27 @@
 //define consts
 const express = require('express');
 const app = express();
+
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require("express-session");
 const flash = require("connect-flash");
+
 require("dotenv").config();
 const port = process.env.PORT_SERVER|| 5000;
-const ejs = require("ejs")
+
+const ejs = require("ejs");
+
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
 
 //configurando a sessão
 app.use(session({
     secret : process.env.SESSION_SECRET,
     resave : true,
-    saveUninitialized : true
+    saveUninitialized : true,
+    cookie: {secure:false}
 }));
 
 //configurando flash
@@ -43,7 +51,21 @@ app.set('view engine', 'ejs');
 var userRoute = require('./src/routes/userRoutes');
 app.use('/', userRoute);
 
+//socket
+
+const users = [];
+io.on('connection', (socket) => {
+    console.log('nova conexão', socket.id);
+    users.push(socket);
+
+    socket.on('disconnect', function(){
+        users.slice(users.indexOf(socket), 1);
+        console.log('desconectou');
+    });
+});
+
+
 //open server
-app.listen(port, () => {
-    console.log('this is ok!');
+server.listen(port, () => {
+    console.log('rodando na porta: ',port);
 });
