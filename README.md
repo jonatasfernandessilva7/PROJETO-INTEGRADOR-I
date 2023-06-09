@@ -79,6 +79,7 @@ Prof. Orientador - Anderson Uchôa.
 - NodeMailer
 - Postgres
 - Amazon Web Server
+- socket.io
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
