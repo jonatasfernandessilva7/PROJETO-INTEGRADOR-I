@@ -5,10 +5,10 @@ const insertUser = require("../models/InsertUser");
 
 const updateAluno = async (req, res) => {
 
-    const {email} = req.session.email;
-    const {nome, curso, senha} = req.body;
+    let {email} = req.session.email;
+    let {nome, curso, senha} = req.body;
 
-    const userFind = await insertUser.findOne({
+    let userFind = await insertUser.findOne({
         email
     })
 

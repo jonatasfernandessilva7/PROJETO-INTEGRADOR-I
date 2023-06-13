@@ -1,22 +1,23 @@
-const { getEventListeners } = require('events');
 var express = require('express');
-const Sequelize = require("sequelize");
 const monitorDelete = require("../models/MonitorModel");
+const admService = require('../services/admService');
 
 const delMonitor = async (req, res) => {
 
+    const { email } =  req.body
 
-    const buscaADeletar = await monitorDelete.findOne({
-        email : req.body.emailMonitorDelete
-    }).then(() => {
-        monitorDelete.destroy({email:req.body.emailMonitorDelete, force: true, truncate: true}).then(function () {
-            res.redirect('/views/admgeral/DeletarMonitor');
-        }).catch(function (erro) {
-            res.send("error" + erro);
-        });
-    }).catch((erro) => {
-        res.send("error" + erro)
+    var buscaADeletar = await monitorDelete.findOne({
+        email
     });
+
+    if (buscaADeletar){
+        try {
+            delMonitor = await admService.deleteMonitor(email);
+            res.redirect('/views/admgeral/DeletarMonitor')
+        }catch(erro) {
+            res.send("error" + erro)
+        };
+    }
 
 }
 

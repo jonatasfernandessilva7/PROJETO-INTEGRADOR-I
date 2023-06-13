@@ -41,10 +41,8 @@ app.use(bodyParser.json());
 
 
 //configuring view
-//var engines = require('consolidate');
 
 app.set('views', __dirname + '/views');
-//app.engine('html', engines.mustache);
 app.set('view engine', 'ejs');
 
 //callback routes

@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const enviandoSugestao = async (req, res) => {
 
-    var searchUser = await insertUser.findOne({
+    let searchUser = await insertUser.findOne({
         attributes: ['email'],
         where: {
             email: req.body.emailDoSugestor,

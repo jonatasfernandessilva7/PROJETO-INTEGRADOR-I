@@ -1,33 +1,30 @@
-const { getEventListeners } = require('events');
-var express = require('express');
-const Sequelize = require("sequelize");
+const express = require('express');
+const userServiceCreate = require("../services/alunoService");
 const insertUser = require("../models/InsertUser");
 
 const createAluno = async (req,res) => {
 
-    const userFind = await insertUser.findOne({where:{
-        email : req.body.email
+    const { nome, email, curso, senha } = req.body;
+
+    let userFind = await insertUser.findOne({where:{
+        email
     }});
 
-    if (req.body.senhaConfirm != req.body.senha) {
+    if (req.body.senhaConfirm != senha) {
         res.send("senhas não batem, por favor volte e corrija");
-    } else if (!req.body.email.includes("@alu.ufc.br")){
+    } else if (!email.includes("@alu.ufc.br")){
         res.send("por favor volte e insira um email da ufc")
     } 
 
     if (userFind){
         res.send('ja existe um usuario com esse email')
     }else{
-        insertUser.create({
-            nome: req.body.nome,
-            email: req.body.email,
-            curso: req.body.curso,
-            senha: req.body.senha
-        }).then(function () {
-            res.redirect('/Aluno/login');
-        }).catch(function (erro) {
-            res.redirect('/Aluno/cadastro');
-        });
+        try {
+            novousuario = await userServiceCreate.createUser(nome,email,curso,senha);
+            res.render('Aluno/login');
+        }catch(error){
+            res.send(error);
+        }
     }
 }
 

@@ -5,7 +5,7 @@ const monitor = require("../models/MonitorModel");
 
 const LoginMonitor = async (req, res) => {
 
-    const verificando = (req, res, next) => {
+    let verificando = (req, res, next) => {
         if (req.session.emailMonitor && req.session.senhaMonitor) {
             next();
         }else{
@@ -13,7 +13,7 @@ const LoginMonitor = async (req, res) => {
         }
     }
 
-    var searchUser = await monitor.findOne({
+    let searchUser = await monitor.findOne({
             email: req.body.emailMonitor,
             senha: req.body.senhaMonitor
     }).then(async () => {

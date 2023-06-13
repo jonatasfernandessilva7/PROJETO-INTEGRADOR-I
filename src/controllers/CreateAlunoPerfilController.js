@@ -6,7 +6,7 @@ const insertUser = require("../models/InsertUser");
 
 const PerfilAluno = async (req, res) => {
 
-    const User = await insertUser.findOne({
+    let User = await insertUser.findOne({
         email: req.session.email,
         senha: req.session.senha,
         curso: req.session.curso,

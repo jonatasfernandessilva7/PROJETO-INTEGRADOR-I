@@ -1,24 +1,25 @@
-const { getEventListeners } = require('events');
 var express = require('express');
-const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
+const update = require('../services/alunoService');
 
 
 const updateAlunoSenha = async (req, res) => {
 
-    const userFind = await insertUser.findOne({
-        email : req.body.emailRecuperacaoSenha
+    const { email, senha } = req.body
+
+    var userFind = await insertUser.findOne({
+        email 
     }).then(async () => {
 
         if (userFind === null) {
             return res.status(400).send('user not found')
         } else {
-            await insertUser.update({
-                senha: req.body.novaSenha
-            },{
-                    email : req.body.emailRecuperacaoSenha
-            });
-            res.redirect("/Aluno/login");
+            try {
+                update = await update.updateAluno(email, senha);
+                res.redirect("/Aluno/login");
+            }catch(error){
+                res.send(error)
+            }
         }
     });
 

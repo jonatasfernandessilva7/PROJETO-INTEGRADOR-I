@@ -12,8 +12,9 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
   <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script defer src="/js/admiteracoes.js"></script>
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script defer type="text/javascript" src="/js/admIteracoes.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.2/socket.io.js"></script>
+  <script defer type="text/javascript" src="/js/websocket/websocket.js"></script>
 </head>
 
 <body>
@@ -28,18 +29,10 @@
   </ul>
 
   <div id="laboratorios">
-    <h1>Laboratórios</h1>
-    <p>Nesta sessão você pode inserir e remover os laboratórios da página de escolha do usuário.</p>
-    <div class="card" style="width: 18rem; display: inline-block; margin:30px;text-align: center;">
-      <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laboratório 1</h5><br>
-        <button class="btn btn-primary">Entrar</button>
-      </div>
-    </div><br>
+    <h1>Adicionar e Remover Laboratórios</h1>
     <p>Digite o nome do laboratório:</p><input type="text" size="40" maxlength="30"><br><br>
-    <button class="but" id="btn-add" onclick="clicar()" style="width: 200px;height: 50px;"> Adicionar </button>
-    <button class="but" id="btn-add" style="width: 200px;height: 50px;"> Remover </button><br><br>
+    <button class="but" id="btn-add" style="width: 200px;height: 50px;"> Adicionar </button>
+    <button class="but" id="btn-remove" style="width: 200px;height: 50px;"> Remover </button><br><br>
     <div style="display: flex;justify-content: center;">
       <button style="width: 300px;height: 40px;"><a href="/views/Aluno/home" style="text-decoration: none;">Ir para a
           página de laboratórios</a></button>
@@ -48,46 +41,17 @@
   </div><br><br>
 
   <div id="computadores">
-    <h1>Computadores</h1>
-    <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
-    <div class="card" style="width: 18rem; display: inline-block; margin:30px;text-align: center;">
-      <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Computador 1</h5>
-        <p class="card-text">Quer escolher esse computador? Então clique no botão abaixo!</p>
-        <button class="btn btn-primary">Escolher</button>
-      </div>
+    <h1>Buscar Computadores</h1>
     </div><br>
     <select name="select" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
       <option selected disabled>Laboratórios</option>
-      <option id="op1" value="valor1" onclick="habilitar()">Laboratório 1</option>
-      <option id="op2" value="valor2" onclick="habilitar()">Laboratório 2</option>
-      <option id="op3" value="valor3" onclick="habilitar()">Laboratório 3</option>
-      <option id="op4" value="valor3" onclick="habilitar()">Laboratório 4</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Biblioteca</option>
+      <option id="op1" value="valor1">Laboratório 1</option>
     </select>
     <select name="select" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
       <option selected disabled>Computadores</option>
-      <option id="op1" value="valor1" onclick="habilitar()">Computador 1</option>
-      <option id="op2" value="valor2" onclick="habilitar()">Computador 2</option>
-      <option id="op3" value="valor3" onclick="habilitar()">Computador 3</option>
-      <option id="op4" value="valor3" onclick="habilitar()">Computador 4</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 5</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 6</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 7</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 8</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 9</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 10</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 11</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 12</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 13</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 14</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 15</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 16</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 17</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 18</option>
+      <option id="op1" value="valor1">Computador 1</option>
     </select>
-    <button id="btn-add" class="but" onclick="clicar()" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
+    <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;">
       Adicionar </button>
     <button id="btn-add" class="but" style="width: 220px;height: 60px;margin: 10px 0px 10px 10px;"> Remover
     </button><br>
@@ -102,37 +66,14 @@
     <p>Nesta sessão você pode inserir e remover os computadores da página de escolha do usuário.</p>
     <select name="select" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">
       <option selected disabled>Laboratórios</option>
-      <option id="op1" value="valor1" onclick="habilitar()">Laboratório 1</option>
-      <option id="op2" value="valor2" onclick="habilitar()">Laboratório 2</option>
-      <option id="op3" value="valor3" onclick="habilitar()">Laboratório 3</option>
-      <option id="op4" value="valor3" onclick="habilitar()">Laboratório 4</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Biblioteca</option>
+      <option id="op1" value="valor1" >Laboratório 1</option>
     </select>
     <select name="select" style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">
       <option selected disabled>Computadores</option>
-      <option id="op1" value="valor1" onclick="habilitar()">Computador 1</option>
-      <option id="op2" value="valor2" onclick="habilitar()">Computador 2</option>
-      <option id="op3" value="valor3" onclick="habilitar()">Computador 3</option>
-      <option id="op4" value="valor3" onclick="habilitar()">Computador 4</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 5</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 6</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 7</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 8</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 9</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 10</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 11</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 12</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 13</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 14</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 15</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 16</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 17</option>
-      <option id="op5" value="valor3" onclick="habilitar()">Computador 18</option>
+      <option id="op1" value="valor1" >Computador 1</option>
     </select>
-    <button id="btn-add" class="but" onclick="clicar()"
-      style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
-    <input type="text" size="50" style="height: 45px;margin-right: 5px;" placeholder="Pesquisar por usuário"><button
-      id="btn-add" class="but" onclick="clicar()"
+    <button
+      id="btn-add" class="but" 
       style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
     <br><br>
     <table class="table table-dark table-striped">
@@ -144,25 +85,6 @@
           <th scope="col">Email</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
     </table>
   </div>
 
@@ -170,7 +92,7 @@
     <h1>Contas</h1>
     <p>Nesta sessão você pode analisar e remover a conta dos usuários do site.</p>
     <input type="text" size="50" style="height: 45px;margin-right: 10px;" placeholder="Pesquisar por usuário"><button
-      id="btn-add" class="but" onclick="clicar()"
+      id="btn-add" class="but" 
       style="width: 200px;height: 50px;margin: 5px 0px 5px 0px;">Verificar</button>
     <br><br>
     <table class="table table-dark table-striped">
@@ -182,25 +104,6 @@
           <th scope="col">Email</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
     </table>
   </div>
 

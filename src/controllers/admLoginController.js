@@ -5,7 +5,7 @@ const administrador = require("../models/InsertUser");
 
 const AdmLogin = async (req, res) => {
 
-    var buscaAdm = await administrador.findOne({
+    let buscaAdm = await administrador.findOne({
         attributes: ['email', 'senha'],
         where: {
             email: req.body.emailAdm,
@@ -13,7 +13,7 @@ const AdmLogin = async (req, res) => {
         }
     });
 
-    const verificando = (req, res, next) => {
+    let verificando = (req, res, next) => {
         if (req.session.emailAdm && req.session.senhaAdm) {
             next();
         }else{

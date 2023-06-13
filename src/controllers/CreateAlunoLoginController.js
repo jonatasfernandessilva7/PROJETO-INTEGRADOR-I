@@ -1,11 +1,9 @@
-const { getEventListeners } = require('events');
 var express = require('express');
-const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
 
 const LoginAluno = async (req, res) => {
 
-    var searchUser = await insertUser.findOne({
+    let searchUser = await insertUser.findOne({
         attributes: ['email', 'senha'],
         where: {
             email: req.body.email1,

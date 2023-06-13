@@ -13,7 +13,6 @@ const updateAlunoSenha = require("../controllers/updateAlunoSenha");
 const deleteMonitor = require("../controllers/deleteMonitorController");
 const sugestao = require("../controllers/emailSugestaoController");
 
-
 //rota para page principal
 
 router.get('/', (req, res) => {
