@@ -1,6 +1,3 @@
-const { getEventListeners } = require('events');
-var express = require('express');
-const Sequelize = require("sequelize");
 const insertUser = require("../models/InsertUser");
 
 
