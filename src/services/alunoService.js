@@ -26,11 +26,31 @@ async function buscaAluno(email) {
         email
     }});
 
-    return email;
+    return userFind;
 }
+
+async function buscaTodosOsDados(nome, email, curso, senha){
+    let buscaTudo = await insertUser.findOne({
+        nome:nome,
+        email: email,
+        curso:curso,
+        senha:senha
+    });
+
+    return buscaTudo;
+}
+
+async function updateDataAluno(nome, email,curso,senha){
+    const updateData = await insertUser.update({nome, curso, senha},{email});
+
+    return updateData;
+}
+
 
 module.exports = {
     createUser,
     updateAluno,
-    buscaAluno
+    buscaAluno,
+    buscaTodosOsDados,
+    updateDataAluno,
 };
