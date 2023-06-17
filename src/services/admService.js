@@ -2,7 +2,7 @@ const monitor = require("../models/MonitorModel");
 const aluno = require("../models/InsertUser");
 const adm = require("../models/AdmModel");
 
-async function createMonitor (nome, email, curso, senha) {
+async function createMonitor(nome, email, curso, senha) {
     const novoMonitor = await monitor.create({
         nome: nome,
         email: email,
@@ -15,8 +15,10 @@ async function createMonitor (nome, email, curso, senha) {
 
 async function deleteMonitor(email) {
     const del = await monitor.destroy({
-        email:email, 
-        force: true, 
+        where: {
+            email
+        },
+        force: true,
         truncate: true
     });
 
@@ -25,8 +27,10 @@ async function deleteMonitor(email) {
 
 async function deleteUsuario(email) {
     const del = await aluno.destroy({
-        email:email, 
-        force: true, 
+        where: {
+            email: email,
+        },
+        force: true,
         truncate: true
     });
 
@@ -35,10 +39,8 @@ async function deleteUsuario(email) {
 
 
 async function buscaMonitor(email) {
-    let userFind = await monitor.findOne({
-        where: {
-            email
-        }
+    let userFind = await monitor.findOne({   
+        where: {email}
     });
 
     return userFind;
@@ -64,11 +66,21 @@ async function buscaAdm(email) {
     return userFind;
 }
 
+
+async function buscaMonitorADeletar(email){
+    let userFind = await monitor.findOne({  
+        email
+    });
+
+    return userFind;
+}
+
 module.exports = {
     createMonitor,
     deleteUsuario,
     buscaAluno,
     buscaAdm,
     buscaMonitor,
-    deleteMonitor
+    deleteMonitor,
+    buscaMonitorADeletar
 }

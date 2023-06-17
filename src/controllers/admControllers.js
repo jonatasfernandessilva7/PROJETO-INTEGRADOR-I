@@ -12,7 +12,7 @@ const AdmLogin = async (req, res) => {
         } else {
             res.render('admgeral/Adm');
         }
-    }catch(error){
+    } catch (error) {
         res.send(error);
     }
 
@@ -49,22 +49,23 @@ const cadastroMonitor = async (req, res) => {
 const delMonitor = async (req, res) => {
 
     const { email } = req.body;
-    console.log(email);
 
-    let buscaADeletar = await admService.buscaMonitor(email);
+    let buscaADeletar = await admService.buscaMonitorADeletar(email);
 
     try {
+
         if (buscaADeletar) {
             try {
-                delMonitor = await admService.deleteMonitor(email);
-                res.redirect('/views/admgeral/DeletarMonitor')
+                monitorADeletadar = await admService.deleteMonitor(email);
+                res.redirect('/views/admgeral/DeletarMonitor');
             } catch (erro) {
                 res.send("error" + erro);
-            };
-        } 
-    }catch(error){
+            }
+        }
+    } catch (error) {
         res.send(error);
     }
+
 
 }
 
