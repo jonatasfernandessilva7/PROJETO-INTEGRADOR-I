@@ -1,16 +1,9 @@
-const { getEventListeners } = require('events');
-var express = require('express');
-var router = express.Router();
-const createAluno = require("../controllers/CreateAlunoControler");
-const perfilAluno = require("../controllers/CreateAlunoPerfilController");
-const LoginAluno = require("../controllers/CreateAlunoLoginController");
-const updateAluno = require("../controllers/updateAlunoData");
-const createMonitor = require("../controllers/CreateMonitorController");
-const LoginMonitor = require("../controllers/CreateMonitorLoginController");
-const loginAdm = require("../controllers/admLoginController");
+const express = require('express');
+const router = express.Router();
+const admControllers = require('../controllers/admControllers');
+const alunoControllers = require('../controllers/alunoControllers');
+const monitorControllers = require('../controllers/monitorControllers');
 const recuperandoSenha = require ("../controllers/recuperarSenhaController")
-const updateAlunoSenha = require("../controllers/updateAlunoSenha");
-const deleteMonitor = require("../controllers/deleteMonitorController");
 const sugestao = require("../controllers/emailSugestaoController");
 
 //rota para page principal
@@ -81,7 +74,7 @@ router.get('/views/Aluno/Historico', (req, res) => {
 });
 
 //rota para pagina de perfil
-router.get('/views/Aluno/perfil', perfilAluno);
+router.get('/views/Aluno/perfil', alunoControllers.PerfilAluno);
 
 //rota para logout
 router.get('/logout', (req, res) => {
@@ -95,19 +88,19 @@ router.get("/Aluno/recuperacao/inserirNovaSenha", (req, res)=>{
 //rotas post Aluno
 
 //rota após o cadastro estar feito
-router.post('/Aluno/cadastro/login', createAluno);
+router.post('/Aluno/cadastro/login', alunoControllers.createAluno);
 
 //rota para pagina home após fazer login
-router.post('/Aluno/login/home', LoginAluno);
+router.post('/Aluno/login/home', alunoControllers.LoginAluno);
 
 router.post('/views/Aluno/Contato', sugestao);
 
 //rotas put Aluno
 
 //rota para fazer update dos dados do perfil
-router.put('/views/Aluno/perfil', updateAluno);
+router.put('/views/Aluno/perfil', alunoControllers.updateAluno);
 
-router.put('/Aluno/recuperacao/inserirNovaSenha', updateAlunoSenha);
+router.put('/Aluno/recuperacao/inserirNovaSenha', alunoControllers.updateAlunoSenha);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -163,7 +156,7 @@ router.get('/views/Monitor/Monitor_perfil', (req, res) => {
 //rotas post Monitor
 
 //rota para login
-router.post('/Monitor/login/home', LoginMonitor);
+router.post('/Monitor/login/home', monitorControllers.LoginMonitor);
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -197,11 +190,11 @@ router.get('/views/admgeral/DeletarMonitor', async (req, res) => {
 });
 
 //rotas post para adm
-router.post('/admgeral/Adm/home', loginAdm);
+router.post('/admgeral/Adm/home', admControllers.AdmLogin);
 
-router.post('/admgeral/CadastroMonitor', createMonitor);
+router.post('/admgeral/CadastroMonitor', admControllers.cadastroMonitor);
 
 //rotas del adm
-router.get('/admgeral/DeletarMonitor', deleteMonitor);
+router.get('/admgeral/DeletarMonitor', admControllers.delMonitor);
 
 module.exports = router;
