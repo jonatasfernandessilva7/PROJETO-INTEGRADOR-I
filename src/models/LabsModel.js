@@ -1,5 +1,5 @@
-const { sequelize } = require("./db");
-const db = require("./db");
+const { sequelize } = require("../config/db");
+const db = require("../config/db");
 
 //criando modelo dos labs
 
@@ -11,7 +11,13 @@ const Lab = sequelize.define('laboratorios', {
     },
     numero: {
         type: db.Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        primaryKey: true
+    },
+    status: {
+        type: db.Sequelize.STRING,
+        allowNull: false,
+        defaultValue: 'livre'
     }
 });
 

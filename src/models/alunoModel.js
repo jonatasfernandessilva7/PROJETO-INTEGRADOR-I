@@ -1,5 +1,5 @@
-const { sequelize } = require("./db");
-const db = require("./db");
+const { sequelize } = require("../config/db");
+const db = require("../config/db");
 
 //criando modelo do banco
 
@@ -12,11 +12,11 @@ const InsertUser = sequelize.define('usuarios', {
     nome:{
         type: db.Sequelize.STRING,
         allowNull: false,
-        primaryKey: true
     },
     email: {
         type: db.Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        primaryKey: true
     },
     curso: {
         type: db.Sequelize.STRING,

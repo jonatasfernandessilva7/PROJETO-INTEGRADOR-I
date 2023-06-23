@@ -18,8 +18,7 @@
   <header>
     <%- include('../partials/headerAluno'); -%>
   </header>
-
-  <form action="">
+  <form action="/views/Aluno/perfil" method="POST">
     <div style="text-align: center;">
       <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
     </div>
@@ -43,13 +42,12 @@
       <button class="enviar" style="margin:0px 30px 0px 10px;" onclick="alert()">Salvar dados</button>
     </div>
   </form><br>
-
   <div style="text-align: center;">
     <button class="enviar" style="margin: 0px 30px 0px 10px;" onclick="habilitar()">Alterar dados</button>
   </div>
   <footer class="footer">
     <%- include('../partials/footer'); -%>
   </footer>
-
 </body>
+
 </html>

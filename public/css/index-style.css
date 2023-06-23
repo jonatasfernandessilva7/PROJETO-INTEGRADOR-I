@@ -13,7 +13,7 @@ html, body{
 }
 
 h3{
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: bold;
 }
 .menu{
@@ -25,24 +25,23 @@ h3{
     justify-content: center;
 }
 .nav{
-    position: absolute;
-    top: 70%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    position: absolute;
+    bottom: 15%;
 }
 .nav a{
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #8344ff;
-    border-right: solid 1px black;
-    text-decoration: none;
-    text-align: center;
-    width: 700px;
-    margin: 10px 20px 10px 20px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
+    background-color: #8344ff;
+    text-decoration: none;
+    font-size: 15pt;
+    color: #fff;
+    width: 270px;
+    padding: 10px 0px 10px 0px;
+    margin: 10px;
 }
 .nav a:hover{
     background-color: #4d4d4d;

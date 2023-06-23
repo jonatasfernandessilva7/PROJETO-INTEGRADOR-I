@@ -87,7 +87,7 @@ Prof. Orientador - Anderson Uchôa.
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
 | Usuários | X |  X  |  |  |
-| Monitores | X |   X |   | |
+| Monitores | X |   X |   | x|
 | Administradores | X |   X |   | |
 
 ## :neckbeard: Rotas da API REST utilizadas

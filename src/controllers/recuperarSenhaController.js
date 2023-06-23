@@ -1,27 +1,21 @@
-const { getEventListeners } = require('events');
-var express = require('express');
-const Sequelize = require("sequelize");
-const insertUser = require("../models/InsertUser");
-require("dotenv").config();
-
-
+const recuperarSenhaService = require("../services/recuperarsenhaService");
 
 const recuperandoSenha = async (req, res) => {
 
-    var searchUser = await insertUser.findOne({
-        attributes: ['email'],
-        where: {
-            email: req.body.emailRecuperacao,
-        }
-    }).then(async () => {
+    const { email } = req.body;
 
+    var searchUser = await recuperarSenhaService.buscaEmail(email);
+
+    try {
         if (searchUser === null) {
             return res.status(400).send('user not found')
         } else {
-            await mailerEnviaEmail(req.body.emailRecuperacao);
+            await mailerEnviaEmail(email, req.body.sugestao, req.body.nomeDoSugestor);
             res.redirect("/Aluno/recuperacao/inserirNovaSenha");
         }
-    });
+    }catch(erro){
+        res.json({erro});
+    }
 }
 
 function mailerEnviaEmail(email) {

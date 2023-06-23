@@ -1,27 +1,24 @@
-const { getEventListeners } = require('events');
-var express = require('express');
-const Sequelize = require("sequelize");
-const insertUser = require("../models/InsertUser");
-require("dotenv").config();
-
+const sugestaoService = require("../services/sugestaoService");
 
 
 const enviandoSugestao = async (req, res) => {
 
-    var searchUser = await insertUser.findOne({
-        attributes: ['email'],
-        where: {
-            email: req.body.emailDoSugestor,
-        }
-    }).then(async () => {
+    const { email } = req.body;
 
+    var searchUser = await sugestaoService.buscaEmail(email);
+
+    try {
         if (searchUser === null) {
             return res.status(400).send('user not found')
         } else {
-            await mailerEnviaEmail(req.body.emailDoSugestor, req.body.sugestao, req.body.nomeDoSugestor);
+            await mailerEnviaEmail(email, req.body.sugestao, req.body.nomeDoSugestor);
             res.send("sugestão enviada");
         }
-    });
+    }catch(erro){
+        res.json({erro});
+    }
+
+
 }
 
 function mailerEnviaEmail(email, sugestao, aluno) {
@@ -37,13 +34,13 @@ function mailerEnviaEmail(email, sugestao, aluno) {
             host: "smtp.gmail.com",
             port: 587,
             secure: false, // verdadeiro para portas 465, 587 = false
-            logger:true,
+            logger: true,
             secureconnection: false,
-            auth:{
-                user:process.env.EMAIL_USER,
+            auth: {
+                user: process.env.EMAIL_USER,
                 pass: process.env.SENHA_EMAIL_USER
             },
-            tls:{
+            tls: {
                 rejectUnAuthorized: true
             }
         });
@@ -54,7 +51,7 @@ function mailerEnviaEmail(email, sugestao, aluno) {
             to: process.env.EMAIL_ENVIAR, // list of receivers
             subject: "sugestão✔", // Subject line
             text: "sugestão", // plain text body
-            html: sugestao + '<br><strong>enviado por </strong>' + aluno, // html body
+            html: sugestao + '<br><br><strong>enviado por </strong>' + aluno, // html body
         });
 
         console.log("Message sent: %s", info.messageId);
@@ -69,4 +66,4 @@ function mailerEnviaEmail(email, sugestao, aluno) {
 
 }
 
-module.exports =  enviandoSugestao;
+module.exports = enviandoSugestao;

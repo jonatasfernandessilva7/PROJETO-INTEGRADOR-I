@@ -1,32 +1,20 @@
-$('.nav a[href^="#"]').on('click', function (e) {
-  e.preventDefault();
-  var id = $(this).attr('href'),
-    targetOffset = $(id).offset().top;
+function add(){
 
-  $('html, body').animate({
-    scrollTop: targetOffset - 100
-  }, 200);
-});
-let cont = 1;
-$('#btn-add').on('click', function () {
-  $('.checks').append('<input type="text" id="' + cont + '">')
-  cont++;
-});
+  var option = document.querySelector(".option");
 
-function clicar() {
-  swal({ title: "Escolher este Computador?", icon: "info", buttons: true, dangerMode: true, }).then((willDelete) => {
-    if (willDelete) {
-      swal("Concluiso!", { icon: "success", });
-      x = 'Em uso ...';
-      computador.innerHTML = x;
-      computador.disabled = true;
-    } else {
-      computador.disabled = false;
-    }
-  });
+  var novoLaboratorio = document.createElement("p");
+
+  var conteudoLaboratorio = document.createTextNode('oi teste');
+
+  novoLaboratorio.appendChild(conteudoLaboratorio);
+
+  option.appendChild(novoLaboratorio);
+
+  console.log(option)
 }
 
-function habilitar() {
-  var entrada1 = document.getElementsByClassName("but");
-  entrada1.disabled = false;
-}
+var botaoAdicionar = document.getElementById('btn-add');
+
+botaoAdicionar.addEventListener('click', function(){
+  add();
+})
