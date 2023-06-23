@@ -1,6 +1,6 @@
 # :checkered_flag: SCHOOL LAB UFC
 
-Monitoramento e controle do fluxo de entrada e saída nos laboratórios e biblioteca.
+Monitoramento e controle do fluxo de entrada e saída nos laboratórios.
 
 ## :technologist: Membros da equipe e Orientador
 
@@ -79,7 +79,6 @@ Prof. Orientador - Anderson Uchôa.
 - NodeMailer
 - Postgres
 - Amazon Web Server
-- socket.io
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
@@ -88,7 +87,8 @@ Prof. Orientador - Anderson Uchôa.
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
 | Usuários | X |  X  |  |  |
-| Monitores | X |   X |   | |
+| Monitores | X |   X |   | x|
+| Administradores | X |   X |   | |
 
 ## :neckbeard: Rotas da API REST utilizadas
 
@@ -98,12 +98,12 @@ Prof. Orientador - Anderson Uchôa.
 | GET | /esqueceuASenha|
 | GET | /Aluno/login|
 | GET | Aluno/cadastro|
-| GET | /views/Lab1|
-| GET | /views/Lab2|
-| GET | /views/Lab3|
-| GET | /views/Lab4|
-| GET | /views/Biblioteca|
-| GET | /views/home|
+| GET | /views/Aluno/Lab1|
+| GET | /views/Aluno/Lab2|
+| GET | /views/Aluno/Lab3|
+| GET | /views/Aluno/Lab4|
+| GET | /views/Aluno/Biblioteca|
+| GET | /views/Aluno/home|
 | GET | /views/Aluno/Ajuda|
 | GET | /views/Aluno/Contato|
 | GET | /views/Aluno/Historico|
@@ -120,18 +120,24 @@ Prof. Orientador - Anderson Uchôa.
 | GET | /views/Monitor/Monitor_Ajuda|
 | GET | /views/Monitor/Contato|
 | GET | /views/Monitor/Monitor_perfil|
-| GET | /admgeral/Adm|
-| GET | /views/admgeral_Adm|
+| GET | /admgeral/Adm/Login|
+| GET | /views/admgeral/Adm|
 | GET | /views/admgeral/Adm_perfil|
 | GET | /views/admgeral/Adm_Ajuda|
 | GET | /views/admgeral/Adm_Contato|
+| GET | /views/admgeral/AdicionarMonitor|
+| GET | /views/admgeral/DeletarMonitor|
 | POST | /Aluno/cadastro/login |
 | POST | /Aluno/login/home |
 | POST | /esqueceuASenha|
 | POST | /Monitor/cadastro/loginMonitor|
 | POST | /Monitor/login/home|
+| POST | /views/Aluno/Contato|
+| POST | /admgeral/Adm/home|
+| POST | /admgeral/CadastroMonitor|
 | PUT | /views/Aluno/perfil |
-| PUT | /Aluno/login |
+| PUT | /Aluno/recuperacao/inserirNovaSenha |
+| DELETE | /views/admgeral/DeletarMonitor |
 
 ## Documentação
 * [Documento de visão do projeto](https://github.com/jonatasfernandessilva7/PROJETO-INTEGRADOR-I/blob/main/documentsSchoolLab/TemplateDocumentodeVisão.doc.pdf)
