@@ -1,17 +1,14 @@
 const userService = require("../services/alunoService");
+const validations = require("../validations/alunoValidations");
 
 
 const createAluno = async (req,res) => {
 
-    const { nome, email, curso, senha } = req.body;
+    const { nome, email, curso, senha, senhaConfirm } = req.body;
 
     busca = await userService.buscaAluno(email);
 
-    if (req.body.senhaConfirm != senha) {
-        res.send("senhas não batem, por favor volte e corrija");
-    } else if (!email.includes("@alu.ufc.br")){
-        res.send("por favor volte e insira um email da ufc");
-    } 
+    await validations.validarCadastro(senhaConfirm, senha, email);
 
     if (busca){
         res.send('ja existe um usuario com esse email');
@@ -45,8 +42,10 @@ const LoginAluno = async (req, res) => {
     if (searchUser === null) {
         return res.status(400).send('user not found')
     } else {
-        res.json(searchUser)
-        res.redirect('/views/Aluno/home');
+        res.json({
+            message:"ok",
+            user: searchUser,
+    }).render('Aluno/home');
     }
 
 }
