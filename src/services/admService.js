@@ -67,7 +67,7 @@ async function buscaAdm(email) {
 }
 
 
-async function buscaMonitorADeletar(email){
+async function buscaUsuarioADeletar(email){
     let userFind = await monitor.findOne({  
         email
     });
@@ -82,5 +82,5 @@ module.exports = {
     buscaAdm,
     buscaMonitor,
     deleteMonitor,
-    buscaMonitorADeletar
+    buscaUsuarioADeletar
 }
