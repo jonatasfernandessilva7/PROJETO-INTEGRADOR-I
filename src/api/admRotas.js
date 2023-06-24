@@ -31,7 +31,11 @@ router.get('/views/admgeral/AdicionarMonitor', async (req, res) => {
 });
 
 router.get('/views/admgeral/DeletarMonitor', async (req, res) => {
-    res.render('admgeral/AdmDeletarMonitor')
+    res.render('admgeral/AdmDeletarMonitor');
+});
+
+router.get('/views/admgeral/DeletarAluno', async (req, res) => {
+    res.render('admgeral/AdmDeletarAluno');
 });
 
 //rotas post para adm
@@ -41,5 +45,7 @@ router.post('/admgeral/CadastroMonitor', admControllers.cadastroMonitor);
 
 //rotas del adm
 router.get('/admgeral/DeletarMonitor', admControllers.delMonitor);
+
+router.get('/admgeral/DeletarAlluno', admControllers.delAluno);
 
 module.exports = router;
