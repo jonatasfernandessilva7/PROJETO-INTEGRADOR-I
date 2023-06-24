@@ -50,7 +50,7 @@ const delMonitor = async (req, res) => {
 
     const { email } = req.body;
 
-    let buscaADeletar = await admService.buscaMonitorADeletar(email);
+    let buscaADeletar = await admService.buscaUsuarioADeletar(email);
 
     try {
 
@@ -70,9 +70,34 @@ const delMonitor = async (req, res) => {
 
 }
 
+const delAluno = async (req, res) => {
+
+    const { email } = req.body;
+
+    let buscaADeletar = await admService.buscaUsuarioADeletar(email);
+
+    try {
+
+        if (buscaADeletar) {
+            try {
+                let alunoADeletar = await admService.deleteUsuario(email);
+                res.redirect('/views/admgeral/DeletarAluno');
+            } catch (erro) {
+                res.json(buscaADeletar)
+                res.send("error" + erro);
+            }
+        }
+    } catch (error) {
+        res.send(error);
+    }
+
+
+}
+
 
 module.exports = {
     AdmLogin,
     cadastroMonitor,
-    delMonitor
+    delMonitor,
+    delAluno
 }
