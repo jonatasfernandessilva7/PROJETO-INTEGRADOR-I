@@ -87,7 +87,7 @@ Prof. Orientador - Anderson Uchôa.
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
 | Usuários | X |  X  |  |  |
-| Monitores | X |   X |   | x|
+| Monitores | X |   X |   | X|
 | Administradores | X |   X |   | |
 
 ## :neckbeard: Rotas da API REST utilizadas
@@ -127,6 +127,7 @@ Prof. Orientador - Anderson Uchôa.
 | GET | /views/admgeral/Adm_Contato|
 | GET | /views/admgeral/AdicionarMonitor|
 | GET | /views/admgeral/DeletarMonitor|
+| GET | /views/admgeral/DeletarAluno|
 | POST | /Aluno/cadastro/login |
 | POST | /Aluno/login/home |
 | POST | /esqueceuASenha|
@@ -138,6 +139,7 @@ Prof. Orientador - Anderson Uchôa.
 | PUT | /views/Aluno/perfil |
 | PUT | /Aluno/recuperacao/inserirNovaSenha |
 | DELETE | /views/admgeral/DeletarMonitor |
+| DELETE | /views/admgeral/DeletarAluno |
 
 ## Documentação
 * [Documento de visão do projeto](https://github.com/jonatasfernandessilva7/PROJETO-INTEGRADOR-I/blob/main/documentsSchoolLab/TemplateDocumentodeVisão.doc.pdf)
