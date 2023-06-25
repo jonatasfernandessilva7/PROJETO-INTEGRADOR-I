@@ -32,7 +32,9 @@ app.use((req, res, next) => {
     res.locals.successMessage = req.flash('succesMessage');
     res.locals.errorMessage = req.flash('errorMessage');
     next();
-})
+});
+
+app.use(express.json());
 
 //configurando engine de views e leitura de json
 app.use(express.static(path.join(__dirname, '../public')));
