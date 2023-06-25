@@ -1,7 +1,9 @@
-const monitor = require("../models/MonitorModel");
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient();
 
 async function buscaMonitor(email) {
-    let userFind = await monitor.findOne({
+    let userFind = await prisma.monitores.findUnique({
         where: {
             email
         }

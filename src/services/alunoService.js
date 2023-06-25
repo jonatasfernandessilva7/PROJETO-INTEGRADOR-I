@@ -1,18 +1,22 @@
-const insertUser = require("../models/alunoModel");
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient();
 
 async function createUser (nome, email, curso, senha) {
-    const novousuario = await insertUser.create({   
+    const user = await prisma.alunos.creat({
+        data: {
             nome,
             email,
             curso,
-            senha                        
+            senha
+        },
     });
 
-    return novousuario;
+    return user;    
 }
 
 async function updateAluno(email, senha) {
-    const update = await insertUser.update({
+    const update = await prisma.alunos.update({
         senha
     },{
             email 
@@ -22,7 +26,7 @@ async function updateAluno(email, senha) {
 }
 
 async function buscaAluno(email) {
-    let userFind = await insertUser.findOne({where:{
+    let userFind = await prisma.alunos.findUnique({where:{
         email
     }});
 
@@ -30,7 +34,7 @@ async function buscaAluno(email) {
 }
 
 async function buscaTodosOsDados(nome, email, curso, senha){
-    let buscaTudo = await insertUser.findOne({
+    let buscaTudo = await prisma.alunos.findUnique({
         nome,
         email,
         curso,
@@ -41,7 +45,7 @@ async function buscaTodosOsDados(nome, email, curso, senha){
 }
 
 async function updateDataAluno(nome, email,curso,senha){
-    const updateData = await insertUser.update({nome, curso, senha},{email});
+    const updateData = await prisma.alunos.update({nome, curso, senha},{email});
 
     return updateData;
 }

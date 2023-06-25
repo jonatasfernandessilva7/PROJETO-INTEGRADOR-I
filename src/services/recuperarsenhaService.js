@@ -1,11 +1,12 @@
-const insertUser = require("../models/alunoModel");
-require("dotenv").config();
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient();
 
 async function buscaEmail(email) {
-    let busca = await insertUser.findOne({
-
-        email
-
+    let busca = await prisma.alunos.findUnique({
+        where: {
+            email
+        }
     });
     return busca;
 }

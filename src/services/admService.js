@@ -1,9 +1,9 @@
-const monitor = require("../models/MonitorModel");
-const aluno = require("../models/alunoModel");
-const adm = require("../models/AdmModel");
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient();
 
 async function createMonitor(nome, email, curso, senha) {
-    const novoMonitor = await monitor.create({
+    const novoMonitor = await prisma.monitores.create({
         nome: nome,
         email: email,
         curso: curso,
@@ -14,7 +14,7 @@ async function createMonitor(nome, email, curso, senha) {
 }
 
 async function deleteMonitor(email) {
-    const del = await monitor.destroy({
+    const del = await prisma.monitores.delete({
         where: {
             email
         },
@@ -26,7 +26,7 @@ async function deleteMonitor(email) {
 }
 
 async function deleteUsuario(email) {
-    const del = await aluno.destroy({
+    const del = await prisma.alunos.delete({
         where: {
             email
         },
@@ -39,7 +39,7 @@ async function deleteUsuario(email) {
 
 
 async function buscaMonitor(email) {
-    let userFind = await monitor.findOne({   
+    let userFind = await prisma.monitores.findUnique({   
         where: {email}
     });
 
@@ -47,7 +47,7 @@ async function buscaMonitor(email) {
 }
 
 async function buscaAluno(email) {
-    let userFind = await aluno.findOne({
+    let userFind = await prisma.alunos.findUnique({
         where: {
             email
         }
@@ -57,7 +57,7 @@ async function buscaAluno(email) {
 }
 
 async function buscaAdm(email) {
-    let userFind = await adm.findOne({
+    let userFind = await prisma.administradores.findUnique({
         where: {
             email
         }
@@ -68,8 +68,10 @@ async function buscaAdm(email) {
 
 
 async function buscaUsuarioADeletar(email){
-    let userFind = await monitor.findOne({  
-        email
+    let userFind = await prisma.alunos.findUnique({  
+        where:{
+            email
+        }
     });
 
     return userFind;
