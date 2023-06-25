@@ -3,13 +3,13 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function createUser (nome, email, curso, senha) {
-    const user = await prisma.alunos.creat({
+    const user = await prisma.alunos.create({
         data: {
             nome,
             email,
             curso,
             senha
-        },
+        }
     });
 
     return user;    
@@ -26,9 +26,11 @@ async function updateAluno(email, senha) {
 }
 
 async function buscaAluno(email) {
-    let userFind = await prisma.alunos.findUnique({where:{
-        email
-    }});
+    let userFind = await prisma.alunos.findUnique({
+        where:{
+            email
+        }
+    });
 
     return userFind;
 }

@@ -4,10 +4,12 @@ const prisma = new PrismaClient();
 
 async function createMonitor(nome, email, curso, senha) {
     const novoMonitor = await prisma.monitores.create({
-        nome: nome,
-        email: email,
-        curso: curso,
-        senha: senha
+        data: {
+            nome,
+            email,
+            curso,
+            senha
+        }
     });
 
     return novoMonitor;
@@ -39,8 +41,8 @@ async function deleteUsuario(email) {
 
 
 async function buscaMonitor(email) {
-    let userFind = await prisma.monitores.findUnique({   
-        where: {email}
+    let userFind = await prisma.monitores.findUnique({
+        where: { email }
     });
 
     return userFind;
@@ -67,9 +69,9 @@ async function buscaAdm(email) {
 }
 
 
-async function buscaUsuarioADeletar(email){
-    let userFind = await prisma.alunos.findUnique({  
-        where:{
+async function buscaUsuarioADeletar(email) {
+    let userFind = await prisma.alunos.findUnique({
+        where: {
             email
         }
     });

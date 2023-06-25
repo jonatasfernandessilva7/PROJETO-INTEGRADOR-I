@@ -14,7 +14,7 @@ const createAluno = async (req,res) => {
         res.send('ja existe um usuario com esse email');
     }else{
         try {
-            novousuario = await userServiceCreate.createUser(nome,email,curso,senha);
+            user = await userService.createUser(nome,email,curso,senha);
             res.render('Aluno/login');
         }catch(error){
             res.send(error);
