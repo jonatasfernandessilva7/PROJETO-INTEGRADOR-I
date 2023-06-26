@@ -72,13 +72,13 @@ Prof. Orientador - Anderson Uchôa.
 
 - Node js
 - express js
-- sequelize
+- Prisma
 - express-session
 - body-parser 
 - connect-flash
 - NodeMailer
 - Postgres
-- Amazon Web Server
+- Amazon Web Service(RDS, EC2)
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
@@ -86,8 +86,8 @@ Prof. Orientador - Anderson Uchôa.
 
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
-| Usuários | X |  X  |  |  |
-| Monitores | X |   X |   | X|
+| Usuários | X |  X  | X | X |
+| Monitores | X |   X |  X | X|
 | Administradores | X |   X |   | |
 
 ## :neckbeard: Rotas da API REST utilizadas
