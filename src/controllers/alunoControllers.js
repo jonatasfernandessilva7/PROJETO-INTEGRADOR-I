@@ -81,7 +81,7 @@ const updateAluno = async (req, res) => {
         try {
 
             let updateDeTudo = await userService.updateDataAluno(nome, email, curso, senha)
-            res.json({message: "ok", usr: userFind}).render('views/Aluno/perfil');
+            res.json({message: "ok", user: userFind}).render('views/Aluno/perfil');
         } catch (erro) {
             console.log(erro);
         }
