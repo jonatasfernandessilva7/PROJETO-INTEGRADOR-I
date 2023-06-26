@@ -16,13 +16,16 @@ async function createUser (nome, email, curso, senha) {
 }
 
 async function updateAluno(email, senha) {
-    const update = await prisma.alunos.update({
-        senha
-    },{
-            email 
+    const updateSenha = await prisma.alunos.update({
+       where:{
+            email,
+       },
+       data:{
+            senha,
+       }, 
     });
 
-    return update;
+    return updateSenha;
 }
 
 async function buscaAluno(email) {
@@ -47,7 +50,14 @@ async function buscaTodosOsDados(nome, email, curso, senha){
 }
 
 async function updateDataAluno(nome, email,curso,senha){
-    const updateData = await prisma.alunos.update({nome, curso, senha},{email});
+    const updateData = await prisma.alunos.update({
+        where:{
+            email
+        },
+        data:{
+            nome, curso, senha
+        }
+    });
 
     return updateData;
 }

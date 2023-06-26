@@ -2,21 +2,21 @@ const userService = require("../services/alunoService");
 const validations = require("../validations/alunoValidations");
 
 
-const createAluno = async (req,res) => {
+const createAluno = async (req, res) => {
 
     const { nome, email, curso, senha, senhaConfirm } = req.body;
 
-    busca = await userService.buscaAluno(email);
+    let busca = await userService.buscaAluno(email);
 
     await validations.validarCadastro(senhaConfirm, senha, email);
 
-    if (busca){
+    if (busca) {
         res.send('ja existe um usuario com esse email');
-    }else{
+    } else {
         try {
-            user = await userService.createUser(nome,email,curso,senha);
-            res.render('Aluno/login');
-        }catch(error){
+            let user = await userService.createUser(nome, email, curso, senha);
+            res.json({user: busca}).render('Aluno/login');
+        } catch (error) {
             res.send(error);
         }
     }
@@ -24,7 +24,7 @@ const createAluno = async (req,res) => {
 
 const LoginAluno = async (req, res) => {
 
-    const { email ,senha } = req.body;
+    const { email, senha } = req.body;
 
     let searchUser = await userService.buscaAluno(email);
 
@@ -34,7 +34,7 @@ const LoginAluno = async (req, res) => {
     const verificando = (req, res, next) => {
         if (emailDeSessao && senhaDeSessao) {
             next();
-        }else{
+        } else {
             res.redirect("/");
         }
     }
@@ -43,9 +43,9 @@ const LoginAluno = async (req, res) => {
         return res.status(400).send('user not found')
     } else {
         res.json({
-            message:"ok",
+            message: "ok",
             user: searchUser,
-    }).render('Aluno/home');
+        }).render('Aluno/home');
     }
 
 }
@@ -54,37 +54,35 @@ const updateAlunoSenha = async (req, res) => {
 
     const { email, senha } = req.body
 
-    busca = await userServiceCreate.buscaAluno(email).then(async () => {
+    let busca = await userService.buscaAluno(email);
 
-        if (userFind === null) {
-            return res.status(400).send('user not found')
-        } else {
-            try {
-                update = await update.updateAluno(email, senha);
-                res.redirect("/Aluno/login");
-            }catch(error){
-                res.send(error)
-            }
+    if (busca === null) {
+        return res.status(400).send('user not found')
+    } else {
+        try {
+            let updateSenha = await userService.updateAluno(email, senha);
+            res.json({ message: "att", user: busca }).render("Aluno/login");
+        } catch (error) {
+            res.send(error)
         }
-    });
-
+    }
 }
 
 
 const updateAluno = async (req, res) => {
 
-    let {nome,email,senha,curso} = req.body; 
+    let { nome, email, senha, curso } = req.body;
 
     let userFind = await userService.buscaAluno(email);
 
-    if (!userFind){
+    if (!userFind) {
         res.send("user não encontrado");
-    }else{
-        try{
+    } else {
+        try {
 
-            updateDeTudo = await userService.updateDataAluno(nome, email, curso, senha)
-            res.redirect('/views/Aluno/perfil');
-        }catch(erro){
+            let updateDeTudo = await userService.updateDataAluno(nome, email, curso, senha)
+            res.json({message: "ok", usr: userFind}).render('views/Aluno/perfil');
+        } catch (erro) {
             console.log(erro);
         }
 
@@ -100,7 +98,7 @@ const PerfilAluno = async (req, res) => {
     let User = await userService.buscaTodosOsDados(nome, email, curso, senha);
 
     if (User) {
-        res.render("Aluno/perfil", {nomeUser: nome, emailUser: email, cursoUser:curso, senhaUser: senha});
+        res.json({User: User}).render("Aluno/perfil", { nomeUser: nome, emailUser: email, cursoUser: curso, senhaUser: senha });
     } else {
         res.send("erro inesperado, desculpe");
     }
