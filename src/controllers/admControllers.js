@@ -57,7 +57,7 @@ const delMonitor = async (req, res) => {
         if (buscaADeletar) {
             try {
                 monitorADeletadar = await admService.deleteMonitor(email);
-                res.redirect('/views/admgeral/DeletarMonitor');
+                res.render('views/admgeral/DeletarMonitor');
             } catch (erro) {
                 res.json(buscaADeletar)
                 res.send("error" + erro);
@@ -81,7 +81,7 @@ const delAluno = async (req, res) => {
         if (buscaADeletar) {
             try {
                 let alunoADeletar = await admService.deleteUsuario(email);
-                res.redirect('/views/admgeral/DeletarAluno');
+                res.render('views/admgeral/DeletarAluno');
             } catch (erro) {
                 res.json(buscaADeletar)
                 res.send("error" + erro);

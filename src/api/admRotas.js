@@ -44,8 +44,8 @@ router.post('/admgeral/Adm/home', admControllers.AdmLogin);
 router.post('/admgeral/CadastroMonitor', admControllers.cadastroMonitor);
 
 //rotas del adm
-router.get('/admgeral/DeletarMonitor', admControllers.delMonitor);
+router.delete('/admgeral/DeletarMonitor', admControllers.delMonitor);
 
-router.get('/admgeral/DeletarAlluno', admControllers.delAluno);
+router.delete('/admgeral/DeletarAluno', admControllers.delAluno);
 
 module.exports = router;

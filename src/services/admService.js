@@ -20,8 +20,6 @@ async function deleteMonitor(email) {
         where: {
             email
         },
-        force: true,
-        truncate: true
     });
 
     return del;
@@ -32,8 +30,6 @@ async function deleteUsuario(email) {
         where: {
             email
         },
-        force: true,
-        truncate: true
     });
 
     return del;
