@@ -2,7 +2,7 @@
 html, body {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
-    background-image: url("../figmaSchoolLab/Tela_fundo.jpg");
+    background-image: url("../Aluno/figmaSchoolLab/Tela_fundo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -159,15 +159,95 @@ label{
     font-weight: 400;
     overflow: hidden;
 }
-.footer address a{
+.footer address p{
     font-weight: 400;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
-/* avatar*/
+.footer address a{
+    color: #ffffff;
+    font-weight: bold;
+}
+/* avatar
 #avatar{
     border-radius: 50%;
     background-color: #fff;
     padding: 5px;
+}*/
+span{
+    color: #8344ff;
 }
+.footer address p button{
+    background-color: #000000;
+    color: #fff;
+    border: none;
+}
+.footer address p button:hover{
+    color: #8344ff;
+    transition: 0.8s;
+}
+
+/*----------------------------------------------------------------------*/
+
+/*Perfil 1*/
+#perfil1{
+    text-align: center;
+    background-color: #000000;
+    display: none;
+}
+#perfil1 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#perfil1 p{
+    font-size: 10pt;
+    color: #fff;
+    margin: 10px 0px 10px 0px;
+}
+#but1{
+    font-size: 13pt;
+}
+
+/*Perfil 2*/
+#perfil2{
+    text-align: center;
+    background-color: #000000;
+    display: none;
+}
+#perfil2 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#perfil2 p{
+    font-size: 10pt;
+    color: #fff;
+    margin: 10px 0px 10px 0px;
+}
+#but2{
+    font-size: 13pt;
+}
+
+/*Perfil 3*/
+#perfil3{
+    text-align: center;
+    background-color: #000000;
+    display: none;
+}
+#perfil3 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#perfil3 p{
+    font-size: 10pt;
+    color: #fff;
+    margin: 10px 0px 10px 0px;
+}
+#but3{
+    font-size: 13pt;
+}
+
+/* AREA DE MUDANÇAS NA RESOLUÇÃO*/
