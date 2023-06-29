@@ -74,6 +74,39 @@
         <footer class="footer">
             <%- include('../partials/footer'); -%>
         </footer>
-</body>
+        <script>
+            let btn1 = document.getElementById('but1');
+let container1 = document.querySelector('#perfil1');
+btn1.addEventListener('click', function() {
+    
+if(container1.style.display === 'block') {
+    container1.style.display = 'none';
+} else {
+    container1.style.display = 'block';
+}
+});
 
+let btn2 = document.getElementById('but2');
+let container2 = document.querySelector('#perfil2');
+btn2.addEventListener('click', function() {
+    
+if(container2.style.display === 'block') {
+    container2.style.display = 'none';
+} else {
+    container2.style.display = 'block';
+}
+});
+
+let btn3 = document.getElementById('but3');
+let container3 = document.querySelector('#perfil3');
+btn3.addEventListener('click', function() {
+    
+if(container3.style.display === 'block') {
+    container3.style.display = 'none';
+} else {
+    container3.style.display = 'block';
+}
+});
+        </script>
+</body>
 </html>
