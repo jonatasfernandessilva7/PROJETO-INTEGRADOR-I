@@ -111,5 +111,5 @@ module.exports = {
     LoginAluno,
     updateAlunoSenha,
     updateAluno,
-    PerfilAluno
+    PerfilAluno,
 }

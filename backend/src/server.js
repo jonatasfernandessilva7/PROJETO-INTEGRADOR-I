@@ -27,7 +27,7 @@ app.use(morgan('tiny'))
 
 //configurando a sessão
 app.use(session({
-    secret : process.env.SESSION_SECRET,
+    secret : 'oi',
     resave : true,
     saveUninitialized : true,
     cookie: {secure:false}

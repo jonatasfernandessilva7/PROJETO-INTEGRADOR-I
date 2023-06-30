@@ -15,9 +15,6 @@
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
   name: 'Index',
-  props: {
-    msg: String
-  }
 }
 </script>
 
@@ -25,13 +22,13 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-html, body{
+body{
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
     width: 100%;
     height: 100%;
     margin: 0px;
-    background-image: "SCHOOLLABUFC.png";
+    background-image: url('../../public/img/SCHOLLLABUFC.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

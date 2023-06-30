@@ -19,6 +19,23 @@ const AdmLogin = async (req, res) => {
 }
 
 
+const buscaTodosOsAlunos = async (req, res) => {
+    try {
+        const alunos = await userService.buscaAlunos();
+
+        return res.json({
+            success: true,
+            data: alunos,
+            message: "alunos found successfully",
+        });
+
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+
+}
+
+
 const cadastroMonitor = async (req, res) => {
 
     try {
@@ -97,5 +114,6 @@ module.exports = {
     AdmLogin,
     cadastroMonitor,
     delMonitor,
-    delAluno
+    delAluno,
+    buscaTodosOsAlunos
 }

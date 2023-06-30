@@ -38,6 +38,8 @@ router.get('/views/admgeral/DeletarAluno', async (req, res) => {
     res.render('admgeral/AdmDeletarAluno');
 });
 
+router.get('/alunos', admControllers.buscaTodosOsAlunos);
+
 //rotas post para adm
 router.post('/admgeral/Adm/home', admControllers.AdmLogin);
 
