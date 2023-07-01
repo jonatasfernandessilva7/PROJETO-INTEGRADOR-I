@@ -100,7 +100,11 @@ import { HeaderAdm} from '@/components/partials/HeaderAdm.vue';
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Adm'
+    name: 'Adm',
+    components :{
+      FooterGeral,
+      HeaderAdm
+    }
 }
 <script>
 

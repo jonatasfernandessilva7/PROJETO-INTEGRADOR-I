@@ -40,7 +40,12 @@ import { HeaderAdm} from '@/components/partials/HeaderAdm.vue';
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Adm_Contato'
-}</script>
+    name: 'Adm_Contato',
+    components: {
+      FooterGeral,
+      HeaderAdm
+    }
+}
+</script>
 
 <style scoped></style>

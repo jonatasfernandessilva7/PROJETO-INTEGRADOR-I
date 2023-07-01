@@ -1,20 +1,33 @@
 <template>
 <body>
     <div class="menu">
-        <h3>Projeto Integrador - UFC Campus Itapaje</h3>
+        <h2>Projeto Integrador - UFC Campus Itapaje</h2>
     </div>
     <div class="nav">
-        <a href="./Aluno/login">Aluno</a>
-        <a href="./Monitor/loginMonitor">Monitor</a>
-        <a href="./admgeral/Adm/Login">Administrador</a>
+        <a @click="paginaAluno">Aluno</a>
+        <a @click="paginaMonitor">Monitor</a>
+        <a @click="paginaAdm">Administrador</a>
     </div>
 </body>
 </template>
 
 <script>
+import api  from "@/services/api.js";
+
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
   name: 'Index',
+  methods:{
+    paginaAluno(){
+        api.get('Aluno/login')
+    },
+    paginaMonitor(){
+        api.get('views/Monitor/Monitor_home')
+    },
+    paginaAdm(){
+        api.get('admgeral/Adm/Login')
+    }
+  }
 }
 </script>
 
