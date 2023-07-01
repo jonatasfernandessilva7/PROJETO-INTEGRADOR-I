@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-    <title>School Lab UFC</title>
-    <link rel="stylesheet" href="/css/sty.css">
-    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
-<body>
-    <form action="/admgeral/DeletarMonitor" method="DELETE" class="caixote">
-        <h1 id="text">Deletar Monitor</h1>
-        <input required name="email" id="email" type="email"
-            placeholder="Email institucional" maxlength="50" maxlength="50" size="50" value="">            
-            <button id="admDelMonitor">Deletar</button>
-        <p style="bottom: 0;" id="footer">&copy;School Lab</p>
-    </form>
-</body>
-</html>
+<template>
+    <body>
+        <form class="caixote">
+            <h1 id="text">Deletar Monitor</h1>
+            <input required name="email" id="email" type="email"
+                placeholder="Email institucional" maxlength="50" size="50" value="">            
+                <button id="admDelMonitor">Deletar</button>
+            <p style="bottom: 0;" id="footer">&copy;School Lab</p>
+        </form>
+    </body>
+    </template>
+    
+    <script>
+    export default {
+        // eslint-disable-next-line vue/multi-word-component-names
+        name: 'AdmDeletarMonitor'
+    }
+    <script>
+    
+    <style scoped></style>

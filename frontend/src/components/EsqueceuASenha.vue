@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-    <title>School Lab UFC</title>
-    <link rel="stylesheet" href="/css/sty.css">
-    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
+<template>
+
 <body>
     <form action="/esqueceuASenha" method="POST" class="caixa" id="formRecuperacao">
         <h1>Insira seu email para recuperar a senha</h1>
@@ -17,4 +8,88 @@
             <p id="logo">&copy;School Lab</p>
     </form>
 </body>
-</html>
+
+</template>
+
+<script>
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'EsqueceuASenha'
+}
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.caixa{
+    position: absolute;
+    top: 25%;
+    background-color: #00000081;
+    text-align: center;
+    width: 400px;
+    height: 390px;
+    border-radius: 10px;
+    color: #fff;
+}
+h1{
+    margin: 40px 0px 30px 0px;
+}
+input{
+    margin: 0px 0px 15px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+button{
+    margin: 10px 10px 15px 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+button:hover{
+    background-color: #8344ff;
+    color: #fff;
+    transition: 0.5s;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12pt;
+}
+a:hover{
+    color: #8344ff;
+    transition: 0.4s;
+}
+/*Cadastro*/
+.caixote{
+    position: absolute;
+    top: 10%;
+    background-color: #00000081;
+    text-align: center;
+    width: 450px;
+    height: 600px;
+    border-radius: 10px;
+    color: #fff;
+}
+.caixote-2{
+    position: absolute;
+    top: 25%;
+    background-color: #00000081;
+    text-align: center;
+    width: 450px;
+    height: 440px;
+    border-radius: 10px;
+    color: #fff;
+}
+</style>

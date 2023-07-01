@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-        <title>School Lab UFC</title>
-        <link rel="stylesheet" href="/css/pages-styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    </head>
+<template>
 <body>
   <header>
-    <%- include('../partials/headerAdm') -%>
+    <HeaderAdm></HeaderAdm>
   </header>
     <div style="text-align: center;">
         <h4 style="color: #fff;">Bem vindo(a) ao tutorial de navegação do site School Lab UFC. Abaixo está o passo a passo numerado de como acessar todas as opções que o site tem a oferecer:</h4>
             <div class="list"><p>1. Na tela principal do site temos a barra de navegação onde estão todas as páginas de navegação do site, ao clicar nelas você será direcionado ao conteúdo específico de cada uma delas</p></div>
             <div style="text-align: center;display: flex;justify-content:center;">
-                <img src="/figmaSchoolLab/tutorial1.png" alt="Perfil" width="580" height="335">
+                <img src="../../../public/img/tutorial1.png" alt="Perfil" width="580" height="335">
             </div>
             <div class="list"><p>2. Na tela principal estão todos os laboratórios que possuem computadores. Para requisitar o uso dos computadores você deve entrar em qualquer um dos 5 laboratórios.</p></div>
             <div style="text-align: center;display: flex;justify-content:center;">
-                <img src="/figmaSchoolLab/tutorial2.png" alt="Perfil" width="580" height="335">
+                <img src="../../../public/img/tutorial1/tutorial2.png" alt="Perfil" width="580" height="335">
             </div>
             <div class="list"><p>3. Ao Entrar em um dos laboratórios você terá como opções todos os computadores que não estiverem sendo utilizados por outros usuários.</p></div>
             <div style="text-align: center;display: flex;justify-content:center;">
-                <img src="/figmaSchoolLab/tutorial3.png" alt="Perfil" width="580" height="335">
+                <img src="../../../public/img/tutorial1/tutorial3.png" alt="Perfil" width="580" height="335">
             </div>
             <div class="list"><p>4. Para selecionar o computador, basta clicar no botão azul com o nome escolher. Ao confirmar a sua escolha irá aparecer um alerta de confirmação.</p></div>
             <div class="list"><p>5. Para cancelar a sua escolha, vá a página de Histórico e lá você encontrara um botão de cancelamento do computador.</p></div>
@@ -37,7 +25,19 @@
         </div>
     </div><br><br>
     <footer class="footer">
-        <%- include('../partials/footer') -%>
+        <FooterGeral></FooterGeral>
     </footer>
 </body>
-</html>
+</template>
+
+<script>
+import { FooterGeral } from "@/components/partials/FooterGeral.vue";
+import { HeaderAdm} from '@/components/partials/HeaderAdm.vue';
+
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'Adm_Ajuda'
+}
+<script>
+
+<style scoped></style>

@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-  <title>School Lab UFC</title>
-  <link rel="stylesheet" href="../admgeral/pages-styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-  <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script defer type="text/javascript" src="/js/admIteracoes.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.2/socket.io.js"></script>
-  <script defer type="text/javascript" src="/js/websocket/websocket.js"></script>
-</head>
+<template>
 
 <body>
   <header>
-    <%- include('../partials/headerAdm') -%>
+    <HeaderAdm></HeaderAdm>
   </header>
   <ul class="nav" style="margin-bottom: 30px;margin-left: 0px;">
     <li><a href="#laboratorios">Laboratórios</a></li>
@@ -106,8 +89,19 @@
   </div>
 
   <footer class="footer">
-    <%- include('../partials/footer') -%>
+    <FooterGeral></FooterGeral>
   </footer>
 </body>
+</template>
 
-</html>
+<script>
+import { FooterGeral } from "@/components/partials/FooterGeral.vue";
+import { HeaderAdm} from '@/components/partials/HeaderAdm.vue';
+
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'Adm'
+}
+<script>
+
+<style scoped></style>

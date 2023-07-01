@@ -1,3 +1,4 @@
+<template>
 <nav class="navbar navbar-dark navbar-expand-lg bg-black">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><span>School</span>Lab UFC</a>
@@ -7,28 +8,37 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/views/admgeral/Adm">Home</a>
+            <a class="nav-link active" aria-current="page" href="">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_perfil">Perfil</a>
+            <a class="nav-link" href="">Perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_Ajuda">Ajuda</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/Adm_Contato">Contato</a>
+            <a class="nav-link" href="">Ajuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/AdicionarMonitor">Adicionar Monitor</a>
+            <a class="nav-link" href="">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/DeletarMonitor">Deletar Monitor</a>
+            <a class="nav-link" href="">Adicionar Monitor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/views/admgeral/DeletarAluno">Deletar Aluno</a>
+            <a class="nav-link" href="">Deletar Monitor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Deletar Aluno</a>
           </li>
         </ul>
       </div>
     </div>
   </nav><br><br>
+</template>
+
+<script>
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'HeaderAdm'
+}
+</script>
+
+<style scoped></style>

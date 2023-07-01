@@ -19,9 +19,6 @@
             <li class="nav-item">
               <a class="nav-link" href="">Contato</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Historico</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -31,7 +28,7 @@
   <script>
   export default {
       // eslint-disable-next-line vue/multi-word-component-names
-      name: 'HeaderAluno'
+      name: 'HeaderMonitor'
   }
   </script>
   
