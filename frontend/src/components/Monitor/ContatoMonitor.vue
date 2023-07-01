@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-  <title>School Lab UFC</title>
-  <link rel="stylesheet" href="/css/pages-styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-</head>
-
-<body>
+<template>
+  <body>
   <header>
-    <%- include('../partials/header'); -%>
+    <HeaderMonitor></HeaderMonitor>
   </header>
   <div class="text">
     <h5>Bem vindo a página de contato, aqui você poderá falar concosco, mandar sugestões de melhoria, fazer elogios ou
       tirar suas dúvidas.</h5>
   </div>
-  <form id="form" style="height: 467px;" action="/views/Monitor/Contato" method="POST">
+  <form id="form" style="height: 467px;">
     <div class="mb-3" style="margin: 0px 20px 0px 20px;">
       <label for="exampleFormControlInput1" class="form-label">Nome e sobrenome</label>
       <input type="text" class="form-control" id="nomeDoSugestor" name="nomeDoSugestor" placeholder="nome">
@@ -43,8 +29,18 @@
     </div>
   </form><br><br>
   <footer class="footer">
-    <%- include('../partials/footer'); -%>
+    <FooterGeral></FooterGeral>
   </footer>
 </body>
+</template>
 
-</html>
+<script>
+import { FooterGeral } from "@/components/partials/FooterGeral.vue";
+import {  HeaderMonitor } from "@/components/partials/HeaderAluno.vue";
+
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'ContatoMonitor'
+}</script>
+
+<style scoped></style>

@@ -1,27 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-    <title>School Lab UFC</title>
-    <link rel="stylesheet" href="/css/pages-styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script defer src="/js/escolhaComputador.js"></script>
-</head>
-
-<body>
-    <header>
-        <%- include('../partials/headerAluno');-%>
-    </header>
-    <%- include('../partials/labs')-%>
+<template>
+    <head>
+        <script defer src="/js/escolhaComputador.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <HeaderAluno></HeaderAluno>
+        </header>
+        <Labs></Labs>
         <footer class="footer">
-            <%- include('../partials/footer'); -%>
+            <FooterGeral></FooterGeral>
         </footer>
-</body>
-
-</html>
+    </body>
+    
+    </template>
+    
+    <script>
+    import { FooterGeral } from "@/components/partials/FooterGeral.vue";
+    import {  HeaderAluno} from "@/components/partials/HeaderAluno.vue";
+    import { Labs } from "@/components/partials/Labs.vue"
+    
+    export default {
+        // eslint-disable-next-line vue/multi-word-component-names
+        name: 'Lab2'
+    }
+    </script>
+    
+    <style scoped></style>

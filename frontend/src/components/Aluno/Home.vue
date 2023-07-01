@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-    <title>School Lab UFC</title>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.2/socket.io.js"></script>
-    <script defer type="text/javascript" src="/js/admIteracoes.js"></script>
-    <script defer type="text/javascript" src="/js/websocket/websocket.js"></script>
-    <link rel="stylesheet" href="/css/pages-styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
-
+<template>
 <body>
     <header>
-        <%- include('../partials/headerAluno'); -%>
+        <HeaderAluno></HeaderAluno>
     </header>
 
     <div class="text">
@@ -32,31 +16,31 @@
     </div>
     <div class="option">
         <div class="card" style="width: 18rem; display: inline-block; margin:30px;">
-            <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
+            <img src="../../../public/img/SCHOLLLABUFC.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Laboratório 1</h5><br>
-                <a href="/views/Aluno/Lab1" class="btn btn-primary" style="width: 150px;">Entrar</a>
+                <a href="" class="btn btn-primary" style="width: 150px;">Entrar</a>
             </div>
         </div>
         <div class="card" style="width: 18rem; display: inline-block;margin:30px;">
-            <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
+            <img src="../../../public/img/SCHOLLLABUFC.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Laboratório 2</h5><br>
-                <a href="/views/Aluno/Lab2" class="btn btn-primary" style="width: 150px;">Entrar</a>
+                <a href="" class="btn btn-primary" style="width: 150px;">Entrar</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;display: inline-block;margin:30px;">
-            <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
+            <img src="../../../public/img/SCHOLLLABUFC.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Laboratório 3</h5><br>
-                <a href="/views/Aluno/Lab3" class="btn btn-primary" style="width: 150px;">Entrar</a>
+                <a href="" class="btn btn-primary" style="width: 150px;">Entrar</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;display: inline-block;margin:30px;">
-            <img src="/figmaSchoolLab/SCHOLLLABUFC.png" class="card-img-top" alt="...">
+            <img src="../../../public/img/SCHOLLLABUFC.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Laboratório 4</h5><br>
-                <a href="/views/Aluno/Lab4" class="btn btn-primary" style="width: 150px;">Entrar</a>
+                <a href="" class="btn btn-primary" style="width: 150px;">Entrar</a>
             </div>
         </div>
         </div><br><br>
@@ -72,41 +56,19 @@
 
         </div>
         <footer class="footer">
-            <%- include('../partials/footer'); -%>
+            <FooterGeral></FooterGeral>
         </footer>
-        <script>
-            let btn1 = document.getElementById('but1');
-let container1 = document.querySelector('#perfil1');
-btn1.addEventListener('click', function() {
-    
-if(container1.style.display === 'block') {
-    container1.style.display = 'none';
-} else {
-    container1.style.display = 'block';
-}
-});
-
-let btn2 = document.getElementById('but2');
-let container2 = document.querySelector('#perfil2');
-btn2.addEventListener('click', function() {
-    
-if(container2.style.display === 'block') {
-    container2.style.display = 'none';
-} else {
-    container2.style.display = 'block';
-}
-});
-
-let btn3 = document.getElementById('but3');
-let container3 = document.querySelector('#perfil3');
-btn3.addEventListener('click', function() {
-    
-if(container3.style.display === 'block') {
-    container3.style.display = 'none';
-} else {
-    container3.style.display = 'block';
-}
-});
-        </script>
 </body>
-</html>
+</template>
+
+<script>
+import { FooterGeral } from "@/components/partials/FooterGeral.vue";
+import {  HeaderAluno} from "@/components/partials/HeaderAluno.vue";
+
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'Home'
+}
+</script>
+
+<style scoped></style>

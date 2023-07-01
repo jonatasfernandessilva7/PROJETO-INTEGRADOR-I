@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/figmaSchoolLab/icone.jpg">
-  <title>School Lab UFC</title>
-  <link rel="stylesheet" href="/css/pages-styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script defer src="/js/perfil.js"></script>
-</head>
-
+<template>
 <body>
   <header>
-    <%- include('../partials/headerAluno'); -%>
+    <HeaderAluno></HeaderAluno>
   </header>
-  <form action="/views/Aluno/perfil" method="UPDATE">
+  <form>
     <div style="text-align: center;">
-      <img src="/figmaSchoolLab/Perfil.png" alt="Perfil" width="170" height="170">
+      <img src="../../../public/img/Perfil.png" alt="Perfil" width="170" height="170">
     </div>
     <div class="mb-3" style="margin: 0px 100px 0px 100px;">
       <label for="alunoOn" class="form-label">Nome</label>
@@ -46,8 +31,17 @@
     <button class="enviar" style="margin: 0px 30px 0px 10px;" onclick="habilitar()">Alterar dados</button>
   </div>
   <footer class="footer">
-    <%- include('../partials/footer'); -%>
+    <FooterGeral></FooterGeral>
   </footer>
 </body>
+</template>
 
-</html>
+<script>
+import { FooterGeral } from "@/components/partials/FooterGeral.vue";
+import {  HeaderAluno} from "@/components/partials/HeaderAluno.vue";
+
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'Perfil'
+}
+</script>
