@@ -5,6 +5,7 @@ import Monitor from '@/components/Monitor/LoginMonitor.vue';
 import Administrador from '@/components/Adm/Adm_login.vue';
 
 import Home from '@/components/Aluno/Home.vue';
+import Cadastro from '@/components/Aluno/Cadastro.vue';
 
 import EsqueceuASenha from '@/components/EsqueceuASenha.vue';
 
@@ -34,6 +35,11 @@ const routes = [
     path: '/esqueceu_Senha',
     name:'EsqueceuASenha',
     component: EsqueceuASenha
+  },
+  {
+    path: '/Aluno/cadastro',
+    name: 'Cadastro',
+    component: Cadastro
   }
 ]
 
