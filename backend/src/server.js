@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 require("dotenv").config();
-const port = 5000;
+const port = 3000;
 
 const ejs = require("ejs");
 
@@ -19,7 +19,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 
 app.use(cors({
-    origin: 'http://localhost:8081'
+    origin: 'http://localhost:8080'
 }))
 
 app.use(morgan('tiny'))

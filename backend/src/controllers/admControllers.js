@@ -21,7 +21,7 @@ const AdmLogin = async (req, res) => {
 
 const buscaTodosOsAlunos = async (req, res) => {
     try {
-        const alunos = await userService.buscaAlunos();
+        const alunos = await admService.buscaAlunos();
 
         return res.json({
             success: true,
@@ -30,7 +30,7 @@ const buscaTodosOsAlunos = async (req, res) => {
         });
 
     } catch (error) {
-        return res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error });
     }
 
 }
@@ -109,11 +109,40 @@ const delAluno = async (req, res) => {
 
 }
 
+const addLab = async (req, res) => {
+
+    try {
+
+        const { numero, status } = req.body;
+
+        let buscaLab = await admService.buscaLab(numero);
+
+        if (buscaLab){
+            return res.json({
+                message: "laboratorio ja existe, impossível cadastrar"
+            })
+        }else {
+
+            let newLab = await admService.adicionarLaboratorios(numero, status);
+
+            return res.json({
+                message: "laboratorio criado com sucesso",
+                data: newLab
+            })
+        }
+    }catch(erro){
+        return res.json({erro: erro})
+    }
+
+
+}
+
 
 module.exports = {
     AdmLogin,
     cadastroMonitor,
     delMonitor,
     delAluno,
-    buscaTodosOsAlunos
+    buscaTodosOsAlunos,
+    addLab,
 }

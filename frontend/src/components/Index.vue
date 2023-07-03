@@ -1,33 +1,21 @@
 <template>
-<body>
-    <div class="menu">
-        <h2>Projeto Integrador - UFC Campus Itapaje</h2>
-    </div>
-    <div class="nav">
-        <a @click="paginaAluno">Aluno</a>
-        <a @click="paginaMonitor">Monitor</a>
-        <a @click="paginaAdm">Administrador</a>
-    </div>
-</body>
+    <body>
+        <div class="menu">
+            <h2>Projeto Integrador - UFC Campus Itapaje</h2>
+        </div>
+        <div class="nav">
+            <router-link to="/Aluno"><button>Aluno</button></router-link>
+            <router-link to="/Monitor"><button>Monitor</button></router-link>
+            <router-link to="/Administrador"><button>Administrador</button></router-link>
+        </div>
+        <router-view/>
+    </body>
 </template>
 
 <script>
-import api  from "@/services/api.js";
-
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Index',
-  methods:{
-    paginaAluno(){
-        api.get('Aluno/login')
-    },
-    paginaMonitor(){
-        api.get('views/Monitor/Monitor_home')
-    },
-    paginaAdm(){
-        api.get('admgeral/Adm/Login')
-    }
-  }
+    name: 'Index',
 }
 </script>
 
@@ -35,7 +23,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
     width: 100%;
@@ -47,11 +35,12 @@ body{
     background-position: center;
 }
 
-h3{
+h3 {
     font-size: 1.1em;
     font-weight: bold;
 }
-.menu{
+
+.menu {
     width: 100%;
     background-color: #000000;
     color: #fff;
@@ -59,14 +48,16 @@ h3{
     display: flex;
     justify-content: center;
 }
-.nav{
+
+.nav {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     position: absolute;
     bottom: 15%;
 }
-.nav a{
+
+.nav button {
     display: flex;
     justify-content: center;
     border-radius: 10px;
@@ -78,10 +69,9 @@ h3{
     padding: 10px 0px 10px 0px;
     margin: 10px;
 }
-.nav a:hover{
+
+.nav button:hover {
     background-color: #4d4d4d;
     color: #fff;
     transition: 0.5s;
-}
-
-</style>
+}</style>

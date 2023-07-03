@@ -2,13 +2,14 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-async function createMonitor(nome, email, curso, senha) {
+async function createMonitor(nome, email, curso, senha, laboratorio) {
     const novoMonitor = await prisma.monitores.create({
         data: {
             nome,
             email,
             curso,
-            senha
+            senha,
+            laboratorio
         }
     });
 
@@ -75,6 +76,25 @@ async function buscaUsuarioADeletar(email) {
     return userFind;
 }
 
+async function buscaAlunos () {
+
+    let users = await prisma.alunos.findMany();
+    return users
+}
+
+async function adicionarLaboratorios(numero, status){
+
+    let newLab = await prisma.laboratorios.create({
+        data: {
+            status,
+            numero
+        }
+    })
+
+    return newLab;
+
+}
+
 module.exports = {
     createMonitor,
     deleteUsuario,
@@ -82,5 +102,7 @@ module.exports = {
     buscaAdm,
     buscaMonitor,
     deleteMonitor,
-    buscaUsuarioADeletar
+    buscaUsuarioADeletar,
+    buscaAlunos,
+    adicionarLaboratorios,
 }

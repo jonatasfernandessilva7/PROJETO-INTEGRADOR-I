@@ -62,12 +62,15 @@
 </template>
 
 <script>
-import { FooterGeral } from "@/components/partials/FooterGeral.vue";
-import {  HeaderAluno} from "@/components/partials/HeaderAluno.vue";
+import FooterGeral from "@/components/partials/FooterGeral.vue";
+import HeaderAluno from "@/components/partials/HeaderAluno.vue";
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Home'
+    name: 'Home',
+    components: {
+        FooterGeral, HeaderAluno
+    },
 }
 </script>
 

@@ -2,22 +2,18 @@
 <body>
     <form class="caixa">
         <h1>Seja bem vindo!</h1>
-            <input required name="email" id="email" type="email" placeholder="Email" maxlength="50" size="40" autocomplete=""><br>
-            <input required name="senha" id="senha" type="password" placeholder="Senha" minlength="8" size="40" ><br>
-            <p><router-link to="/esqueceu_Senha">Esqueceu a senha?</router-link></p>
-            <button id="butEnter" @click="verificarLogin">Entrar</button>
-            <router-link to="/Aluno/cadastro"><button id="butCad"><a style="color: black;" href="">Cadastro</a></button></router-link>
+            <input required name="email" id="email" type="email" placeholder="Email" maxlength="50" size="40" value="" autocomplete=""><br>
+            <input required name="senha" id="senha" type="password" placeholder="Senha" minlength="8" size="40" value=""><br>
+            <button id="butEnterADM">Entrar</button>
             <p id="logo">&copy;School Lab</p>
     </form>
 </body>
 </template>
 
 <script>
-
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Login',
-    
+    name: 'Adm_login'
 }
 </script>
 
