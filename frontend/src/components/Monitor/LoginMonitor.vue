@@ -6,7 +6,7 @@
                 autocomplete=""><br>
             <input required name="senha" id="senha" type="password" placeholder="Senha" minlength="8" size="40"
                 value=""><br>
-            <p><router-link to="/esqueceu_Senha">Esqueceu a senha?</router-link></p>
+            <p><router-link to="/esqueceu_Senha ">Esqueceu a senha?</router-link></p>
             <button id="butEnterMonitor">Entrar</button>
             <p id="logo">&copy;School Lab</p>
         </form>
