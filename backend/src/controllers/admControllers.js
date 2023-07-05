@@ -1,4 +1,4 @@
-const admService = require('../services/admService');
+import admService from '../services/admService';
 
 const AdmLogin = async (req, res) => {
 
@@ -40,15 +40,15 @@ const cadastroMonitor = async (req, res) => {
 
     try {
 
-        const { nome, email, curso, senha } = req.body;
+        const { nome, email, curso, senha, laboratorio } = req.body;
 
-        buscaMonitor = await admService.buscaMonitor(email);
+        let busca = await admService.buscaMonitor(email);
 
-        if (buscaMonitor) {
+        if (busca) {
             res.json({message: "alredy user"});
         } else {
             try {
-                novomonitor = await admService.createMonitor(nome, email, curso, senha);
+                novomonitor = await admService.createMonitor(nome, email, curso, senha, laboratorio);
                 res.json({message: "ok", user: novomonitor});
             } catch (error) {
                 res.send(error);

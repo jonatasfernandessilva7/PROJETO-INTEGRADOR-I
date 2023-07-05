@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Login from '@/components/Aluno/Login.vue';
-import Monitor from '@/components/Monitor/LoginMonitor.vue';
-import Administrador from '@/components/Adm/Adm_login.vue';
+import Login from '@/views/Aluno/Login.vue';
+import Monitor from '@/views/Monitor/LoginMonitor.vue';
+import Administrador from '@/views/Adm/Adm_login.vue';
 
-import Home from '@/components/Aluno/Home.vue';
-import Cadastro from '@/components/Aluno/Cadastro.vue';
+import Home from '@/views/Aluno/Home.vue';
+import Cadastro from '@/views/Aluno/Cadastro.vue';
 
-import EsqueceuASenha from '@/components/EsqueceuASenha.vue';
+import EsqueceuASenha from '@/views/EsqueceuASenha.vue';
 
 
 const routes = [

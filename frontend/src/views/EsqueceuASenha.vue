@@ -1,7 +1,7 @@
 <template>
 
 <body>
-    <form action="/esqueceuASenha" method="POST" class="caixa" id="formRecuperacao">
+    <form id="formRecuperacao">
         <h1>Insira seu email para recuperar a senha</h1>
             <input required name="email" id="email" type="email" placeholder="Email" maxlength="50" size="40" value="" autocomplete=""><br>
             <button id="RecuperarSenha">Recuperar</button>

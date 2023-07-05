@@ -1,9 +1,9 @@
 <template>
-  <Index/>
+  <Index></Index>
 </template>
 
 <script>
-import Index from './components/Index.vue'
+import Index from './views/Index.vue'
 
 export default {
   name: 'App',

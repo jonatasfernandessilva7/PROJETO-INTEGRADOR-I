@@ -1,4 +1,4 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -100,9 +100,9 @@ module.exports = {
     deleteUsuario,
     buscaAluno,
     buscaAdm,
-    buscaMonitor,
     deleteMonitor,
     buscaUsuarioADeletar,
     buscaAlunos,
     adicionarLaboratorios,
+    buscaMonitor
 }

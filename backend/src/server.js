@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 require("dotenv").config();
-const port = 3000;
+const port = 9999;
 
 const ejs = require("ejs");
 
