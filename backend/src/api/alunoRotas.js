@@ -4,7 +4,9 @@ const alunoControllers = require('../controllers/alunoControllers');
 const recuperandoSenha = require ("../controllers/recuperarSenhaController")
 const sugestao = require("../controllers/emailSugestaoController");
 
-//rota para page principal
+
+
+router.get('/views/Aluno/perfil', alunoControllers.PerfilAluno);
 
 router.post('/esqueceuASenha', recuperandoSenha);
 

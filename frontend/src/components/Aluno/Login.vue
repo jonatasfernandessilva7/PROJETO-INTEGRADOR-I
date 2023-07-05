@@ -10,6 +10,7 @@
             <router-link to="/Aluno/cadastro"><button id="butCad"><a style="color: black;">Cadastro</a></button></router-link>
             <p id="logo">&copy;School Lab</p>
         </form>
+        <RouterView></RouterView>
     </body>
 </template>
 
