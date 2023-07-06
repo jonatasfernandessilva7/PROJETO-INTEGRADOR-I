@@ -67,14 +67,14 @@ const delMonitor = async (req, res) => {
 
     const { email } = req.body;
 
-    let buscaADeletar = await admService.buscaUsuarioADeletar(email);
+    let buscaADeletarMonitor = await admService.buscaMonitor(email);
 
     try {
 
-        if (buscaADeletar) {
+        if (buscaADeletarMonitor) {
             try {
-                monitorADeletadar = await admService.deleteMonitor(email);
-                res.json({message:"deleted", user: monitorADeletadar});
+                monitorADeletar = await admService.deleteMonitor(email);
+                res.json({message:"deleted", user: monitorADeletar});
             } catch (erro) {
                 res.json({message: erro})
             }
