@@ -1,5 +1,4 @@
 <template>
-    <body>
         <form class="caixa">
             <h1>Seja bem vindo!</h1>
             <input v-model="aluno.email" required name="email" id="email" type="email" placeholder="Email" maxlength="50" size="40"
@@ -10,8 +9,7 @@
             <router-link to="/Aluno/cadastro"><button id="butCad"><a style="color: black;">Cadastro</a></button></router-link>
             <p id="logo">&copy;School Lab</p>
         </form>
-        <RouterView></RouterView>
-    </body>
+        <RouterView/>
 </template>
 
 <script>

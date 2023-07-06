@@ -7,7 +7,7 @@
         <button id="enviarNovaSenha">Enviar Nova Senha</button>
         <p id="logo">&copy;School Lab</p>
     </form>
-</body>
+    </body>
 </template>
 
 <script>

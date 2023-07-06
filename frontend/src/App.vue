@@ -1,5 +1,5 @@
 <template>
-  <body>
+
       <div class="menu">
           <h2>Projeto Integrador - UFC Campus Itapaje</h2>
       </div>
@@ -11,7 +11,6 @@
           <router-link to="/Monitor"><button>Monitor</button></router-link>
           <router-link to="/Administrador"><button>Administrador</button></router-link>
       </div>
-  </body>
 </template>
 
 <script>
