@@ -17,7 +17,7 @@ async function createMonitor(nome, email, curso, senha, laboratorio) {
 }
 
 async function deleteMonitor(email) {
-    const del = await prisma.monitores.delete({
+    let del = await prisma.monitores.delete({
         where: {
             email
         },
@@ -27,7 +27,7 @@ async function deleteMonitor(email) {
 }
 
 async function deleteUsuario(email) {
-    const del = await prisma.alunos.delete({
+    let del = await prisma.alunos.delete({
         where: {
             email
         },
@@ -39,7 +39,9 @@ async function deleteUsuario(email) {
 
 async function buscaMonitor(email) {
     let userFind = await prisma.monitores.findUnique({
-        where: { email }
+        where: { 
+            email 
+        }
     });
 
     return userFind;
@@ -95,6 +97,16 @@ async function adicionarLaboratorios(numero, status){
 
 }
 
+async function buscaLab(numero) {
+    let busca = await prisma.laboratorios.findUnique({
+        where: {
+            numero
+        }
+    });
+
+    return busca
+}
+
 module.exports = {
     createMonitor,
     deleteUsuario,
@@ -104,5 +116,6 @@ module.exports = {
     buscaUsuarioADeletar,
     buscaAlunos,
     adicionarLaboratorios,
-    buscaMonitor
+    buscaMonitor,
+    buscaLab
 }

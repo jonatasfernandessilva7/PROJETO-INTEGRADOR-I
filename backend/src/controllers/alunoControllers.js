@@ -15,7 +15,7 @@ const createAluno = async (req, res) => {
     } else {
         try {
             let user = await userService.createUser(nome, email, curso, senha);
-            res.json({user: busca});
+            res.json({user: user});
         } catch (error) {
             res.json({error});
         }
@@ -61,7 +61,7 @@ const updateAlunoSenha = async (req, res) => {
     } else {
         try {
             let updateSenha = await userService.updateAluno(email, senha);
-            res.json({ message: "att", user: busca });
+            res.json({ message: "att", user: updateSenha });
         } catch (error) {
             res.json({error})
         }

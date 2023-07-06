@@ -11,7 +11,7 @@ const recuperandoSenha = async (req, res) => {
         if (searchUser === null) {
             return res.status(400).json({message: 'user not found'})
         } else {
-            await sendEmail.mailerEnviaEmail(email, req.body.sugestao, req.body.nomeDoSugestor);
+            await sendEmail.mailerEnviaEmail(email);
             res.json({message: "ok", data: searchUser});
         }
     }catch(erro){
