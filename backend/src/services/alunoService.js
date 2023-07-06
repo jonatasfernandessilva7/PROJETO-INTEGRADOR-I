@@ -66,11 +66,6 @@ async function updateDataAluno(nome, email,curso,senha){
     return updateData;
 }
 
-async function buscaAlunos(){
-    const users = await prisma.alunos.findMany();
-    return users
-}
-
 
 module.exports = {
     createUser,
@@ -78,5 +73,4 @@ module.exports = {
     buscaAluno,
     buscaTodosOsDados,
     updateDataAluno,
-    buscaAlunos
 };
