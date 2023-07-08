@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 require("dotenv").config();
-const port = process.env.PORT_SERVER|| 5000;
+const port = 9999;
 
 const ejs = require("ejs");
 
@@ -18,7 +18,7 @@ const io = require('socket.io')(server);
 
 //configurando a sessão
 app.use(session({
-    secret : process.env.SESSION_SECRET,
+    secret : 'oi',
     resave : true,
     saveUninitialized : true,
     cookie: {secure:false}
@@ -44,7 +44,7 @@ app.use(bodyParser.json());
 
 //configuring view
 
-app.set('views', '../../frontend/views');
+app.set('views', '../frontend/views');
 app.set('view engine', 'ejs');
 
 //callback routes

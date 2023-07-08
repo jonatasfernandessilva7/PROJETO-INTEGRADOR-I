@@ -15,7 +15,7 @@ const createAluno = async (req, res) => {
     } else {
         try {
             let user = await userService.createUser(nome, email, curso, senha);
-            res.json({user: busca}).render('Aluno/login');
+            res.json({user: user}).render('Aluno/login');
         } catch (error) {
             res.send(error);
         }
@@ -45,7 +45,7 @@ const LoginAluno = async (req, res) => {
         res.json({
             message: "ok",
             user: searchUser,
-        }).render('Aluno/home');
+        });
     }
 
 }
