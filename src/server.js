@@ -8,17 +8,14 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 require("dotenv").config();
-const port = process.env.PORT_SERVER|| 5000;
+const port = 3000;
 
 const ejs = require("ejs");
-
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
 
 
 //configurando a sessão
 app.use(session({
-    secret : process.env.SESSION_SECRET,
+    secret : "oioioi",
     resave : true,
     saveUninitialized : true,
     cookie: {secure:false}
@@ -57,21 +54,8 @@ app.use('/', rotasAdm);
 const rotasMonitor = require('./api/monitorRotas');
 app.use('/', rotasMonitor);
 
-//socket
-
-const users = [];
-io.on('connection', (socket) => {
-    console.log('nova conexão', socket.id);
-    users.push(socket);
-
-    socket.on('disconnect', function(){
-        users.slice(users.indexOf(socket), 1);
-        console.log('desconectou');
-    });
-});
-
 
 //open server
-server.listen(port, () => {
+app.listen(port, () => {
     console.log('rodando na porta: ',port);
 });

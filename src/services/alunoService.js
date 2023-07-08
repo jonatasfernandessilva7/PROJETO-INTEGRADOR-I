@@ -38,12 +38,11 @@ async function buscaAluno(email) {
     return userFind;
 }
 
-async function buscaTodosOsDados(nome, email, curso, senha){
+async function buscaTodosOsDados(email){
     let buscaTudo = await prisma.alunos.findUnique({
-        nome,
-        email,
-        curso,
-        senha
+        where: {
+            email
+        }
     });
 
     return buscaTudo;

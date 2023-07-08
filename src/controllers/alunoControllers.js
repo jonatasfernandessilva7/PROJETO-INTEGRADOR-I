@@ -15,7 +15,7 @@ const createAluno = async (req, res) => {
     } else {
         try {
             let user = await userService.createUser(nome, email, curso, senha);
-            res.json({user: busca}).render('Aluno/login');
+            res.render('Aluno/login');
         } catch (error) {
             res.send(error);
         }
@@ -42,10 +42,7 @@ const LoginAluno = async (req, res) => {
     if (searchUser === null) {
         return res.status(400).send('user not found')
     } else {
-        res.json({
-            message: "ok",
-            user: searchUser,
-        }).render('Aluno/home');
+        res.render('Aluno/home');
     }
 
 }
@@ -61,7 +58,7 @@ const updateAlunoSenha = async (req, res) => {
     } else {
         try {
             let updateSenha = await userService.updateAluno(email, senha);
-            res.json({ message: "att", user: busca }).render("Aluno/login");
+            res.render("Aluno/login");
         } catch (error) {
             res.send(error)
         }
@@ -81,7 +78,7 @@ const updateAluno = async (req, res) => {
         try {
 
             let updateDeTudo = await userService.updateDataAluno(nome, email, curso, senha)
-            res.json({message: "ok", usr: userFind}).render('views/Aluno/perfil');
+            res.redirect('/views/Aluno/perfil');
         } catch (erro) {
             console.log(erro);
         }
@@ -93,12 +90,12 @@ const updateAluno = async (req, res) => {
 
 const PerfilAluno = async (req, res) => {
 
-    const { nome, email, curso, senha } = req.session;
+    const { email } = req.session;
 
-    let User = await userService.buscaTodosOsDados(nome, email, curso, senha);
+    let User = await userService.buscaTodosOsDados(email);
 
     if (User) {
-        res.json({User: User}).render("Aluno/perfil", { nomeUser: nome, emailUser: email, cursoUser: curso, senhaUser: senha });
+        res.render("Aluno/perfil", { nomeUser: nome, emailUser: email, cursoUser: curso, senhaUser: senha });
     } else {
         res.send("erro inesperado, desculpe");
     }

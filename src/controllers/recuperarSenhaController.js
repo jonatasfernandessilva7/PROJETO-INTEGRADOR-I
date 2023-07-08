@@ -12,7 +12,7 @@ const recuperandoSenha = async (req, res) => {
             return res.status(400).send('user not found')
         } else {
             await sendEmail.mailerEnviaEmail(email, req.body.sugestao, req.body.nomeDoSugestor);
-            res.json({message: "ok", data: searchUser}).render("/Aluno/recuperacao/inserirNovaSenha");
+            res.render("/Aluno/recuperacao/inserirNovaSenha");
         }
     }catch(erro){
         res.json({erro});

@@ -62,3 +62,13 @@ a:hover{
     border-radius: 10px;
     color: #fff;
 }
+.caixote-2{
+    position: absolute;
+    top: 25%;
+    background-color: #00000081;
+    text-align: center;
+    width: 450px;
+    height: 440px;
+    border-radius: 10px;
+    color: #fff;
+}

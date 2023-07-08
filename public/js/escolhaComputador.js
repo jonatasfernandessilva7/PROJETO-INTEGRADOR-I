@@ -5,6 +5,7 @@ function esconder() {
         }
         var id = event.target.dataset.nome;
         document.getElementById(id).hidden = false;
+        alert("Você escolheu o computador "+id);
 }
 
 function mostrar() {

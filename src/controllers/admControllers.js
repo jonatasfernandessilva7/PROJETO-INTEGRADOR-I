@@ -50,7 +50,7 @@ const delMonitor = async (req, res) => {
 
     const { email } = req.body;
 
-    let buscaADeletar = await admService.buscaUsuarioADeletar(email);
+    let buscaADeletar = await admService.buscaMonitor(email);
 
     try {
 
