@@ -28,27 +28,39 @@ html, body {
 }
 #laboratorios{
     color: #fff;
-    width: 100%;
+    width: 900px;
     text-align: center;
-    margin-bottom: 100px;
+    background-color: #2e2e2eb6;
+    border-radius: 20px;
 }
 #computadores{
     color: #fff;
-    width: 100%;
+    width: 900px;
     text-align: center;
-    margin-bottom: 100px;
+    background-color: #2e2e2eb6;
+    border-radius: 20px;
 }
 #historico{
     color: #fff;
-    width: 100%;
+    width: 900px;
     text-align: center;
-    margin-bottom: 100px;
+    background-color: #2e2e2eb6;
+    border-radius: 20px;
 }
 #contas{
     color: #fff;
-    width: 100%;
+    width: 900px;
     text-align: center;
+    background-color: #2e2e2eb6;
+    border-radius: 20px;
+}
+.container-2{
+    width: 100%;
     margin-bottom: 100px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -147,12 +159,13 @@ label{
     font-size: 15pt;
 }
 .but{
-    background-color: #2e2e2e;
+    background-color: #8344ff;
     color: #fff;
 }
 .but:hover{
-    background-color: #fff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.60s;
 }
 .footer{
     width: 100%;
